@@ -1,0 +1,7 @@
+class Pelicula
+{
+	constructor()
+	{
+		
+	}
+}
