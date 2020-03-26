@@ -1,4 +1,17 @@
-var habitaciones = []; 
+var habitaciones = [];
+var metodosDePago = [];
+
+//FUNCIONES QUE GESTIONAN LOS METODOS DE PAGO
+function aniadirMetodoDePago(metodo)
+{
+	metodosDePago.push(metodo);
+}
+function eliminarMetodoDePago(numero)
+{
+	metodosDePago.splice(numero,1);
+}
+
+//FUNCIONES QUE INICIAN TODAS LAS ESTANCIAS DE LA CASA.
 function inicio()
 {
 	var cocina = new Estancia(1,"cocina");
