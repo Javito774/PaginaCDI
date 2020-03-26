@@ -1,4 +1,4 @@
-class Persiana
+class Persiana extends Electrodomestico
 {
 	constructor(idAux,nombre)
 	{
