@@ -1,4 +1,4 @@
-class Grifo
+class Grifo extends Electrodomestico
 {
 	constructor(idAux,nombre)
 	{

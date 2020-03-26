@@ -1,4 +1,4 @@
-class Ventana
+class Ventana extends Electrodomestico
 {
 	constructor(idAux,nombre)
 	{
