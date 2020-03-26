@@ -1,15 +1,6 @@
 var habitaciones = [];
 var metodosDePago = [];
-
-//FUNCIONES QUE GESTIONAN LOS METODOS DE PAGO
-function aniadirMetodoDePago(metodo)
-{
-	metodosDePago.push(metodo);
-}
-function eliminarMetodoDePago(numero)
-{
-	metodosDePago.splice(numero,1);
-}
+var agendaContactos = [];
 
 //FUNCIONES QUE INICIAN TODAS LAS ESTANCIAS DE LA CASA.
 function inicio()
@@ -42,3 +33,29 @@ function inicio()
 }
 
 inicio();
+
+//FUNCIONES QUE GESTIONAN LOS METODOS DE PAGO
+function aniadirMetodoDePago(metodo)
+{
+	metodosDePago.push(metodo);
+}
+function eliminarMetodoDePago(numero)
+{
+	metodosDePago.splice(numero,1);
+}
+
+//FUNCIONES QUE GESTIONAN LA LISTA DE CONTACTOS
+function aniadirContacto(contacto)
+{
+	var i=0;
+	while(i<agendaContactos.length && agendaContactos[i].nombre < contacto.nombre )
+	{
+		i++;
+	}
+	agendaContactos.splice(i,0,contacto);
+}
+
+function eliminarContacto(numero)
+{
+	agendaContactos.splice(numero,1);
+}
