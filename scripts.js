@@ -1,6 +1,7 @@
 var habitaciones = [];
 var metodosDePago = [];
 var agendaContactos = [];
+var restaurantesFavoritos = Array(3);
 
 //FUNCIONES QUE INICIAN TODAS LAS ESTANCIAS DE LA CASA.
 function inicio()
