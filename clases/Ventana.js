@@ -12,6 +12,7 @@ class Ventana
 		this.icono2 = aux;
 		if(this.estado = "abierta")
 			this.estado = "cerrada";
-		this.estado = "cerrada";
+		else
+			this.estado = "abierta";
 	}
 }
