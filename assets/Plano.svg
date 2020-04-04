@@ -1,0 +1,108 @@
+<svg
+   id="svg64"
+   width="583.40747"
+   height="829.81403"
+   viewBox="0 0 583.40747 829.81403">
+  <g
+     id="habitacion2"
+     style="display:inline"
+     transform="translate(-9.185704,-8.582418)"
+     class="relleno">
+    <path class="borde"
+       d="m 139.43726,439.96962 h -8.27377 l 0.0633,16.54749"
+       id="path179" fill="transparent" stroke="#000000" stroke-width="8" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" stroke-dasharray="none" fill-opacity="0"/>
+    <path class="borde"
+       d="m 190.78327,439.96962 10.46388,0.0387 0.52903,394.3881 H 13.627374 V 505.18633 H 131.22682 v -9.24716"
+       id="path185" fill="transparent" stroke="#000000" stroke-width="8" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" stroke-dasharray="none" fill-opacity="0"/>
+    <text>Habitacion 2</text>
+  </g>
+  <g
+     id="baño1"
+     style="display:inline"
+     transform="translate(-9.185704,-8.582418)"
+     class="relleno">
+    <path class="borde"
+       d="m 211.46768,439.96962 -10.22053,0.0387 -0.15926,132.8393 159.68246,0.6883 1.08513,-133.5663 H 260.86689"
+       id="path188" fill="transparent" stroke="#000000" stroke-width="8" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" stroke-dasharray="none" fill-opacity="0"/>
+  </g>
+  <g
+     id="baño2"
+     transform="translate(-9.185704,-8.582418)"
+     class="relleno">
+    <path class="borde" 
+       d="M 131.22682,456.51711 V 322.19012 H 13.627374 v 182.9962 H 131.22682 v -9.24716"
+       id="path174" fill="transparent" stroke="#000000" stroke-width="8" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" stroke-dasharray="none" fill-opacity="0"/>
+  </g>
+  <g
+     id="cocina"
+     transform="translate(-9.185704,-8.582418)"
+     class="relleno">
+    <path class="borde"
+       d="m 408.95041,376.68596 -65.34585,-0.47304 V 13.270718 H 498.12928 V 376.21292 l -40.31054,0.47304"
+       id="path131" fill="transparent" stroke="#000000" stroke-width="8" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" stroke-dasharray="none" fill-opacity="0"/>
+  </g>
+  <g
+     id="estudio"
+     style="display:inline"
+     transform="translate(-9.185704,-8.582418)"
+     class="relleno">
+    <path class="borde"
+       d="m 257.70342,376.34182 85.90114,-0.1289 V 13.270718 H 198.32699 V 376.21292 l 9.73384,0.1289"
+       id="path139" fill="transparent" stroke="#000000" stroke-width="8" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" stroke-dasharray="none" fill-opacity="0"/>
+  </g>
+  <g
+     id="Salon"
+     style="display:inline"
+     transform="translate(-9.185704,-8.582418)"
+     class="relleno">
+    <path class="borde"
+       d="m 437.17015,526.04412 h 85.05038 v 111.9891 l 66.37264,-0.4867 v 196.8499 H 201.77618 l -0.68829,-261.5488 159.68246,0.6883 0.68829,-48.86837 h 31.66118"
+       id="path76" fill="transparent" stroke="#000000" stroke-width="8" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" stroke-dasharray="none" fill-opacity="0"/>
+  </g>
+  <g
+     id="habitacion1"
+     transform="translate(-9.185704,-8.582418)"
+     class="relleno">
+    <path class="borde"
+       d="m 139.43726,376.34182 h -8.03042 l -0.18002,-54.1517 -118.041116,-1.2554 V 12.582418 H 197.64647 l 0.68052,363.630502 -7.54372,0.1289"
+       id="path4709" fill="transparent" stroke="#000000" stroke-width="8" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" stroke-dasharray="none" fill-opacity="0"/>
+  </g>
+  <g
+     id="Entrada"
+     style="display:inline"
+     transform="translate(-9.185704,-8.582418)"
+     class="relleno">
+    <path class="borde"
+       d="m 393.11982,524.66755 h -31.66118 l 0.34414,-92.40246"
+       id="path81" fill="transparent" stroke="#000000" stroke-width="8" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" stroke-dasharray="none" fill-opacity="0"/>
+    <path class="borde"
+       d="m 361.80278,387.3544 v -11.01258 l 47.14763,0.34414"
+       id="path83" fill="transparent" stroke="#000000" stroke-width="8" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" stroke-dasharray="none" fill-opacity="0"/>
+    <path class="borde"
+       d="m 457.81874,376.68596 c 1.72072,-0.68829 40.60891,-0.34414 40.60891,-0.34414 l -0.34414,11.01258"
+       id="path85" fill="transparent" stroke="#000000" stroke-width="8" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" stroke-dasharray="none" fill-opacity="0"/>
+    <path class="borde"
+       d="m 498.42765,434.50202 -0.34414,91.5421 h -60.91336"
+       id="path87" fill="transparent" stroke="#000000" stroke-width="8" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" stroke-dasharray="none" fill-opacity="0"/>
+  </g>
+  <g
+     id="Pasillo"
+     transform="translate(-9.185704,-8.582418)"
+     class="relleno">
+    <path class="borde"
+       d="m 361.80278,432.26509 0.0527,7.70453 H 260.86689"
+       id="path105" fill="transparent" stroke="#000000" stroke-width="8" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" stroke-dasharray="none" fill-opacity="0"/>
+    <path class="borde"
+       d="M 361.80278,387.3544 V 376.34182 H 257.70342"
+       id="path107" fill="transparent" stroke="#000000" stroke-width="8" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" stroke-dasharray="none" fill-opacity="0"/>
+    <path class="borde"
+       d="M 208.06083,376.34182 H 190.78327"
+       id="path109" fill="transparent" stroke="#000000" stroke-width="8" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" stroke-dasharray="none" fill-opacity="0"/>
+    <path class="borde"
+       d="m 139.43726,376.34182 h -8.03042 l -0.24335,63.6278 h 8.27377"
+       id="path111" fill="transparent" stroke="#000000" stroke-width="8" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" stroke-dasharray="none" fill-opacity="0"/>
+    <path class="borde"
+       d="m 190.78327,439.96962 h 20.68441"
+       id="path119" fill="transparent" stroke="#000000" stroke-width="8" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" stroke-dasharray="none" fill-opacity="0"/>
+  </g>
+</svg>
