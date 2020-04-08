@@ -3,12 +3,29 @@
 <head>
 	<title>Silla de Ruedas</title>
 	<link rel="stylesheet" type="text/css" href="estilos.css">
+
 	<script type="text/javascript" src="clases/Estancia.js"></script>
 	<script type="text/javascript" src="clases/Electrodomestico.js"></script>
 	<script type="text/javascript" src="clases/Combi.js"></script>
 	<script type="text/javascript" src="clases/Vitroceramica.js"></script>
 	<script type="text/javascript" src="clases/Microondas.js"></script>
+	<script type="text/javascript" src="clases/Grifo.js"></script>
+	<script type="text/javascript" src="clases/Iluminacion.js"></script>
+	<script type="text/javascript" src="clases/Termostato.js"></script>
+	<script type="text/javascript" src="clases/Ventana.js"></script>
+	<script type="text/javascript" src="clases/Persiana.js"></script>
+	<script type="text/javascript" src="clases/Puerta.js"></script>
 	<script type="text/javascript" src="clases/TV.js"></script>
+
+	<script type="text/javascript" src="clases/Tarjeta.js"></script>
+
+	<script type="text/javascript" src="clases/Contacto.js"></script>
+
+	<script type="text/javascript" src="clases/Pelicula.js"></script>
+	<script type="text/javascript" src="clases/BibliotecaMultimedia.js"></script>
+
+	<script type="text/javascript" src="clases/Silla.js"></script>
+
 	<script type="text/javascript" src="scripts.js"></script>
 	<meta charset="utf-8">
 </head>
@@ -23,33 +40,42 @@
 	</div>
 	<main>
 		<div id="PantallaSecundaria" style="width:0%;">
-			<div class="categoria-menu" id="domotica">
+			<div class="indicador-carpeta"><h3>Domotica</h3></div>
+			<div class="categoria-menu" id="domótica">
 				<div id="mapa">
-					<p style="top: 78px;">Habitacion 1</p>
-					<p style="top: 321px;">Habitacion 2</p>
-					<p style="top: 240px;
-							left: 106px;
-				    		transform: none;
+					<p style="
+						top: 78px;
+					">Habitación 1</p>
+					<p style="
+						top: 321px;
+					">Habitación 2</p>
+					<p style="
+						top: 240px;
+						left: 106px;
+			    		transform: none;
 					">Baño 1</p>
-					<p style="top: 193px;">Baño 2</p>
-					<p style="transform: none;
-				    top: 191px;
-				    left: 91px;
+					<p style="
+						top: 193px;
+					">Baño 2</p>
+					<p style="
+						transform: none;
+				    	top: 191px;
+				    	left: 91px;
 					">Pasillo</p>
 					<p style="
-				    top: 90px;
-				    left: 109px;
+				    	top: 90px;
+				    	left: 109px;
 					">Salita</p>
-						<p style="
+					<p style="
 					    top: 338px;
 					    left: 164px;
 					    transform: none;
-					">Salon</p>
-						<p style="
+					">Salón</p>
+					<p style="
 					    top: 89px;
 					    left: 180px;
 					">Cocina</p>
-						<p style="
+					<p style="
 					    top: 213px;
 					    left: 181px;
 					">Entrada</p>
@@ -195,15 +221,22 @@
 			<div class="categoria-menu" id="servicios">
 				Aqui va los servicios
 				<!--<video src="assets/Peliculas/HP7.2010.BRRip.720p.Bluray.YIFY.mkv" type='video/x-matroska; codecs="theora, vorbis"' autoplay style="width: 100%;
-    height: auto;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);"></video>-->
+			    height: auto;
+			    position: absolute;
+			    top: 50%;
+			    transform: translateY(-50%);"></video>-->
 			</div>
-			<div class="categoria-menu" id="telefonia">
-				<div class="indicador-carpeta"><h3>Teléfono</h3></div>
+			<div class="categoria-menu" id="teléfono">
+				<div class="menu-telefono">
+					<input id="telefono-menu" type="radio" name="select-telefono" checked="true">
+					<label for="telefono-menu">Teléfono</label>
+					<input id="recientes-menu" type="radio" name="select-telefono">
+					<label for="recientes-menu">Recientes</label>
+					<input id="contactos-menu" type="radio" name="select-telefono">
+					<label for="contactos-menu">Contactos</label>
+				</div>
 				<div class="pantallas">
-					<div id="telefono">
+					<div id="telefonia">
 						<div class="inputNumero">
 							<p style="color: transparent;">3</p>
 							<p class="numTelefono"> </p>
@@ -233,14 +266,6 @@
 					</div>
 					<div id="contactos"></div>
 				</div>
-				<div class="menu-telefono">
-					<input id="telefono-menu" type="radio" name="select-telefono" checked="true">
-					<label for="telefono-menu">Teléfono</label>
-					<input id="recientes-menu" type="radio" name="select-telefono">
-					<label for="recientes-menu">Recientes</label>
-					<input id="contactos-menu" type="radio" name="select-telefono">
-					<label for="contactos-menu">Contactos</label>
-				</div>
 			</div>
 			<div class="categoria-menu" id="emergencias">Aqui va Emergencias</div>
 		</div>
@@ -254,11 +279,12 @@
 			</div>
 		</div>
 	</main>
-	<div id="menuPrincipal" src="menuPrincipal.html">
+	<div id="menuPrincipal">
 		<img onclick="mostrarMenu(0);" src="assets/home.svg">
 		<img onclick="mostrarMenu(1);" src="assets/location_on.svg">
 		<img onclick="mostrarMenu(2);" src="assets/phone.svg">
 		<img onclick="mostrarMenu(3);" src="assets/notification_important.svg">
+		<img src="assets/power_settings_new.svg"/>
 	</div>
 	<script type="text/javascript" src="eventos.js"></script>
 </body>
