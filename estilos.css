@@ -112,11 +112,6 @@ main>div
     font-size: 18pt;
     cursor: pointer;
 }
-
-.categoria-menu
-{
-    position: relative;
-}
 #menuPrincipal 
 {
     display: flex;
@@ -135,14 +130,6 @@ main>div
     border-radius: 100px;
     
     cursor: pointer;
-}
-.categoria-menu
-{
-    opacity: 0;
-	width: 100%;
-	height: 100%;
-	overflow: hidden;
-    z-index: 2;
 }
 
 #mapa{
@@ -208,12 +195,16 @@ main>div
 #PantallaSecundaria{
     position: relative;
     overflow: hidden;
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+#PantallaSecundaria>.indicador-carpeta>h3
+{
+    text-transform: capitalize;
 }
 .categoria-menu{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+    position: relative;
+    display: none;
     height: 100%;
     overflow: hidden;
 }
@@ -223,11 +214,6 @@ main>div
 .indicador-carpeta{
     padding: 1em 2em;
     color: #333;
-}
-
-.categoria-menu#telefonia{
-    display: grid;
-    grid-template-rows: auto 1fr auto;
 }
 .teclado{
     display: grid;
@@ -250,7 +236,7 @@ main>div
    font-size: 7pt;
    color: #555;
 }
-#telefonia .inputNumero {
+#teléfono .inputNumero {
     display: flex;
     justify-content: center;
 }
@@ -261,7 +247,7 @@ main>div
     line-height: 3;
     padding-top: 6%;
 }
-#telefonia .contenedor-botones {
+#teléfono .contenedor-botones {
     padding: 1em 0;
     display: grid;
     align-items: center;
@@ -274,11 +260,11 @@ main>div
     display: table;
     margin: 0 auto;
 }
-#telefonia svg#btn-borrar {
+#teléfono svg#btn-borrar {
     width: 30px;
     height: 30px;
 }
-#telefonia #iconoLlamar {
+#teléfono #iconoLlamar {
     background: green;
     padding: 0.5em;
     width: 50px;
@@ -289,14 +275,15 @@ main>div
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2em 0;
+    overflow: hidden;
+    transition: transform .2s ease-in-out;
 }
 .menu-telefono input[type="radio"]
 {
     display: none
 }
 .menu-telefono label{
-    font-size: 14pt;
+    font-size: 12pt;
     margin:0 2em;
 }
 .menu-telefono input[type="radio"]:checked + label {
