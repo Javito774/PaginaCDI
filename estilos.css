@@ -291,3 +291,38 @@ main>div
     color: green;
     border-bottom: 5px dotted;
 }
+
+#emergencias_container{
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border: 1px solid #545154;
+    width: 415px;
+    height: 210px;
+    margin: 0px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px; /*Adaptar esto a lo que necesite para la ventana*/
+    font-size: larger;
+}
+
+.center{
+    margin: 0px 25px;
+}
+
+#emergencias_buttons{
+    margin: 15px;
+}
+
+.emergencias_button{
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 6px 6px 6px 6px;
+    border: 0px solid #faf5fa;
+    width: 50px;
+    height: 30px;
+    font-weight: 600;
+    color: white;
+}
