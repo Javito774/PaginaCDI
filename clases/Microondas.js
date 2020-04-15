@@ -12,7 +12,7 @@ class Microondas extends Electrodomestico
 {
 	constructor(idAux)
 	{
-		super(idAux,'Microondas','apagado',"vocina.svg");
+		super(idAux,'Microondas','apagado',"assets/microwave.png",true);
 		this.temporizador=0;
 		this.modos = [];
 		this.modo = 0;

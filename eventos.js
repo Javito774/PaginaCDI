@@ -42,6 +42,10 @@ function mostrarMenu(numero)
 		pantalla1.style.width="100%";
 		pantalla2.style.width="0%";
 		pantallas = [];
+		if(numero==0)
+		{
+			document.querySelector("#ventanaEstancia").style.display="none";
+		}
 	}
 	else
 	{
@@ -175,3 +179,26 @@ function mostrarMenuTelefono()
 	document.querySelector('#teléfono .menu-telefono').style.transform="none";
 }
 mostrarMenuTelefono();
+
+//MANEJAR MOVIMIENTO DE VENTANAS ENTRE DOMOTICA
+function mostrarHabitacion(numeroHabitacion)
+{
+	var ventana = document.querySelector("#ventanaEstancia");
+	ventana.style.display="grid";
+	ventana.innerHTML="";
+	var estancia = habitaciones[numeroHabitacion];
+	for(var i=0;i<estancia.electrodomesticos.length;i++)
+	{
+		if(estancia.electrodomesticos[i] instanceof Puerta)
+		{
+			if(estancia.electrodomesticos[i].room1.nombre==estancia.nombre)
+				estancia.electrodomesticos[i].nombre=estancia.electrodomesticos[i].room2.nombre;
+			else
+				estancia.electrodomesticos[i].nombre=estancia.electrodomesticos[i].room1.nombre;
+		}
+		if(estancia.electrodomesticos[i].tieneInterfaz)
+			ventana.innerHTML+='<div><img src="'+estancia.electrodomesticos[i].icono+'"/><h4>'+estancia.electrodomesticos[i].nombre+'</h4><p>'+estancia.electrodomesticos[i].estado+'</p></div>';
+		else
+			ventana.innerHTML+='<div onclick="habitaciones['+numeroHabitacion+'].electrodomesticos['+i+'].cambiarEstado();habitaciones['+numeroHabitacion+'].electrodomesticos['+i+'].imprimir(this);"><img src="'+estancia.electrodomesticos[i].icono+'"/><h4>'+estancia.electrodomesticos[i].nombre+'</h4><p>'+estancia.electrodomesticos[i].estado+'</p></div>';
+	}
+}

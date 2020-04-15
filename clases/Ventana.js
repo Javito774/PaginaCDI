@@ -2,7 +2,7 @@ class Ventana extends Electrodomestico
 {
 	constructor(idAux,nombre)
 	{
-		super(idAux,nombre,"cerrada","icono");
+		super(idAux,nombre,"cerrada","assets/ventana.png",false);
 		this.icono2 = "icono2";
 	}
 	cambiarEstado()

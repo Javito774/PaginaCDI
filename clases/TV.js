@@ -1,7 +1,7 @@
 class TV extends Electrodomestico{
 	constructor(idAux)
 	{
-		super(idAux,'TV','apagada',"tv.svg");
+		super(idAux,'TV','apagada',"assets/tv.svg",true);
 		this.canal = null;
 		this.vol = 0;
 	}

@@ -40,7 +40,7 @@
 	</div>
 	<main>
 		<div id="PantallaSecundaria" style="width:0%;">
-			<div class="indicador-carpeta"><h3>Domotica</h3></div>
+			<div class="indicador-carpeta"><h3></h3></div>
 			<div class="categoria-menu" id="domótica">
 				<div id="mapa">
 					<p style="
@@ -91,7 +91,7 @@
 					     class="relleno">
 					    <path class="divrelleno"
 					       d="m 131.16349,439.96962 0.0633,65.21671 H 13.627374 V 834.39642 H 201.77618 l -0.52903,-394.3881 z"
-					       id="path4748"/>
+					       id="path4748" onclick="mostrarHabitacion(6)"/>
 					    <path class="borde"
 					       d="m 139.43726,439.96962 h -8.27377 l 0.0633,16.54749"
 					       id="path179"/>
@@ -106,7 +106,7 @@
 					     class="relleno">
 					     <path class="divrelleno"
 					       d="m 201.24715,440.00832 -0.15926,132.8393 159.68246,0.6883 1.08513,-133.5663 z"
-					       id="path4742"/>
+					       id="path4742" onclick="mostrarHabitacion(7)"/>
 					    <path class="borde"
 					       d="m 211.46768,439.96962 -10.22053,0.0387 -0.15926,132.8393 159.68246,0.6883 1.08513,-133.5663 H 260.86689"
 					       id="path188"/>
@@ -117,7 +117,7 @@
 					     class="relleno">
 					     <path class="divrelleno"
 					       d="m 131.22679,456.51711 3e-5,-134.32699 H 13.627374 v 182.9962 l 117.599446,10e-6 z"
-					       id="path4745"/>
+					       id="path4745" onclick="mostrarHabitacion(8)"/>
 					    <path class="borde" 
 					       d="M 131.22682,456.51711 V 322.19012 H 13.627374 v 182.9962 H 131.22682 v -9.24716"
 					       id="path174"/>
@@ -128,7 +128,7 @@
 					     class="relleno">
 					     <path class="divrelleno"
 					       d="M 343.60456,376.21292 H 498.12928 V 13.270718 H 343.60456 Z"
-					       id="path4716"/>
+					       id="path4716" onclick="mostrarHabitacion(1)"/>
 					    <path class="borde"
 					       d="m 408.95041,376.68596 -65.34585,-0.47304 V 13.270718 H 498.12928 V 376.21292 l -40.31054,0.47304"
 					       id="path131"/>
@@ -140,7 +140,7 @@
 					     class="relleno">
 					     <path class="divrelleno"
 					       d="M 198.32699,376.21292 H 343.60456 V 13.270718 l -145.95809,-0.6883 z"
-					       id="path4719"/>
+					       id="path4719" onclick="mostrarHabitacion(4)"/>
 					    <path class="borde"
 					       d="m 257.70342,376.34182 85.90114,-0.1289 V 13.270718 H 198.32699 V 376.21292 l 9.73384,0.1289"
 					       id="path139"/>
@@ -152,7 +152,7 @@
 					     class="relleno">
 					     <path class="divrelleno"
 					       d="m 361.45864,524.66755 160.76189,1.37657 v 111.9891 l 66.37264,-0.4867 v 196.8499 H 201.77618 l -0.68829,-261.5488 159.68246,0.6883 z"
-					       id="path4713"/>
+					       id="path4713" onclick="mostrarHabitacion(3)"/>
 					    <path class="borde"
 					       d="m 437.17015,526.04412 h 85.05038 v 111.9891 l 66.37264,-0.4867 v 196.8499 H 201.77618 l -0.68829,-261.5488 159.68246,0.6883 0.68829,-48.86837 h 31.66118"
 					       id="path76"/>
@@ -163,7 +163,7 @@
 					     class="relleno">
 					     <path class="divrelleno"
 					       d="M 197.64647,12.582418 H 13.185704 V 320.93472 l 118.041116,1.2554 0.18002,54.1517 66.92015,-0.1289 z"
-					       id="path4736"/>
+					       id="path4736" onclick="mostrarHabitacion(5)"/>
 					    <path class="borde"
 					       d="m 139.43726,376.34182 h -8.03042 l -0.18002,-54.1517 -118.041116,-1.2554 V 12.582418 H 197.64647 l 0.68052,363.630502 -7.54372,0.1289"
 					       id="path4709"/>
@@ -175,7 +175,7 @@
 					     class="relleno">
 					     <path class="divrelleno"
 					       d="m 498.12928,376.21292 -136.3265,0.1289 -0.34414,148.32573 136.62487,1.37657 z"
-					       id="path4711"/>
+					       id="path4711" onclick="mostrarHabitacion(0)"/>
 					    <path class="borde"
 					       d="m 393.11982,524.66755 h -31.66118 l 0.34414,-92.40246"
 					       id="path81"/>
@@ -195,7 +195,7 @@
 					     class="relleno">
 					     <path class="divrelleno"
 					       d="M 361.80278,376.34182 H 131.40684 l -0.24335,63.6278 h 230.69199 z"
-					       id="path4739"/>
+					       id="path4739" onclick="mostrarHabitacion(2)"/>
 					    <path class="borde"
 					       d="m 361.80278,432.26509 0.0527,7.70453 H 260.86689"
 					       id="path105"/>
@@ -264,7 +264,17 @@
 							</svg>
 						</div>
 					</div>
-					<div id="contactos"></div>
+					<div id="contactos">
+						<div>
+							<p class="letra">A</p>
+							<div class="contenedor-contactos">
+								<div class="contacto">
+									<img src="">
+									<p class="nombre-contacto">Aa Mama</p>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="categoria-menu" id="emergencias">Aqui va Emergencias</div>

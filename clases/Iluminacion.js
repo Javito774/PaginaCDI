@@ -2,8 +2,8 @@ class Iluminacion extends Electrodomestico
 {
 	constructor(idAux,nombre)
 	{
-		super(idAux,nombre,"apagada","assets/emoji_objects.svg");
-		this.icono2 = "assets/iluminacionEN";
+		super(idAux,nombre,"apagada","assets/emoji_objects.svg",false);
+		this.icono2 = "assets/iluminacionEN.png";
 	}
 	cambiarEstado()
 	{

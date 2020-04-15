@@ -2,7 +2,7 @@ class Grifo extends Electrodomestico
 {
 	constructor(idAux,nombre)
 	{
-		super(idAux,nombre,"cerrado","icono");
+		super(idAux,nombre,"cerrado","assets/tap.png",true);
 		this.temperatura=36;
 		this.presion=0;
 	}

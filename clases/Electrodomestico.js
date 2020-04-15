@@ -1,22 +1,15 @@
 class Electrodomestico
 {
-	constructor(idAux,nombreAux,estadoAux,iconoAux)
+	constructor(idAux,nombreAux,estadoAux,iconoAux,tieneInterfazAux)
 	{
 		this.id = idAux;
 		this.nombre = nombreAux;
 		this.estado = estadoAux;
 		this.icono = iconoAux;
+		this.tieneInterfaz=tieneInterfazAux;
 	}
-	getNombre()
+	imprimir(elemento)
 	{
-		return this.nombre;
-	}
-	getIcono()
-	{
-		return this.icono;
-	}
-	getEstado()
-	{
-		return this.estado;
+		elemento.innerHTML='<img src="'+this.icono+'"/><h4>'+this.nombre+'</h4><p>'+this.estado+'</p>';
 	}
 }
