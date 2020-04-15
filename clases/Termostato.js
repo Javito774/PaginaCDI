@@ -2,7 +2,7 @@ class Termostato extends Electrodomestico
 {
 	constructor(idAux)
 	{
-		super(idAux,"termostato","apagado","URLicono")
+		super(idAux,"termostato","apagado","assets/calor.png",true)
 		this.temperaturaActual = 22;
 		this.temperaturaDeseada = null;
 		this.programas = [];

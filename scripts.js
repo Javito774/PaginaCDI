@@ -15,22 +15,90 @@ function inicio()
 	var dormitorio2 = new Estancia(6,"dormitorio2");
 	var pasillo = new Estancia(2,"pasillo");
 	var recibidor = new Estancia(0,"recibidor");
+	var puertas = [];
+	
+	puertas.push(new Puerta(0,recibidor,cocina));
+	puertas.push(new Puerta(1,recibidor,pasillo));
+	puertas.push(new Puerta(2,recibidor,salon));
+	puertas.push(new Puerta(3,pasillo,estudio));
+	puertas.push(new Puerta(4,pasillo,dormitorio1));
+	puertas.push(new Puerta(5,pasillo,dormitorio2));
+	puertas.push(new Puerta(6,dormitorio2,banio2));
+	puertas.push(new Puerta(7,pasillo,banio1));
 
 	habitaciones.push(recibidor);
+	recibidor.electrodomesticos.push(puertas[0]);
+	recibidor.electrodomesticos.push(puertas[1]);
+	recibidor.electrodomesticos.push(puertas[2]);
+	recibidor.electrodomesticos.push(new Iluminacion(recibidor.electrodomesticos.length,"general"));
+	recibidor.electrodomesticos.push(new Termostato(recibidor.electrodomesticos.length));
+
 	habitaciones.push(cocina);
+	cocina.electrodomesticos.push(puertas[0]);
+	cocina.electrodomesticos.push(new Iluminacion(cocina.electrodomesticos.length,"general"));
+	cocina.electrodomesticos.push(new Termostato(cocina.electrodomesticos.length));
+	cocina.electrodomesticos.push(new Grifo(cocina.electrodomesticos.length,"fregadeo"));
+	cocina.electrodomesticos.push(new Combi(cocina.electrodomesticos.length));
+	cocina.electrodomesticos.push(new Vitroceramica(cocina.electrodomesticos.length,3,6));
+	cocina.electrodomesticos.push(new Microondas(cocina.electrodomesticos.length));
+	cocina.electrodomesticos.push(new Ventana(cocina.electrodomesticos.length,"ventana"));
+	cocina.electrodomesticos.push(new Persiana(cocina.electrodomesticos.length,"persiana"));
+
 	habitaciones.push(pasillo);
+	pasillo.electrodomesticos.push(puertas[1]);
+	pasillo.electrodomesticos.push(puertas[3]);
+	pasillo.electrodomesticos.push(puertas[4]);
+	pasillo.electrodomesticos.push(puertas[5]);
+	pasillo.electrodomesticos.push(puertas[7]);
+	pasillo.electrodomesticos.push(new Iluminacion(pasillo.electrodomesticos.length,"general"));
+	pasillo.electrodomesticos.push(new Termostato(pasillo.electrodomesticos.length));
+
 	habitaciones.push(salon);
+	salon.electrodomesticos.push(puertas[2]);
+	salon.electrodomesticos.push(new Iluminacion(salon.electrodomesticos.length,"general"));
+	salon.electrodomesticos.push(new Termostato(salon.electrodomesticos.length));
+	salon.electrodomesticos.push(new TV(salon.electrodomesticos.length));
+	salon.electrodomesticos.push(new Ventana(salon.electrodomesticos.length,"ventana1"));
+	salon.electrodomesticos.push(new Persiana(salon.electrodomesticos.length,"persiana1"));
+	salon.electrodomesticos.push(new Ventana(salon.electrodomesticos.length,"ventana2"));
+	salon.electrodomesticos.push(new Persiana(salon.electrodomesticos.length,"persiana2"));
+
 	habitaciones.push(estudio);
+	estudio.electrodomesticos.push(puertas[3]);
+	estudio.electrodomesticos.push(new Iluminacion(estudio.electrodomesticos.length,"general"));
+	estudio.electrodomesticos.push(new Termostato(estudio.electrodomesticos.length));
+	estudio.electrodomesticos.push(new Ventana(estudio.electrodomesticos.length,"ventana"));
+	estudio.electrodomesticos.push(new Persiana(estudio.electrodomesticos.length,"persiana"));
+
 	habitaciones.push(dormitorio1);
+	dormitorio1.electrodomesticos.push(puertas[4]);
+	dormitorio1.electrodomesticos.push(new Iluminacion(dormitorio1.electrodomesticos.length,"general"));
+	dormitorio1.electrodomesticos.push(new Termostato(dormitorio1.electrodomesticos.length));
+	dormitorio1.electrodomesticos.push(new Ventana(dormitorio1.electrodomesticos.length,"ventana"));
+	dormitorio1.electrodomesticos.push(new Persiana(dormitorio1.electrodomesticos.length,"persiana"));
+
 	habitaciones.push(dormitorio2);
-	habitaciones.push(banio1);
+	dormitorio2.electrodomesticos.push(puertas[5]);
+	dormitorio2.electrodomesticos.push(puertas[6]);
+	dormitorio2.electrodomesticos.push(new Iluminacion(dormitorio2.electrodomesticos.length,"general"));
+	dormitorio2.electrodomesticos.push(new Iluminacion(dormitorio2.electrodomesticos.length,"mesilla"));
+	dormitorio2.electrodomesticos.push(new Termostato(dormitorio2.electrodomesticos.length));
+	dormitorio2.electrodomesticos.push(new Ventana(dormitorio2.electrodomesticos.length,"ventana"));
+	dormitorio2.electrodomesticos.push(new Persiana(dormitorio2.electrodomesticos.length,"persiana"));
+
 	habitaciones.push(banio2);
-
-	cocina.aniadirElectrodomestico(new Combi(cocina.getElectrodomesticos().length));
-	cocina.aniadirElectrodomestico(new Vitroceramica(cocina.getElectrodomesticos().length,3,6));
-	cocina.aniadirElectrodomestico(new Microondas(cocina.getElectrodomesticos().length));
-
-	salon.aniadirElectrodomestico(new TV(salon.getElectrodomesticos().length));
+	banio2.electrodomesticos.push(puertas[6]);
+	banio2.electrodomesticos.push(new Iluminacion(banio2.electrodomesticos.length,"general"));
+	banio2.electrodomesticos.push(new Termostato(banio2.electrodomesticos.length));
+	banio2.electrodomesticos.push(new Grifo(banio2.electrodomesticos.length,"lavabo"));
+	banio2.electrodomesticos.push(new Grifo(banio2.electrodomesticos.length,"ducha"));
+	
+	habitaciones.push(banio1);
+	banio1.electrodomesticos.push(puertas[7]);
+	banio1.electrodomesticos.push(new Iluminacion(banio1.electrodomesticos.length,"general"));
+	banio1.electrodomesticos.push(new Termostato(banio1.electrodomesticos.length));
+	banio1.electrodomesticos.push(new Grifo(banio1.electrodomesticos.length,"lavabo"));
+	banio1.electrodomesticos.push(new Grifo(banio1.electrodomesticos.length,"ducha"));
 }
 
 inicio();

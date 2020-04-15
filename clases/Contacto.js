@@ -4,6 +4,6 @@ class Contacto
 	{
 		this.nombre = nombre;
 		this.numero = numero;
-		this.imagen = imagen | nombre[0];
+		this.imagen = imagen || nombre[0];
 	}
 }

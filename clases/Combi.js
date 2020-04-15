@@ -2,7 +2,7 @@ class Combi extends Electrodomestico
 {
 	constructor(idAux)
 	{
-		super(idAux,"Combinado","_ºC | _ºC","assets/fastfood.svg");
+		super(idAux,"Combinado","_ºC | _ºC","assets/fridge.png",true);
 		this.temNevera = null;
 		this.temCongelador = null; 
 	}

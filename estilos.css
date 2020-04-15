@@ -1,3 +1,15 @@
+@media (max-width: 1500px)
+{
+    :root{
+        font-size: 16pt;
+    }
+}
+@media (max-width: 900px)
+{
+    :root{
+        font-size: 12pt;
+    }
+}
 *{
 	margin: 0;
 	padding: 0;
@@ -49,11 +61,11 @@ main>div
 }
 
 .battery-num{
-	font-size: 10pt;
+	font-size: 0.6rem;
 }
 .reloj{
 	padding: .5em 1em;
-	font-size: 14pt;
+	font-size: 0.8rem;
 }
 
 
@@ -61,20 +73,20 @@ main>div
 {
     position: absolute;
     /* display: table; */
-    width: 300px;
-    height: 300px;
+    width: 18rem;
+    height: 18rem;
     /* margin: 0 auto; */
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     border: 2px solid #333;
-    border-radius: 20px;
+    border-radius: 1em;
 }
 .contenedor-joystick>div
 {
     background: #333;
-    width: 70%;
-    height: 70%;
+    width: 80%;
+    height: 80%;
     border-radius: 70%;
     position: absolute;
     top: 50%;
@@ -94,22 +106,23 @@ main>div
     justify-content: center;
     border-radius: 85%;
     cursor: pointer;
+    border: 4px solid #333
 }
 
 .contenedor-joystick>div>div:hover
 {
-	transform: translateY(20px);
+	transform: translateY(-30px);
 }
 .contenedor-joystick h1
 {
-	font-size: 63pt;
+	font-size: 4.5rem;
     text-align: center;
     cursor: pointer;
 }
 .contenedor-joystick h1 span
 {
 	display: block;
-    font-size: 18pt;
+    font-size: 1.4rem;
     cursor: pointer;
 }
 #menuPrincipal 
@@ -122,12 +135,12 @@ main>div
 
 #menuPrincipal img 
 {
-	width: 70px;
+	width: 3.8rem;
 	margin: 1.5em 4em;
 	padding: 1em;
 
     background: #fff;
-    border-radius: 100px;
+    border-radius: 100em;
     
     cursor: pointer;
 }
@@ -186,7 +199,7 @@ main>div
     transform: rotate(-90deg);
     font-weight: bolder;
     text-transform: uppercase;
-    font-size: 10pt;
+    font-size: 0.6rem;
     color: #333;
     opacity: 0;
     transition: opacity 1s ease-in-out;
@@ -201,12 +214,15 @@ main>div
 #PantallaSecundaria>.indicador-carpeta>h3
 {
     text-transform: capitalize;
+    font-size: 1rem;
 }
 .categoria-menu{
     position: relative;
     display: none;
     height: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    left: 20px;
 }
 
 
@@ -230,10 +246,10 @@ main>div
     outline: none;
 }
 .teclado button .numero{
-   font-size: 16pt;
+   font-size: 1rem;
 }
 .teclado button .letras{
-   font-size: 7pt;
+   font-size: 0.4rem;
    color: #555;
 }
 #teléfono .inputNumero {
@@ -241,7 +257,7 @@ main>div
     justify-content: center;
 }
 .inputNumero p {
-    font-size: 22pt;
+    font-size: 1.4rem;
     font-weight: bolder;
     text-align: center;
     line-height: 3;
@@ -283,7 +299,7 @@ main>div
     display: none
 }
 .menu-telefono label{
-    font-size: 12pt;
+    font-size:0.8rem;
     margin:0 2em;
 }
 .menu-telefono input[type="radio"]:checked + label {
@@ -292,37 +308,28 @@ main>div
     border-bottom: 5px dotted;
 }
 
-#emergencias_container{
-    border-radius: 10px 10px 10px 10px;
-    -moz-border-radius: 10px 10px 10px 10px;
-    -webkit-border-radius: 10px 10px 10px 10px;
-    border: 1px solid #545154;
-    width: 415px;
-    height: 210px;
-    margin: 0px auto;
-    display: flex;
+/*ESTILOS PARTE DOMOTICA*/
+#ventanaEstancia{
+    background: #fff;
+    position: absolute;
+    z-index: 10;
+    display: none;
+    grid-template-columns: repeat(3,8rem);
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 30px; /*Adaptar esto a lo que necesite para la ventana*/
-    font-size: larger;
+    justify-self: center;
+    width: 100%;
+    height: 100%;
 }
-
-.center{
-    margin: 0px 25px;
+#ventanaEstancia>div {
+    padding: 0.5em;
+    text-align: center;
 }
-
-#emergencias_buttons{
-    margin: 15px;
+#ventanaEstancia>div>img {
+    width: 3.5em;
 }
-
-.emergencias_button{
-    border-radius: 10px 10px 10px 10px;
-    -moz-border-radius: 10px 10px 10px 10px;
-    -webkit-border-radius: 6px 6px 6px 6px;
-    border: 0px solid #faf5fa;
-    width: 50px;
-    height: 30px;
-    font-weight: 600;
-    color: white;
+#ventanaEstancia>div>h4{
+    font-size: 0.9rem;
+}
+#ventanaEstancia>div>p {
+    font-size: 0.7rem;
 }

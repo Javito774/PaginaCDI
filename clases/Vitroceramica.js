@@ -63,7 +63,7 @@ class Vitroceramica extends Electrodomestico
 {
 	constructor(idAux,nFuegos,potencia)
 	{
-		super(idAux,"vitroceramica","_ | _ | _","assets/voicemail.svg");
+		super(idAux,"vitroceramica","_ | _ | _","assets/vitrp.png",true);
 		this.fuego=new Array(nFuegos);
 		for(var i=0;i<this.fuego.length;i++)
 			this.fuego[i] = new Fuego(potencia);
