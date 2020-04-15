@@ -1,10 +1,10 @@
-@media (max-width: 1500px)
+@media (max-width: 1600px)
 {
     :root{
         font-size: 16pt;
     }
 }
-@media (max-width: 900px)
+@media (max-width: 1000px)
 {
     :root{
         font-size: 12pt;
