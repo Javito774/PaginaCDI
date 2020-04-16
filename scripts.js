@@ -16,7 +16,7 @@ function inicio()
 	var pasillo = new Estancia(2,"pasillo");
 	var recibidor = new Estancia(0,"recibidor");
 	var puertas = [];
-	
+
 	puertas.push(new Puerta(0,recibidor,cocina));
 	puertas.push(new Puerta(1,recibidor,pasillo));
 	puertas.push(new Puerta(2,recibidor,salon));
@@ -92,7 +92,7 @@ function inicio()
 	banio2.electrodomesticos.push(new Termostato(banio2.electrodomesticos.length));
 	banio2.electrodomesticos.push(new Grifo(banio2.electrodomesticos.length,"lavabo"));
 	banio2.electrodomesticos.push(new Grifo(banio2.electrodomesticos.length,"ducha"));
-	
+
 	habitaciones.push(banio1);
 	banio1.electrodomesticos.push(puertas[7]);
 	banio1.electrodomesticos.push(new Iluminacion(banio1.electrodomesticos.length,"general"));
@@ -101,7 +101,7 @@ function inicio()
 	banio1.electrodomesticos.push(new Grifo(banio1.electrodomesticos.length,"ducha"));
 }
 
-inicio();
+document.addEventListener("DOMContentLoaded", inicio);
 
 //FUNCIONES QUE GESTIONAN LOS METODOS DE PAGO
 function aniadirMetodoDePago(metodo)

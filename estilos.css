@@ -1,335 +1,447 @@
-@media (max-width: 1600px)
-{
-    :root{
-        font-size: 16pt;
-    }
-}
-@media (max-width: 1000px)
-{
-    :root{
-        font-size: 12pt;
-    }
-}
-*{
-	margin: 0;
-	padding: 0;
-
-	box-sizing: border-box;
-
-	font-family: sans-serif;
-	color: #333;
-}
-*::selection{
-    color: auto;
-    background: transparent;
-}
-body
-{
-	display: grid;
-	width: 100%;
-	height: 100vh;
-	overflow: hidden;
-
-	grid-template-rows: auto 1fr auto;
-}
-main
-{
-	display: flex;
-}
-main>div
-{
-	overflow: hidden;
-	
-	transition: width .5s ease-in-out;
-}
-
-#notificaciones{
-	display: flex;
-    background: #fafafa;
-}
-#notificacionesDinamicas{
-	display: flex;
-	align-items: center;
-	flex-grow:	10;
-
-}
-#notificacionesEstaticas{
-	display: flex;
-	align-items: center;
-	justify-content: right;
-	padding: .5em 3em;
-}
-
-.battery-num{
-	font-size: 0.6rem;
-}
-.reloj{
-	padding: .5em 1em;
-	font-size: 0.8rem;
-}
-
-
-.contenedor-joystick
-{
-    position: absolute;
-    /* display: table; */
-    width: 18rem;
-    height: 18rem;
-    /* margin: 0 auto; */
-    top: 50%;
-    left: 50%;
+@media (max-width: 1600px) {
+  :root {
+    font-size: 16pt;
+  }
+  #mapa{
     transform: translate(-50%, -50%);
-    border: 2px solid #333;
-    border-radius: 1em;
-}
-.contenedor-joystick>div
-{
-    background: #333;
-    width: 80%;
-    height: 80%;
-    border-radius: 70%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.contenedor-joystick>div>div
-{
-    background: #fff;
-    width: 85%;
-    height: 85%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 85%;
-    cursor: pointer;
-    border: 4px solid #333
+  }
 }
 
-.contenedor-joystick>div>div:hover
-{
-	transform: translateY(-30px);
-}
-.contenedor-joystick h1
-{
-	font-size: 4.5rem;
-    text-align: center;
-    cursor: pointer;
-}
-.contenedor-joystick h1 span
-{
-	display: block;
-    font-size: 1.4rem;
-    cursor: pointer;
-}
-#menuPrincipal 
-{
-    display: flex;
-    justify-content: center;
-
-    background: cadetblue;
+@media (max-width: 1300px) {
+  :root {
+    font-size: 12pt;
+  }
+  #mapa{
+    transform: translate(-50%, -50%) scale(0.8);
+  }
 }
 
-#menuPrincipal img 
-{
-	width: 3.8rem;
-	margin: 1.5em 4em;
-	padding: 1em;
-
-    background: #fff;
-    border-radius: 100em;
-    
-    cursor: pointer;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  color: #333;
 }
 
-#mapa{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    width: 291px;
-    height: 415px;
-    background: transparent;
-}
-#mapa svg{    
-    transform: scale(.5);
-    transform-origin: top left;
-}
-#mapa .relleno{
-    position: relative;
-}
-#mapa .relleno .divrelleno
-{
-    fill: transparent;
-    fill-opacity:1;
-    stroke:#000000;
-    stroke-width:0;
-    stroke-linecap:butt;
-    stroke-linejoin:miter;
-    stroke-miterlimit:4;
-    stroke-dasharray:none;
-    stroke-opacity:1;
-    position: absolute;
-    z-index: 10;
-}
-#mapa .relleno:hover .divrelleno
-{
-    fill: sandybrown;
-    opacity: .5;
-    z-index: 11;
-}
-#mapa .borde{
-    fill:none;
-    stroke:#000000;
-    stroke-width:8;
-    stroke-linecap:butt;
-    stroke-linejoin:miter;
-    stroke-miterlimit:4;
-    stroke-dasharray:none;
-    stroke-opacity:1;
-    transition: stroke-dashoffset 2s ease-in-out;
-}
-#mapa p{
-    position: absolute;
-    top: 0;
-    font-family: sans-serif;
-    transform: rotate(-90deg);
-    font-weight: bolder;
-    text-transform: uppercase;
-    font-size: 0.6rem;
-    color: #333;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
+*::selection {
+  color: auto;
+  background: transparent;
 }
 
-#PantallaSecundaria{
-    position: relative;
-    overflow: hidden;
-    display: grid;
-    grid-template-rows: auto 1fr;
+body {
+  display: grid;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  grid-template-rows: auto 1fr auto;
 }
-#PantallaSecundaria>.indicador-carpeta>h3
-{
-    text-transform: capitalize;
-    font-size: 1rem;
+
+main {
+  display: flex;
 }
-.categoria-menu{
-    position: relative;
-    display: none;
-    height: 100%;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    left: 20px;
+
+main>div {
+  overflow: hidden;
+  transition: width .5s ease-in-out;
+}
+
+#notificaciones {
+  display: flex;
+  background: #fafafa;
+}
+
+#notificacionesDinamicas {
+  display: flex;
+  align-items: center;
+  flex-grow: 10;
+}
+
+#notificacionesEstaticas {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  padding: .5em 3em;
+}
+
+.battery-num {
+  font-size: 0.6rem;
+}
+
+.reloj {
+  padding: .5em 1em;
+  font-size: 0.8rem;
+}
+
+#emergencias {
+  justify-content: center;
+}
+
+#emergencias_container {
+  align-items: center;
+  border: 1px solid #d9d9d9;
+  border-radius: 1rem;
+  padding: 30px;
+  height: 40%;
+}
+
+#emergencias_buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.emergencias_button {
+  padding: 0.3rem 2rem;
+}
+
+.mensaje-confirmacion {
+  padding: 0.5rem 0;
+}
+
+.contenedor-joystick {
+  position: absolute;
+  width: 18rem;
+  height: 18rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid #333;
+  border-radius: 1em;
+}
+
+.contenedor-joystick>div {
+  background: #333;
+  width: 80%;
+  height: 80%;
+  border-radius: 70%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contenedor-joystick>div>div {
+  background: #fff;
+  width: 85%;
+  height: 85%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 85%;
+  cursor: pointer;
+  border: 4px solid #333
+}
+
+.contenedor-joystick>div>div:hover {
+  transform: translateY(-30px);
+}
+
+.contenedor-joystick h1 {
+  font-size: 4.5rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.contenedor-joystick h1 span {
+  display: block;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+#menuPrincipal {
+  display: flex;
+  justify-content: center;
+  background: cadetblue;
+}
+
+#menuPrincipal img {
+  width: 3.8rem;
+  margin: 1.5em 4em;
+  padding: 1em;
+  background: #fff;
+  border-radius: 100em;
+  cursor: pointer;
+}
+
+#mapa {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 291px;
+  height: 415px;
+  background: transparent;
+}
+
+#mapa svg {
+  transform: scale(.5);
+  transform-origin: top left;
+}
+
+#mapa .relleno {
+  position: relative;
+}
+
+#mapa .relleno .divrelleno {
+  fill: transparent;
+  fill-opacity: 1;
+  stroke: #000000;
+  stroke-width: 0;
+  stroke-linecap: butt;
+  stroke-linejoin: miter;
+  stroke-miterlimit: 4;
+  stroke-dasharray: none;
+  stroke-opacity: 1;
+  position: absolute;
+  z-index: 10;
+}
+
+#mapa .relleno:hover .divrelleno {
+  fill: sandybrown;
+  opacity: .5;
+  z-index: 11;
+}
+
+#mapa .borde {
+  fill: none;
+  stroke: #000000;
+  stroke-width: 8;
+  stroke-linecap: butt;
+  stroke-linejoin: miter;
+  stroke-miterlimit: 4;
+  stroke-dasharray: none;
+  stroke-opacity: 1;
+  transition: stroke-dashoffset 2s ease-in-out;
+}
+
+#mapa p {
+  position: absolute;
+  top: 0;
+  font-family: sans-serif;
+  transform: rotate(-90deg);
+  font-weight: bolder;
+  text-transform: uppercase;
+  font-size: 0.6rem;
+  color: #333;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+#PantallaSecundaria {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+#PantallaSecundaria>.indicador-carpeta>h3 {
+  text-transform: capitalize;
+  font-size: 1rem;
+}
+
+.categoria-menu {
+  position: relative;
+  display: none;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  left: 20px;
+  align-items: center;
+}
+
+/*ESTILOS TV*/
+
+.contenedor-tv{
+	display: none;
+	grid-template-rows: auto auto;
+  background: #fff;
+  z-index: 300;
+}
+
+.mando{
+	display: grid;
+	grid-template-columns: repeat(5, 70px);
+	grid-template-rows: repeat(5, 60px);
+	justify-content: center; /*Bien*/
+	justify-items: center; /*Bien*/
+	width: 100%;
+	height: 100%;
+	line-height: 60px;
+	font-family: sans-serif;
+	font-size: 15px;
+	cursor: pointer;
+  align-items: center;
+}
+
+.boton {
+	background-color: #D9D9D9;
+	grid-template-rows: 1fr auto 1fr;
+	text-align: center; /*Bien*/
+	width: 80%;
+	height: 100%;
+}
+
+.boton_arriba {
+	background-color: #D9D9D9;
+	width: 80%;
+	height: 100%;
+	text-align: center;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	cursor: pointer;
+}
+
+.boton_abajo {
+	background-color: #D9D9D9;
+	width: 80%;
+	height: 100%;
+	text-align: center;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	cursor: pointer;
+}
+
+.header {
+	font-family: sans-serif;
+	font-size: 15px;
+	text-align: center;
+	padding-top: 25px;
+}
+
+.letrero {
+	line-height: 5px;
+	font-family: sans-serif;
+	font-size: 10px;
 }
 
 
 /*ESTILOS TELEFONO*/
-.indicador-carpeta{
-    padding: 1em 2em;
-    color: #333;
+.indicador-carpeta {
+  padding: 1em 2em;
+  color: #333;
 }
-.teclado{
-    display: grid;
-    grid-template-columns: repeat(3,80px);
-    grid-template-rows: repeat(4,50px);
-    align-items: center;
-    justify-content: center;
+
+.teclado {
+  display: grid;
+  grid-template-columns: repeat(3, 80px);
+  grid-template-rows: repeat(4, 50px);
+  align-items: center;
+  justify-content: center;
 }
+
 .teclado button {
-    background: transparent;
-    border: none;
+  background: transparent;
+  border: none;
 }
-.teclado button:focus{
-    outline: none;
+
+.teclado button:focus {
+  outline: none;
 }
-.teclado button .numero{
-   font-size: 1rem;
+
+.teclado button .numero {
+  font-size: 1rem;
 }
-.teclado button .letras{
-   font-size: 0.4rem;
-   color: #555;
+
+.teclado button .letras {
+  font-size: 0.4rem;
+  color: #555;
 }
+
 #teléfono .inputNumero {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
+
 .inputNumero p {
-    font-size: 1.4rem;
-    font-weight: bolder;
-    text-align: center;
-    line-height: 3;
-    padding-top: 6%;
+  font-size: 1.4rem;
+  font-weight: bolder;
+  text-align: center;
+  line-height: 3;
+  padding-top: 6%;
 }
+
 #teléfono .contenedor-botones {
-    padding: 1em 0;
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    width: 180px;
-    margin: 0 auto;
-    grid-template-columns: repeat(3,80px);
+  padding: 1em 0;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  width: 180px;
+  margin: 0 auto;
+  grid-template-columns: repeat(3, 80px);
 }
+
 .contenedor-botones>* {
-    display: table;
-    margin: 0 auto;
+  display: table;
+  margin: 0 auto;
 }
+
 #teléfono svg#btn-borrar {
-    width: 30px;
-    height: 30px;
+  width: 30px;
+  height: 30px;
 }
+
 #teléfono #iconoLlamar {
-    background: green;
-    padding: 0.5em;
-    width: 50px;
-    height: 50px;
-    border-radius: 60px;
+  background: green;
+  padding: 0.5em;
+  width: 50px;
+  height: 50px;
+  border-radius: 60px;
 }
-.menu-telefono{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    transition: transform .2s ease-in-out;
+
+.menu-telefono {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: transform .2s ease-in-out;
 }
-.menu-telefono input[type="radio"]
-{
-    display: none
+
+.menu-telefono input[type="radio"] {
+  display: none
 }
-.menu-telefono label{
-    font-size:0.8rem;
-    margin:0 2em;
+
+.menu-telefono label {
+  font-size: 0.8rem;
+  margin: 0 2em;
 }
-.menu-telefono input[type="radio"]:checked + label {
-    font-weight: bolder;
-    color: green;
-    border-bottom: 5px dotted;
+
+.menu-telefono input[type="radio"]:checked+label {
+  font-weight: bolder;
+  color: green;
+  border-bottom: 5px dotted;
 }
 
 /*ESTILOS PARTE DOMOTICA*/
-#ventanaEstancia{
-    background: #fff;
-    position: absolute;
-    z-index: 10;
-    display: none;
-    grid-template-columns: repeat(3,8rem);
-    justify-content: center;
-    justify-self: center;
-    width: 100%;
-    height: 100%;
+#ventanaEstancia {
+  background: #fff;
+  position: absolute;
+  z-index: 10;
+  display: none;
+  grid-template-columns: repeat(3, 8rem);
+  justify-content: center;
+  justify-self: center;
+  width: 100%;
+  height: 100%;
 }
+
 #ventanaEstancia>div {
-    padding: 0.5em;
-    text-align: center;
+  padding: 0.5em;
+  text-align: center;
 }
+
 #ventanaEstancia>div>img {
-    width: 3.5em;
+  width: 3.5em;
+  cursor: pointer;
 }
-#ventanaEstancia>div>h4{
-    font-size: 0.9rem;
+
+#ventanaEstancia>div>h4 {
+  font-size: 0.9rem;
 }
+
 #ventanaEstancia>div>p {
-    font-size: 0.7rem;
+  font-size: 0.7rem;
 }
