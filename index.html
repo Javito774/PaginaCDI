@@ -118,7 +118,7 @@
 					     <path class="divrelleno"
 					       d="m 131.22679,456.51711 3e-5,-134.32699 H 13.627374 v 182.9962 l 117.599446,10e-6 z"
 					       id="path4745" onclick="mostrarHabitacion(8)"/>
-					    <path class="borde" 
+					    <path class="borde"
 					       d="M 131.22682,456.51711 V 322.19012 H 13.627374 v 182.9962 H 131.22682 v -9.24716"
 					       id="path174"/>
 					  </g>
@@ -214,10 +214,43 @@
 					  </g>
 					</svg>
 				</div>
+				<div class="contenedor-tv" habitacion='' electrodomestico=''>
+					<div class="header">
+						<p>TV apagada. Pulse cualquier botón para encenderla</p>
+					</div>
+					<div class="mando">
+						<div class="boton_arriba"><img src="assets/keyboard_arrow_up-24px.svg"></div>
+						<div>1</div>
+						<div>2</div>
+						<div>3</div>
+						<div class="boton_arriba"><img src="assets/add.svg"></div>
+						<div class="boton">CH</div>
+						<div>4</div>
+						<div>5</div>
+						<div>6</div>
+						<div class="boton" style="align-self: center; justify-self: center;">VOL</div>
+						<div class="boton_abajo"><img src="assets/expand_more-24px.svg"></div>
+						<div>7</div>
+						<div>8</div>
+						<div>9</div>
+						<div class="boton_abajo"><img src="assets/remove.svg"></div>
+						<div></div>
+						<div>
+							<img src="assets/arrow_back.svg">
+							<p class="letrero">ATRÁS</p>
+						</div>
+
+						<div>0</div>
+						<div>
+							<img src="assets/volume_off.svg">
+							<p class="letrero">DESACTIVAR</p>
+						</div>
+					</div>
+				</div>
 				<div id="ventanaEstancia">
-					 
+
 				</div>
-				</div>
+			</div>
 			<div class="categoria-menu" id="servicios">
 				Aqui va los servicios
 				<!--<video src="assets/Peliculas/HP7.2010.BRRip.720p.Bluray.YIFY.mkv" type='video/x-matroska; codecs="theora, vorbis"' autoplay style="width: 100%;
@@ -277,7 +310,15 @@
 					</div>
 				</div>
 			</div>
-			<div class="categoria-menu" id="emergencias">Aqui va Emergencias</div>
+			<div class="categoria-menu" id="emergencias">
+				<div id='emergencias_container'>
+		        <p class='mensaje-confirmacion'>¿Está seguro de que desea llamar a emergencias?</p>
+		        <div id='emergencias_buttons'>
+		            <button class='emergencias_button' style="background-color: #4ecf32;">SI</button>
+		            <button class='emergencias_button' style="background-color: red;">NO</button>
+		        </div>
+		    </div>
+			</div>
 		</div>
 		<div id="controlesSilla" style="width:100%;position: relative;">
 			<div class="contenedor-joystick">

@@ -197,7 +197,7 @@ function mostrarHabitacion(numeroHabitacion)
 				estancia.electrodomesticos[i].nombre=estancia.electrodomesticos[i].room1.nombre;
 		}
 		if(estancia.electrodomesticos[i].tieneInterfaz)
-			ventana.innerHTML+='<div><img src="'+estancia.electrodomesticos[i].icono+'"/><h4>'+estancia.electrodomesticos[i].nombre+'</h4><p>'+estancia.electrodomesticos[i].estado+'</p></div>';
+			ventana.innerHTML+='<div onclick="habitaciones['+numeroHabitacion+'].electrodomesticos['+i+'].interfaz.style.display=\'grid\';"><img src="'+estancia.electrodomesticos[i].icono+'"/><h4>'+estancia.electrodomesticos[i].nombre+'</h4><p>'+estancia.electrodomesticos[i].estado+'</p></div>';
 		else
 			ventana.innerHTML+='<div onclick="habitaciones['+numeroHabitacion+'].electrodomesticos['+i+'].cambiarEstado();habitaciones['+numeroHabitacion+'].electrodomesticos['+i+'].imprimir(this);"><img src="'+estancia.electrodomesticos[i].icono+'"/><h4>'+estancia.electrodomesticos[i].nombre+'</h4><p>'+estancia.electrodomesticos[i].estado+'</p></div>';
 	}
