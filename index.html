@@ -185,13 +185,13 @@
 					<label for="contactos-menu" style="cursor:pointer;">Contactos</label>
 				</div>
 				<div class="pantallas">
-					<div id="llamada">
-						<h2 style="display: flex; justify-content: center; align-items: center;">Aa Mama</h2>
+					<div id="llamada" style="display: none;">
+						<h2 style=" display: flex; justify-content: center; align-items: center;">Aa Mama</h2>
 						<p style="text-align: center; padding:1rem;">0034992 | SPRINGFIELD</p>
 						<img src="imagenes/margeD.png" class="foto-contacto">
 						<img src="assets/call_end.svg" class="boton-colgar">
 					</div>
-					<div id="telefonia">
+					<div id="telefonia" style="display: none;">
 						<div class="inputNumero">
 							<p style="color: transparent;">3</p>
 							<p class="numTelefono"> </p>
@@ -266,26 +266,27 @@
 							<p class="letra">A</p>
 							<div class="contenedor-contactos">
 								<div class="contacto">
-									<!-- <img src="imagenes/margeD.png"> -->
+									<!-- <img src="imagenes/margeD.png" class="foto-listaContactos"> -->
 									<p class="nombre-contacto">Aa Mama</p>
-									<!-- <img src="imagenes/homerD.png"> -->
+									<hr>
+									<!-- <img src="imagenes/homerD.png" class="foto-listaContactos"> -->
 									<p class="nombre-contacto">Aa Papa</p>
 								</div>
 							</div>
-							<p class="letra">L</p>
+							<!-- <p class="letra">L</p>
 							<div class="contenedor-contactos">
 								<div class="contacto">
-									<!-- <img src="imagenes/lisaD.png"> -->
+									<img src="imagenes/lisaD.png">
 									<p class="nombre-contacto">Lisa</p>
 								</div>
-							</div>
+							</div> -->
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="categoria-menu" id="emergencias">
-				<div id='emergencias_container'>
-					<p class='mensaje-confirmacion'>¿Está seguro de que desea llamar a emergencias?</p>
+				<div id="emergencias_container">
+					<p class="mensaje-confirmacion">¿Está seguro de que desea llamar a emergencias?</p>
 					<div id='emergencias_buttons'>
 						<button class='emergencias_button' style="background-color: #4ecf32;">SI</button>
 						<button class='emergencias_button' style="background-color: red;">NO</button>

@@ -48,6 +48,12 @@ main>div {
   transition: width .5s ease-in-out;
 }
 
+hr {
+  border-bottom: none;
+  margin: 1rem auto;
+  
+}
+
 #notificaciones {
   display: flex;
   background: #fafafa;
@@ -256,11 +262,33 @@ main>div {
 }
 
 /* ESTILOS LISTA DE CONTACTOS */
-.contactos {
-  height: 80vh;
-  overflow: hidden;
-  overflow-y: scroll;
+
+.pantallas {
+  height: 100%;
 }
+
+#contactos {
+  margin-left: 6rem;
+  /* overflow: hidden;
+  overflow-y: scroll; */
+}
+
+.letra {
+  font-size: 18pt;
+  padding: 1rem 0;
+}
+
+.contacto {
+  border: 0.12rem solid #d9d9d9;
+  border-radius: 0.7rem;
+  padding: 2rem;
+  width: 99%;
+}
+
+/* .foto-listaContactos {
+  width: 13%;
+  float: left;
+} */
 
 /*ESTILOS TV*/
 .contenedor-tv {
