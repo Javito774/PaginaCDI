@@ -246,11 +246,42 @@ main>div {
 .categoria-menu {
   position: relative;
   display: none;
-  height: 100%;
+  height: 90%;
   overflow-x: hidden;
   overflow-y: scroll;
   left: 20px;
   align-items: center;
+}
+
+/* ESTILOS LISTA DE CONTACTOS */
+
+.contactos {
+  height: 80vh;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+/* ESTILOS UN SÓLO CONTACTO RECORDAR CAMBIAR LO DE LOS SERVICIOS */
+
+.categoria-menu#servicios {
+  justify-content: center;
+  align-self: center;
+}
+
+.boton-colgar {
+  width: 23%;
+  cursor: pointer;
+  display:block;
+  margin:auto;
+  border-radius: 2rem;
+  padding: 4rem;
+}
+
+
+.foto-contacto {
+  width: 30%;
+  display:block;
+  margin:auto;
 }
 
 /*ESTILOS TV*/
@@ -320,8 +351,13 @@ main>div {
 
 
 /*ESTILOS TELEFONO*/
+
+#telefonia { /*RECORDAR CAMBIAR */
+  display: none;
+}
+
 .indicador-carpeta {
-  padding: 1em 2em;
+  padding: 0.6em 2em;
   color: #333;
 }
 
