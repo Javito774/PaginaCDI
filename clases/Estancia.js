@@ -5,6 +5,5 @@ class Estancia
 		this.id = idAux;
  		this.nombre = nombreAux;
 		this.electrodomesticos = [];
-		this.interfaz = document.querySelector("#ventanaEstancia");
 	}
 }

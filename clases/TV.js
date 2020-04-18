@@ -4,7 +4,6 @@ class TV extends Electrodomestico{
 		super(idAux,'TV','apagada',"assets/tv.svg",true);
 		this.canal = null;
 		this.vol = 0;
-		this.interfaz = document.querySelector(".contenedor-tv");
 	}
 	cambiarCanal(canal)
 	{

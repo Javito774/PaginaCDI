@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>Silla de Ruedas</title>
 	<link rel="stylesheet" type="text/css" href="estilos.css">
@@ -29,6 +30,7 @@
 	<script type="text/javascript" src="scripts.js"></script>
 	<meta charset="utf-8">
 </head>
+
 <body>
 	<div id="notificaciones">
 		<p class="reloj"><span class="horas">00</span>:<span class="minutos">00</span></p>
@@ -41,7 +43,6 @@
 	<main>
 		<div id="PantallaSecundaria" style="width:0%;">
 			<div class="indicador-carpeta">
-				<img onclick="retrocederVentana();" src="assets/arrow_back.svg">
 				<h3></h3>
 			</div>
 			<div class="categoria-menu" id="domótica">
@@ -82,145 +83,54 @@
 					    top: 213px;
 					    left: 181px;
 					">Entrada</p>
-					<svg
-					   id="svg64"
-					   width="583.40747"
-					   height="829.81403"
-					   viewBox="0 0 583.40747 829.81403">
-					  <g
-					     id="habitacion2"
-					     style="display:inline"
-					     transform="translate(-9.185704,-8.582418)"
-					     class="relleno">
-					    <path class="divrelleno"
-					       d="m 131.16349,439.96962 0.0633,65.21671 H 13.627374 V 834.39642 H 201.77618 l -0.52903,-394.3881 z"
-					       id="path4748" onclick="mostrarHabitacion(6)"/>
-					    <path class="borde"
-					       d="m 139.43726,439.96962 h -8.27377 l 0.0633,16.54749"
-					       id="path179"/>
-					    <path class="borde"
-					       d="m 190.78327,439.96962 10.46388,0.0387 0.52903,394.3881 H 13.627374 V 505.18633 H 131.22682 v -9.24716"
-					       id="path185"/>
-					  </g>
-					  <g
-					     id="baño1"
-					     style="display:inline"
-					     transform="translate(-9.185704,-8.582418)"
-					     class="relleno">
-					     <path class="divrelleno"
-					       d="m 201.24715,440.00832 -0.15926,132.8393 159.68246,0.6883 1.08513,-133.5663 z"
-					       id="path4742" onclick="mostrarHabitacion(7)"/>
-					    <path class="borde"
-					       d="m 211.46768,439.96962 -10.22053,0.0387 -0.15926,132.8393 159.68246,0.6883 1.08513,-133.5663 H 260.86689"
-					       id="path188"/>
-					  </g>
-					  <g
-					     id="baño2"
-					     transform="translate(-9.185704,-8.582418)"
-					     class="relleno">
-					     <path class="divrelleno"
-					       d="m 131.22679,456.51711 3e-5,-134.32699 H 13.627374 v 182.9962 l 117.599446,10e-6 z"
-					       id="path4745" onclick="mostrarHabitacion(8)"/>
-					    <path class="borde"
-					       d="M 131.22682,456.51711 V 322.19012 H 13.627374 v 182.9962 H 131.22682 v -9.24716"
-					       id="path174"/>
-					  </g>
-					  <g
-					     id="cocina"
-					     transform="translate(-9.185704,-8.582418)"
-					     class="relleno">
-					     <path class="divrelleno"
-					       d="M 343.60456,376.21292 H 498.12928 V 13.270718 H 343.60456 Z"
-					       id="path4716" onclick="mostrarHabitacion(1)"/>
-					    <path class="borde"
-					       d="m 408.95041,376.68596 -65.34585,-0.47304 V 13.270718 H 498.12928 V 376.21292 l -40.31054,0.47304"
-					       id="path131"/>
-					  </g>
-					  <g
-					     id="estudio"
-					     style="display:inline"
-					     transform="translate(-9.185704,-8.582418)"
-					     class="relleno">
-					     <path class="divrelleno"
-					       d="M 198.32699,376.21292 H 343.60456 V 13.270718 l -145.95809,-0.6883 z"
-					       id="path4719" onclick="mostrarHabitacion(4)"/>
-					    <path class="borde"
-					       d="m 257.70342,376.34182 85.90114,-0.1289 V 13.270718 H 198.32699 V 376.21292 l 9.73384,0.1289"
-					       id="path139"/>
-					  </g>
-					  <g
-					     id="Salon"
-					     style="display:inline"
-					     transform="translate(-9.185704,-8.582418)"
-					     class="relleno">
-					     <path class="divrelleno"
-					       d="m 361.45864,524.66755 160.76189,1.37657 v 111.9891 l 66.37264,-0.4867 v 196.8499 H 201.77618 l -0.68829,-261.5488 159.68246,0.6883 z"
-					       id="path4713" onclick="mostrarHabitacion(3)"/>
-					    <path class="borde"
-					       d="m 437.17015,526.04412 h 85.05038 v 111.9891 l 66.37264,-0.4867 v 196.8499 H 201.77618 l -0.68829,-261.5488 159.68246,0.6883 0.68829,-48.86837 h 31.66118"
-					       id="path76"/>
-					  </g>
-					  <g
-					     id="habitacion1"
-					     transform="translate(-9.185704,-8.582418)"
-					     class="relleno">
-					     <path class="divrelleno"
-					       d="M 197.64647,12.582418 H 13.185704 V 320.93472 l 118.041116,1.2554 0.18002,54.1517 66.92015,-0.1289 z"
-					       id="path4736" onclick="mostrarHabitacion(5)"/>
-					    <path class="borde"
-					       d="m 139.43726,376.34182 h -8.03042 l -0.18002,-54.1517 -118.041116,-1.2554 V 12.582418 H 197.64647 l 0.68052,363.630502 -7.54372,0.1289"
-					       id="path4709"/>
-					  </g>
-					  <g
-					     id="Entrada"
-					     style="display:inline"
-					     transform="translate(-9.185704,-8.582418)"
-					     class="relleno">
-					     <path class="divrelleno"
-					       d="m 498.12928,376.21292 -136.3265,0.1289 -0.34414,148.32573 136.62487,1.37657 z"
-					       id="path4711" onclick="mostrarHabitacion(0)"/>
-					    <path class="borde"
-					       d="m 393.11982,524.66755 h -31.66118 l 0.34414,-92.40246"
-					       id="path81"/>
-					    <path class="borde"
-					       d="m 361.80278,387.3544 v -11.01258 l 47.14763,0.34414"
-					       id="path83"/>
-					    <path class="borde"
-					       d="m 457.81874,376.68596 c 1.72072,-0.68829 40.60891,-0.34414 40.60891,-0.34414 l -0.34414,11.01258"
-					       id="path85"/>
-					    <path class="borde"
-					       d="m 498.42765,434.50202 -0.34414,91.5421 h -60.91336"
-					       id="path87"/>
-					  </g>
-					  <g
-					     id="Pasillo"
-					     transform="translate(-9.185704,-8.582418)"
-					     class="relleno">
-					     <path class="divrelleno"
-					       d="M 361.80278,376.34182 H 131.40684 l -0.24335,63.6278 h 230.69199 z"
-					       id="path4739" onclick="mostrarHabitacion(2)"/>
-					    <path class="borde"
-					       d="m 361.80278,432.26509 0.0527,7.70453 H 260.86689"
-					       id="path105"/>
-					    <path class="borde"
-					       d="M 361.80278,387.3544 V 376.34182 H 257.70342"
-					       id="path107"/>
-					    <path class="borde"
-					       d="M 208.06083,376.34182 H 190.78327"
-					       id="path109"/>
-					    <path class="borde"
-					       d="m 139.43726,376.34182 h -8.03042 l -0.24335,63.6278 h 8.27377"
-					       id="path111"/>
-					    <path class="borde"
-					       d="m 190.78327,439.96962 h 20.68441"
-					       id="path119"/>
-					  </g>
+					<svg id="svg64" width="583.40747" height="829.81403" viewBox="0 0 583.40747 829.81403">
+						<g id="habitacion2" style="display:inline" transform="translate(-9.185704,-8.582418)" class="relleno">
+							<path class="divrelleno" d="m 131.16349,439.96962 0.0633,65.21671 H 13.627374 V 834.39642 H 201.77618 l -0.52903,-394.3881 z" id="path4748" onclick="mostrarHabitacion(6)" />
+							<path class="borde" d="m 139.43726,439.96962 h -8.27377 l 0.0633,16.54749" id="path179" />
+							<path class="borde" d="m 190.78327,439.96962 10.46388,0.0387 0.52903,394.3881 H 13.627374 V 505.18633 H 131.22682 v -9.24716" id="path185" />
+						</g>
+						<g id="baño1" style="display:inline" transform="translate(-9.185704,-8.582418)" class="relleno">
+							<path class="divrelleno" d="m 201.24715,440.00832 -0.15926,132.8393 159.68246,0.6883 1.08513,-133.5663 z" id="path4742" onclick="mostrarHabitacion(7)" />
+							<path class="borde" d="m 211.46768,439.96962 -10.22053,0.0387 -0.15926,132.8393 159.68246,0.6883 1.08513,-133.5663 H 260.86689" id="path188" />
+						</g>
+						<g id="baño2" transform="translate(-9.185704,-8.582418)" class="relleno">
+							<path class="divrelleno" d="m 131.22679,456.51711 3e-5,-134.32699 H 13.627374 v 182.9962 l 117.599446,10e-6 z" id="path4745" onclick="mostrarHabitacion(8)" />
+							<path class="borde" d="M 131.22682,456.51711 V 322.19012 H 13.627374 v 182.9962 H 131.22682 v -9.24716" id="path174" />
+						</g>
+						<g id="cocina" transform="translate(-9.185704,-8.582418)" class="relleno">
+							<path class="divrelleno" d="M 343.60456,376.21292 H 498.12928 V 13.270718 H 343.60456 Z" id="path4716" onclick="mostrarHabitacion(1)" />
+							<path class="borde" d="m 408.95041,376.68596 -65.34585,-0.47304 V 13.270718 H 498.12928 V 376.21292 l -40.31054,0.47304" id="path131" />
+						</g>
+						<g id="estudio" style="display:inline" transform="translate(-9.185704,-8.582418)" class="relleno">
+							<path class="divrelleno" d="M 198.32699,376.21292 H 343.60456 V 13.270718 l -145.95809,-0.6883 z" id="path4719" onclick="mostrarHabitacion(4)" />
+							<path class="borde" d="m 257.70342,376.34182 85.90114,-0.1289 V 13.270718 H 198.32699 V 376.21292 l 9.73384,0.1289" id="path139" />
+						</g>
+						<g id="Salon" style="display:inline" transform="translate(-9.185704,-8.582418)" class="relleno">
+							<path class="divrelleno" d="m 361.45864,524.66755 160.76189,1.37657 v 111.9891 l 66.37264,-0.4867 v 196.8499 H 201.77618 l -0.68829,-261.5488 159.68246,0.6883 z" id="path4713" onclick="mostrarHabitacion(3)" />
+							<path class="borde" d="m 437.17015,526.04412 h 85.05038 v 111.9891 l 66.37264,-0.4867 v 196.8499 H 201.77618 l -0.68829,-261.5488 159.68246,0.6883 0.68829,-48.86837 h 31.66118" id="path76" />
+						</g>
+						<g id="habitacion1" transform="translate(-9.185704,-8.582418)" class="relleno">
+							<path class="divrelleno" d="M 197.64647,12.582418 H 13.185704 V 320.93472 l 118.041116,1.2554 0.18002,54.1517 66.92015,-0.1289 z" id="path4736" onclick="mostrarHabitacion(5)" />
+							<path class="borde" d="m 139.43726,376.34182 h -8.03042 l -0.18002,-54.1517 -118.041116,-1.2554 V 12.582418 H 197.64647 l 0.68052,363.630502 -7.54372,0.1289" id="path4709" />
+						</g>
+						<g id="Entrada" style="display:inline" transform="translate(-9.185704,-8.582418)" class="relleno">
+							<path class="divrelleno" d="m 498.12928,376.21292 -136.3265,0.1289 -0.34414,148.32573 136.62487,1.37657 z" id="path4711" onclick="mostrarHabitacion(0)" />
+							<path class="borde" d="m 393.11982,524.66755 h -31.66118 l 0.34414,-92.40246" id="path81" />
+							<path class="borde" d="m 361.80278,387.3544 v -11.01258 l 47.14763,0.34414" id="path83" />
+							<path class="borde" d="m 457.81874,376.68596 c 1.72072,-0.68829 40.60891,-0.34414 40.60891,-0.34414 l -0.34414,11.01258" id="path85" />
+							<path class="borde" d="m 498.42765,434.50202 -0.34414,91.5421 h -60.91336" id="path87" />
+						</g>
+						<g id="Pasillo" transform="translate(-9.185704,-8.582418)" class="relleno">
+							<path class="divrelleno" d="M 361.80278,376.34182 H 131.40684 l -0.24335,63.6278 h 230.69199 z" id="path4739" onclick="mostrarHabitacion(2)" />
+							<path class="borde" d="m 361.80278,432.26509 0.0527,7.70453 H 260.86689" id="path105" />
+							<path class="borde" d="M 361.80278,387.3544 V 376.34182 H 257.70342" id="path107" />
+							<path class="borde" d="M 208.06083,376.34182 H 190.78327" id="path109" />
+							<path class="borde" d="m 139.43726,376.34182 h -8.03042 l -0.24335,63.6278 h 8.27377" id="path111" />
+							<path class="borde" d="m 190.78327,439.96962 h 20.68441" id="path119" />
+						</g>
 					</svg>
 				</div>
-				<div id="ventanaEstancia">
-
-				</div>
-				<div class="contenedor-tv contenedor-electrodomestico">
+				<div class="contenedor-tv" habitacion='' electrodomestico=''>
 					<div class="header">
 						<p>TV apagada. Pulse cualquier botón para encenderla</p>
 					</div>
@@ -253,41 +163,12 @@
 						</div>
 					</div>
 				</div>
-				<div class="contenedor-microondas contenedor-electrodomestico"></div>
-				<div class="contenedor-vitro contenedor-electrodomestico"></div>
-				<div class="contenedor-nevera contenedor-electrodomestico">
-					<div class="menu-nevera">
-						<input id="nevera-menu" type="radio" name="select-nevera" checked="true">
-						<label for="nevera-menu" onclick="electrodomesticoActual.mostrarInterfazNevera();">Nevera</label>
-						<input id="congelador-menu" type="radio" name="select-nevera">
-						<label for="congelador-menu" onclick="electrodomesticoActual.mostrarInterfazCongelador();">Congelador</label>
-					</div>
-					<div class="boton-apagado">
-						<img src="assets/power_settings_new.png">
-						<p class="estado">apagado</p>
-					</div>
-					<div class="contenedor-mensaje">
-					</div>
+				<div id="ventanaEstancia">
+
 				</div>
-				<div class="contenedor-termostato contenedor-electrodomestico">
-					<div class="menu-termostato">
-						<input id="termostato-menu" type="radio" name="select-termostato" checked="true">
-						<label for="termostato-menu">Manual</label>
-						<input id="programa-menu" type="radio" name="select-termostato">
-						<label for="programa-menu">Programa</label>
-					</div>
-					<div class="boton-apagado">
-						<img src="assets/power_settings_new.png">
-						<p class="estado">apagado</p>
-					</div>
-					<div class="contenedor-mensaje">
-						<p class="mensaje">La nevera está apagada, pulse el botón de encendido para iniciar el sistema.</p>
-					</div>
-				</div>
-				<div class="contenedor-grifo contenedor-electrodomestico"></div>
 			</div>
 			<div class="categoria-menu" id="servicios">
-				Aqui va los servicios
+
 				<!--<video src="assets/Peliculas/HP7.2010.BRRip.720p.Bluray.YIFY.mkv" type='video/x-matroska; codecs="theora, vorbis"' autoplay style="width: 100%;
 			    height: auto;
 			    position: absolute;
@@ -297,38 +178,86 @@
 			<div class="categoria-menu" id="teléfono">
 				<div class="menu-telefono">
 					<input id="telefono-menu" type="radio" name="select-telefono" checked="true">
-					<label for="telefono-menu">Teléfono</label>
+					<label for="telefono-menu" style="cursor:pointer;">Teléfono</label>
 					<input id="recientes-menu" type="radio" name="select-telefono">
-					<label for="recientes-menu">Recientes</label>
+					<label for="recientes-menu" style="cursor:pointer;">Recientes</label>
 					<input id="contactos-menu" type="radio" name="select-telefono">
-					<label for="contactos-menu">Contactos</label>
+					<label for="contactos-menu" style="cursor:pointer;">Contactos</label>
 				</div>
 				<div class="pantallas">
-					<div id="telefonia">
+					<div id="llamada" style="display: none;">
+						<h2 style=" display: flex; justify-content: center; align-items: center;">Aa Mama</h2>
+						<p style="text-align: center; padding:1rem;">0034992 | SPRINGFIELD</p>
+						<img src="imagenes/margeD.png" class="foto-contacto">
+						<img src="assets/call_end.svg" class="boton-colgar">
+					</div>
+					<div id="telefonia" style="display: none;">
 						<div class="inputNumero">
 							<p style="color: transparent;">3</p>
 							<p class="numTelefono"> </p>
 						</div>
 						<div class="teclado">
-							<button onclick="aniadirNumeroATelefono('1');"><p class="numero">1</p><p class="letras"></p></button>
-							<button onclick="aniadirNumeroATelefono('2');"><p class="numero">2</p><p class="letras">ABC</p></button>
-							<button onclick="aniadirNumeroATelefono('3');"><p class="numero">3</p><p class="letras">DEF</p></button>
-							<button onclick="aniadirNumeroATelefono('4');"><p class="numero">4</p><p class="letras">GHI</p></button>
-							<button onclick="aniadirNumeroATelefono('5');"><p class="numero">5</p><p class="letras">JKL</p></button>
-							<button onclick="aniadirNumeroATelefono('6');"><p class="numero">6</p><p class="letras">MNO</p></button>
-							<button onclick="aniadirNumeroATelefono('7');"><p class="numero">7</p><p class="letras">PQRS</p></button>
-							<button onclick="aniadirNumeroATelefono('8');"><p class="numero">8</p><p class="letras">TUV</p></button>
-							<button onclick="aniadirNumeroATelefono('9');"><p class="numero">9</p><p class="letras">WXYZ</p></button>
-							<button onclick="aniadirNumeroATelefono('*');"><p class="numero">*</p><p class="letras"></p></button>
-							<button onclick="aniadirNumeroATelefono('0');"><p class="numero">0</p><p class="letras">+</p></button>
-							<button onclick="aniadirNumeroATelefono('#');"><p class="numero">#</p><p class="letras"></p></button>
+							<button onclick="aniadirNumeroATelefono('1');">
+								<p class="numero">1</p>
+								<p class="letras"></p>
+							</button>
+							<button onclick="aniadirNumeroATelefono('2');">
+								<p class="numero">2</p>
+								<p class="letras">ABC</p>
+							</button>
+							<button onclick="aniadirNumeroATelefono('3');">
+								<p class="numero">3</p>
+								<p class="letras">DEF</p>
+							</button>
+							<button onclick="aniadirNumeroATelefono('4');">
+								<p class="numero">4</p>
+								<p class="letras">GHI</p>
+							</button>
+							<button onclick="aniadirNumeroATelefono('5');">
+								<p class="numero">5</p>
+								<p class="letras">JKL</p>
+							</button>
+							<button onclick="aniadirNumeroATelefono('6');">
+								<p class="numero">6</p>
+								<p class="letras">MNO</p>
+							</button>
+							<button onclick="aniadirNumeroATelefono('7');">
+								<p class="numero">7</p>
+								<p class="letras">PQRS</p>
+							</button>
+							<button onclick="aniadirNumeroATelefono('8');">
+								<p class="numero">8</p>
+								<p class="letras">TUV</p>
+							</button>
+							<button onclick="aniadirNumeroATelefono('9');">
+								<p class="numero">9</p>
+								<p class="letras">WXYZ</p>
+							</button>
+							<button onclick="aniadirNumeroATelefono('*');">
+								<p class="numero">*</p>
+								<p class="letras"></p>
+							</button>
+							<button onclick="aniadirNumeroATelefono('0');">
+								<p class="numero">0</p>
+								<p class="letras">+</p>
+							</button>
+							<button onclick="aniadirNumeroATelefono('#');">
+								<p class="numero">#</p>
+								<p class="letras"></p>
+							</button>
 						</div>
 						<div class="contenedor-botones">
 							<div></div>
 							<svg height="24" viewBox="0 0 24 24" width="24" id="iconoLlamar">
-								<path d="M0 0h24v24H0V0z" fill="none"/><path d="M19.23 15.26l-2.54-.29c-.61-.07-1.21.14-1.64.57l-1.84 1.84c-2.83-1.44-5.15-3.75-6.59-6.59l1.85-1.85c.43-.43.64-1.03.57-1.64l-.29-2.52c-.12-1.01-.97-1.77-1.99-1.77H5.03c-1.13 0-2.07.94-2 2.07.53 8.54 7.36 15.36 15.89 15.89 1.13.07 2.07-.87 2.07-2v-1.73c.01-1.01-.75-1.86-1.76-1.98z" fill="#fff"/>
+								<path d="M0 0h24v24H0V0z" fill="none" />
+								<path
+									d="M19.23 15.26l-2.54-.29c-.61-.07-1.21.14-1.64.57l-1.84 1.84c-2.83-1.44-5.15-3.75-6.59-6.59l1.85-1.85c.43-.43.64-1.03.57-1.64l-.29-2.52c-.12-1.01-.97-1.77-1.99-1.77H5.03c-1.13 0-2.07.94-2 2.07.53 8.54 7.36 15.36 15.89 15.89 1.13.07 2.07-.87 2.07-2v-1.73c.01-1.01-.75-1.86-1.76-1.98z"
+									fill="#fff" />
 							</svg>
-							<svg onclick="quitarNumeroATelefono();" id="btn-borrar" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M22 3H7c-.69 0-1.23.35-1.59.88L0 12l5.41 8.11c.36.53.9.89 1.59.89h15c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-3 12.59L17.59 17 14 13.41 10.41 17 9 15.59 12.59 12 9 8.41 10.41 7 14 10.59 17.59 7 19 8.41 15.41 12 19 15.59z" fill="#333"/>
+							<svg onclick="quitarNumeroATelefono();" id="btn-borrar" height="24" viewBox="0 0 24 24" width="24">
+								<path d="M0 0h24v24H0z" fill="none" />
+								<path d="M22 3H7c-.69 0-1.23.35-1.59.88L0 12l5.41 8.11c.36.53.9.89 1.59.89h15c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-3 12.59L17.59 17 14 13.41 10.41 17 9 15.59 12.59 12 9 8.41 10.41 7 14 10.59 17.59 7 19 8.41 15.41 12 19 15.59z"
+									fill="#333" />
 							</svg>
 						</div>
 					</div>
@@ -337,22 +266,32 @@
 							<p class="letra">A</p>
 							<div class="contenedor-contactos">
 								<div class="contacto">
-									<img src="">
+									<!-- <img src="imagenes/margeD.png" class="foto-listaContactos"> -->
 									<p class="nombre-contacto">Aa Mama</p>
+									<hr>
+									<!-- <img src="imagenes/homerD.png" class="foto-listaContactos"> -->
+									<p class="nombre-contacto">Aa Papa</p>
 								</div>
 							</div>
+							<!-- <p class="letra">L</p>
+							<div class="contenedor-contactos">
+								<div class="contacto">
+									<img src="imagenes/lisaD.png">
+									<p class="nombre-contacto">Lisa</p>
+								</div>
+							</div> -->
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="categoria-menu" id="emergencias">
-				<div id='emergencias_container'>
-		        <p class='mensaje-confirmacion'>¿Está seguro de que desea llamar a emergencias?</p>
-		        <div id='emergencias_buttons'>
-		        	<button class='emergencias_button'>NO</button>
-		            <button class='emergencias_button' style="background-color: #4ecf32;">SI</button>
-		        </div>
-		    </div>
+				<div id="emergencias_container">
+					<p class="mensaje-confirmacion">¿Está seguro de que desea llamar a emergencias?</p>
+					<div id='emergencias_buttons'>
+						<button class='emergencias_button' style="background-color: #4ecf32;">SI</button>
+						<button class='emergencias_button' style="background-color: red;">NO</button>
+					</div>
+				</div>
 			</div>
 		</div>
 		<div id="controlesSilla" style="width:100%;position: relative;">
@@ -370,8 +309,9 @@
 		<img onclick="mostrarMenu(1);" src="assets/location_on.svg">
 		<img onclick="mostrarMenu(2);" src="assets/phone.svg">
 		<img onclick="mostrarMenu(3);" src="assets/notification_important.svg">
-		<img src="assets/power_settings_new.svg"/>
+		<img src="assets/power_settings_new.svg" />
 	</div>
 	<script type="text/javascript" src="eventos.js"></script>
 </body>
+
 </html>
