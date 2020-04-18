@@ -6,6 +6,7 @@ class Termostato extends Electrodomestico
 		this.temperaturaActual = 22;
 		this.temperaturaDeseada = null;
 		this.programas = [];
+		this.interfaz=document.querySelector(".contenedor-termostato");
 	}
 	encenderTermostato(temperatura)
 	{
