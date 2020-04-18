@@ -5,38 +5,35 @@ class Combi extends Electrodomestico
 		super(idAux,"Combinado","_ºC | _ºC","assets/fridge.png",true);
 		this.temNevera = null;
 		this.temCongelador = null; 
+		this.interfaz = document.querySelector(".contenedor-nevera");
 	}
 	subirTemNevera(temperatura)
 	{
 		if(this.temNevera<8)
 			this.temNevera++;
+		this.mostrarTemperaturaNevera();
 		this.actualizarEstado();
 	}
 	bajarTemNevera(temperatura)
 	{
 		if(this.temNevera>2)
 			this.temNevera--;
+		this.mostrarTemperaturaNevera();
 		this.actualizarEstado();
-	}
-	getTemNevera()
-	{
-		return this.temNevera;
 	}
 	subirTemCongelador()
 	{	
-		if(this.temNevera<-16)
+		if(this.temCongelador<-16)
 			this.temCongelador++;
+		this.mostrarTemperaturaCongelador();
 		this.actualizarEstado();
 	}
 	bajarTemCongelador()
 	{	
-		if(this.temNevera>-24)
+		if(this.temCongelador>-24)
 			this.temCongelador--;
+		this.mostrarTemperaturaCongelador();
 		this.actualizarEstado();
-	}
-	getTemCongelador()
-	{
-		return this.temCongelador;
 	}
 	actualizarEstado()
 	{
@@ -49,20 +46,87 @@ class Combi extends Electrodomestico
 		else
 			this.estado += "_ºC";
 	}
-	apagarNevera()
+	mostrarTemperaturaNevera()
 	{
-		this.temNevera = null;
+		if(this.temNevera==2)
+			this.interfaz.querySelector(".contenedor-mensaje .temperatura .bajartemp-btn").style.display="none";
+		else if(this.temNevera==8)
+			this.interfaz.querySelector(".contenedor-mensaje .temperatura .subirtemp-btn").style.display="none";
+		else
+		{
+			this.interfaz.querySelector(".contenedor-mensaje .temperatura .bajartemp-btn").style.display="block";
+			this.interfaz.querySelector(".contenedor-mensaje .temperatura .subirtemp-btn").style.display="block";
+		}
+		this.interfaz.querySelector(".contenedor-mensaje .temperatura p").innerHTML=this.temNevera+"ºC";
 	}
-	apagarCongelador()
+	mostrarTemperaturaCongelador()
 	{
-		this.temCongelador = null;
+		if(this.temCongelador==-24)
+			this.interfaz.querySelector(".contenedor-mensaje .temperatura .bajartemp-btn").style.display="none";
+		else if(this.temCongelador==-16)
+			this.interfaz.querySelector(".contenedor-mensaje .temperatura .subirtemp-btn").style.display="none";
+		else
+		{
+			this.interfaz.querySelector(".contenedor-mensaje .temperatura .bajartemp-btn").style.display="block";
+			this.interfaz.querySelector(".contenedor-mensaje .temperatura .subirtemp-btn").style.display="block";
+		}
+		this.interfaz.querySelector(".contenedor-mensaje .temperatura p").innerHTML=this.temCongelador+"ºC";
 	}
-	encenderNevera()
+	switchNevera()
 	{
-		this.temNevera = 4;
+		if(this.temNevera==null)
+			this.temNevera = 4;
+		else
+			this.temNevera = null;
+		this.mostrarInterfazNevera();
 	}
-	encenderCongelador()
+	switchCongelador()
 	{
-		this.temCongelador = -18;
+		if(this.temCongelador==null)
+			this.temCongelador = -18;
+		else
+			this.temCongelador = null;
+		this.mostrarInterfazCongelador();
+	}
+	mostrarInterfazNevera()
+	{
+		var contenedor = this.interfaz.querySelector(".contenedor-mensaje");
+		this.interfaz.querySelector(".boton-apagado img").setAttribute("onclick","electrodomesticoActual.switchNevera();");
+		var mensaje="";
+		if(this.temNevera==null)
+		{
+			mensaje+="<p class='mensaje'>La nevera está apagada, pulse el botón de encendido para iniciar el sistema.</p>"
+			contenedor.innerHTML=mensaje;
+		}
+		else
+		{
+			mensaje += "<div class='temperatura'>";
+			mensaje+="<img class='bajartemp-btn' src='assets/remove.svg' onclick='electrodomesticoActual.bajarTemNevera()'/><p></p><img class='subirtemp-btn' src='assets/add.svg' onclick='electrodomesticoActual.subirTemNevera();'/>";
+			mensaje+="</div>";
+			mensaje+="<p>La temperatura recomendada por el fabricante es de 4ºC</p>";
+			contenedor.innerHTML=mensaje;
+			this.mostrarTemperaturaNevera();	
+		}
+		
+	}
+	mostrarInterfazCongelador()
+	{
+		var contenedor = this.interfaz.querySelector(".contenedor-mensaje");
+		this.interfaz.querySelector(".boton-apagado img").setAttribute("onclick","electrodomesticoActual.switchCongelador();");
+		var mensaje="";
+		if(this.temCongelador==null)
+		{
+			mensaje+="<p class='mensaje'>El congelador está apagado, pulse el botón de encendido para iniciar el sistema.</p>"
+			contenedor.innerHTML=mensaje;
+		}
+		else
+		{
+			mensaje += "<div class='temperatura'>";
+			mensaje+="<img class='bajartemp-btn' src='assets/remove.svg' onclick='electrodomesticoActual.bajarTemCongelador()'/><p></p><img class='subirtemp-btn' src='assets/add.svg' onclick='electrodomesticoActual.subirTemCongelador();'/>";
+			mensaje+="</div>";
+			mensaje+="<p>La temperatura recomendada por el fabricante es de -18ºC</p>";
+			contenedor.innerHTML=mensaje;
+			this.mostrarTemperaturaCongelador();	
+		}
 	}
 }
