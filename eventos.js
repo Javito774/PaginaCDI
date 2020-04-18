@@ -31,6 +31,7 @@ function mostrarMenu(numero)
 	var pantalla1 = document.querySelector("#controlesSilla");
 	var pantalla2 = document.querySelector("#PantallaSecundaria");
 	var menuElem = document.querySelectorAll(".categoria-menu");
+	pantallas = [];
 	if(menuNum == 0)
 	{
 		desactivarmapa();
@@ -41,7 +42,6 @@ function mostrarMenu(numero)
 		menuNum = -1;
 		pantalla1.style.width="100%";
 		pantalla2.style.width="0%";
-		pantallas = [];
 		if(numero==0)
 		{
 			document.querySelector("#ventanaEstancia").style.display="none";
@@ -54,7 +54,8 @@ function mostrarMenu(numero)
 			menuElem[menuNum].style.display="none";
 			menuNum = numero;
 			menuElem[menuNum].style.display="grid";
-			document.querySelector("#PantallaSecundaria>.indicador-carpeta>h3").innerHTML=menuElem[menuNum].getAttribute("id");
+			pantallas.push(menuElem[menuNum].getAttribute("id"));
+			mostrarCarpeta();
 			if(menuNum == 0)
 			{
 				activarmapa();
@@ -66,33 +67,13 @@ function mostrarMenu(numero)
 			pantalla1.style.width="50%";
 			pantalla2.style.width="50%";
 			menuElem[menuNum].style.display="grid";
-			document.querySelector("#PantallaSecundaria>.indicador-carpeta>h3").innerHTML=menuElem[menuNum].getAttribute("id");
+			pantallas.push(menuElem[menuNum].getAttribute("id"));
+			mostrarCarpeta();
 			if(menuNum == 0)
 			{
 				activarmapa();
 			}
-			pantallas.push(numero)
 		}
-	}
-}
-function accionesDeMenu(numero)
-{
-	var indicadorCarpeta = document.querySelector("#PantallaSecundaria>.indicador-carpeta>h3");
-	switch(numero)
-	{
-		case 0:
-			activarmapa();
-			indicadorCarpeta.innerHTML = "Domotica";
-			break;
-		case 1:
-			indicadorCarpeta.innerHTML = "Domotica";
-			break;
-		case 2:
-			indicadorCarpeta.innerHTML = "Domotica";
-			break;
-		case 3:
-			indicadorCarpeta.innerHTML = "Domotica";
-			break;
 	}
 }
 
@@ -181,12 +162,32 @@ function mostrarMenuTelefono()
 mostrarMenuTelefono();
 
 //MANEJAR MOVIMIENTO DE VENTANAS ENTRE DOMOTICA
+function mostrarCarpeta()
+{
+	var pantalla = document.querySelector("#PantallaSecundaria>.indicador-carpeta>h3");
+	if(pantallas.length!=0)
+	{
+		if(pantallas.length==1)
+			 document.querySelector("#PantallaSecundaria>.indicador-carpeta>img").style.transform="translateY(100%)";
+		else
+			document.querySelector("#PantallaSecundaria>.indicador-carpeta>img").style.transform="none";
+		pantalla.innerHTML=pantallas[0];
+		for(var i=1;i<pantallas.length;i++)
+		{
+			pantalla.innerHTML+=" / ";
+			pantalla.innerHTML+=pantallas[i].nombre;
+		}
+	}
+}
+
 function mostrarHabitacion(numeroHabitacion)
 {
-	var ventana = document.querySelector("#ventanaEstancia");
-	ventana.style.display="grid";
-	ventana.innerHTML="";
+	
+	var mensaje="";
 	var estancia = habitaciones[numeroHabitacion];
+	estancia.interfaz.style.display="grid";
+	pantallas.push(estancia);
+	mostrarCarpeta();
 	for(var i=0;i<estancia.electrodomesticos.length;i++)
 	{
 		if(estancia.electrodomesticos[i] instanceof Puerta)
@@ -197,8 +198,30 @@ function mostrarHabitacion(numeroHabitacion)
 				estancia.electrodomesticos[i].nombre=estancia.electrodomesticos[i].room1.nombre;
 		}
 		if(estancia.electrodomesticos[i].tieneInterfaz)
-			ventana.innerHTML+='<div onclick="habitaciones['+numeroHabitacion+'].electrodomesticos['+i+'].interfaz.style.display=\'grid\';"><img src="'+estancia.electrodomesticos[i].icono+'"/><h4>'+estancia.electrodomesticos[i].nombre+'</h4><p>'+estancia.electrodomesticos[i].estado+'</p></div>';
+		{
+			mensaje+='<div onclick="electrodomesticoActual=habitaciones['+numeroHabitacion+'].electrodomesticos['+i+'];';
+			mensaje+='pantallas.push(electrodomesticoActual);';
+			mensaje+='mostrarCarpeta();';
+			mensaje+='electrodomesticoActual.interfaz.style.display=\'grid\';';
+			if(estancia.electrodomesticos[i] instanceof Combi)
+			{
+				mensaje+='electrodomesticoActual.mostrarInterfazNevera();';
+			}
+			mensaje+='">';
+		}
 		else
-			ventana.innerHTML+='<div onclick="habitaciones['+numeroHabitacion+'].electrodomesticos['+i+'].cambiarEstado();habitaciones['+numeroHabitacion+'].electrodomesticos['+i+'].imprimir(this);"><img src="'+estancia.electrodomesticos[i].icono+'"/><h4>'+estancia.electrodomesticos[i].nombre+'</h4><p>'+estancia.electrodomesticos[i].estado+'</p></div>';
+			mensaje+='<div onclick="habitaciones['+numeroHabitacion+'].electrodomesticos['+i+'].cambiarEstado();habitaciones['+numeroHabitacion+'].electrodomesticos['+i+'].imprimir(this);">';
+		
+		mensaje+='<img src="'+estancia.electrodomesticos[i].icono+'"/><h4>'+estancia.electrodomesticos[i].nombre+'</h4><p>'+estancia.electrodomesticos[i].estado+'</p></div>';
+		estancia.interfaz.innerHTML=mensaje;
 	}
+}
+
+function retrocederVentana()
+{
+	if(electrodomesticoActual!=null)
+		electrodomesticoActual=null;
+	var pantallaActual = pantallas.pop();
+	pantallaActual.interfaz.style.display="none";
+	mostrarCarpeta();
 }
