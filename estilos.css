@@ -494,8 +494,8 @@ main>div {
 
 .teclado {
   display: grid;
-  grid-template-columns: repeat(3, 4rem);
-  grid-template-rows: repeat(4, 3rem);
+  grid-template-columns: repeat(3, 3.5rem);
+  grid-template-rows: repeat(4, 2.5rem);
   align-items: center;
   justify-content: center;
 }
