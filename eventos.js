@@ -207,6 +207,10 @@ function mostrarHabitacion(numeroHabitacion)
 			{
 				mensaje+='electrodomesticoActual.mostrarInterfazNevera();';
 			}
+      else if(estancia.electrodomesticos[i] instanceof Termostato)
+      {
+        mensaje+='electrodomesticoActual.mostrarInterfaz();';
+      }
 			mensaje+='">';
 		}
 		else

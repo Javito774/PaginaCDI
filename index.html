@@ -20,6 +20,7 @@
 
 	<script type="text/javascript" src="clases/Tarjeta.js"></script>
 
+	<script type="text/javascript" src="clases/Telefono.js"></script>
 	<script type="text/javascript" src="clases/Contacto.js"></script>
 
 	<script type="text/javascript" src="clases/Pelicula.js"></script>
@@ -186,16 +187,16 @@
 				<div class="contenedor-termostato contenedor-electrodomestico">
 					<div class="menu-termostato">
 						<input id="termostato-menu" type="radio" name="select-termostato" checked="true">
-						<label for="termostato-menu">Manual</label>
+						<label for="termostato-menu" onclick="electrodomesticoActual.mostrarInterfaz();">Manual</label>
 						<input id="programa-menu" type="radio" name="select-termostato">
-						<label for="programa-menu">Programa</label>
+						<label for="programa-menu" onclick="electrodomesticoActual.mostrarInterfaz();">Programa</label>
 					</div>
 					<div class="boton-apagado">
 						<img src="assets/power_settings_new.png">
 						<p class="estado">apagado</p>
 					</div>
 					<div class="contenedor-mensaje">
-						<p class="mensaje">La nevera está apagada, pulse el botón de encendido para iniciar el sistema.</p>
+						<p class="mensaje">El termostato está apagado, pulse el botón de encendido para iniciar el sistema.</p>
 					</div>
 				</div>
 				<div class="contenedor-grifo contenedor-electrodomestico"></div>
@@ -210,20 +211,20 @@
 			<div class="categoria-menu" id="teléfono">
 				<div class="menu-telefono">
 					<input id="telefono-menu" type="radio" name="select-telefono" checked="true">
-					<label for="telefono-menu">Teléfono</label>
+					<label for="telefono-menu" onclick="electrodomesticoActual.mostrarMenu(1)">Teléfono</label>
 					<input id="recientes-menu" type="radio" name="select-telefono">
 					<label for="recientes-menu">Recientes</label>
 					<input id="contactos-menu" type="radio" name="select-telefono">
-					<label for="contactos-menu">Contactos</label>
+					<label for="contactos-menu" onclick="electrodomesticoActual.mostrarMenu(2)">Contactos</label>
 				</div>
 				<div class="pantallas">
-					<div id="llamada">
+					<div class="pantalla-menu" id="llamada" >
 						<h2 style=" display: flex; justify-content: center; align-items: center;">Aa Mama</h2>
 						<p style="text-align: center; padding:1rem;">0034992 | SPRINGFIELD</p>
 						<img src="imagenes/margeD.png" class="foto-contacto">
 						<img src="assets/call_end.svg" class="boton-colgar">
 					</div>
-					<div id="telefonia" style="display: none;">
+					<div class="pantalla-menu" id="telefonia">
 						<div class="inputNumero">
 							<p style="color: transparent;">3</p>
 							<p class="numTelefono"> </p>
@@ -293,7 +294,7 @@
 							</svg>
 						</div>
 					</div>
-					<div id="contactos" style="display: none;">
+					<div class="pantalla-menu" id="contactos">
 						<div>
 							<p class="letra">A</p>
 							<div class="contenedor-contactos">
@@ -341,7 +342,7 @@
 	<div id="menuPrincipal">
 		<img onclick="mostrarMenu(0);" src="assets/home.svg">
 		<img onclick="mostrarMenu(1);" src="assets/location_on.svg">
-		<img onclick="mostrarMenu(2);" src="assets/phone.svg">
+		<img onclick="mostrarMenu(2);electrodomesticoActual=telefono;" src="assets/phone.svg">
 		<img onclick="mostrarMenu(3);" src="assets/notification_important.svg">
 		<img onclick="mostrarMenu(4)" src="assets/power_settings_new.svg">
 	</div>

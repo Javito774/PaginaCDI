@@ -46,9 +46,13 @@ main>div {
   transition: width .5s ease-in-out;
 }
 
-hr {
-  border-bottom: none;
-  margin: 1rem auto;
+#contactos hr {
+  height: 1px;
+  background: #d9d9d9;
+  width: 80%;
+  display: table;
+  margin: 0 auto;
+  border: none;
 }
 
 #notificaciones {
@@ -285,21 +289,38 @@ hr {
 }
 
 #contactos {
-  margin-left: 6rem;
+  height: 60vh;
+  overflow-y: scroll;
+  position: relative;
+  left: 20px;
   /* overflow: hidden;
   overflow-y: scroll; */
 }
 
-.letra {
-  font-size: 18pt;
-  padding: 1rem 0;
+#contactos .letra {
+  font-size: 1rem;
+  padding: .5em 1em;
+  font-weight: bold;
+}
+#contactos .nombre-contacto{
+  font-size: .9rem;
+}
+#contactos .contenedor-letra{
+  display: table;
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 1em;
 }
 
-.contacto {
-  border: 0.12rem solid #d9d9d9;
+#contactos .contenedor-contactos{
+  border: 0.05rem solid #d9d9d9;
   border-radius: 0.7rem;
-  padding: 2rem;
-  width: 99%;
+}
+
+#contactos .contacto {
+  display: flex;
+  padding: .5rem 1em;
+  align-items: center;
 }
 
 /* .foto-listaContactos {
@@ -327,10 +348,15 @@ hr {
   background-color: red;
 }
 
-.foto-contacto {
-  width: 13%;
-  display: block;
-  margin: auto;
+#contactos .foto-contacto {
+  width: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  background: pink;
+  border-radius: 2em;
+  margin-right: 1em;
+  font-size: 1rem;
+  color: #555;
 }
 
 
@@ -345,43 +371,60 @@ hr {
 }
 
 /*ESTILOS COMBI*/
-.contenedor-nevera{
+.contenedor-nevera,
+.contenedor-termostato{
   grid-template-rows: auto auto 1fr;
 }
-.contenedor-nevera .boton-apagado{
+.contenedor-nevera .boton-apagado,
+.contenedor-termostato .boton-apagado{
   text-align: center;
   padding: 2em 0;
 }
-.contenedor-nevera .boton-apagado img{
+.contenedor-nevera .boton-apagado img,
+.contenedor-termostato .boton-apagado img{
   width: 1.5em;
 }
-.contenedor-nevera .boton-apagado p{
+.contenedor-nevera .boton-apagado p,
+.contenedor-termostato .boton-apagado p{
   font-size: 0.6rem;
 }
-.contenedor-nevera .contenedor-mensaje{
+.contenedor-nevera .contenedor-mensaje,
+.contenedor-termostato .contenedor-mensaje{
   align-self: baseline;
 }
-.contenedor-nevera .contenedor-mensaje .mensaje
+.contenedor-nevera .contenedor-mensaje .mensaje,
+.contenedor-termostato .contenedor-mensaje .mensaje
 {
   text-align: center;
   font-weight: bolder;
   font-size: 1rem;
   color: #9d9d9d;
+  line-height: 1.5;
 }
-.contenedor-nevera .temperatura{
+.contenedor-nevera .temperatura,
+.contenedor-termostato .temperatura{
   display: flex;
   justify-content: center;
 }
-.contenedor-nevera .temperatura img{
+.contenedor-nevera .contenedor-mensaje>p,
+.contenedor-termostato .contenedor-mensaje>p
+{
+  text-align: center;
+  line-height: 6;
+}
+.contenedor-nevera .temperatura img,
+.contenedor-termostato .temperatura img{
   width: 3rem;
 }
-.contenedor-nevera>p
+.contenedor-nevera>p,
+.contenedor-termostato>p
 {
   text-align: center;
   color: #9d9d9d;
   line-height: 5;
 }
-.contenedor-nevera .temperatura p{
+.contenedor-nevera .temperatura p,
+.contenedor-termostato .temperatura p{
   font-size: 4rem;
   font-weight: bolder;
   padding: 0 1em;
@@ -481,7 +524,9 @@ hr {
   display: flex;
   justify-content: center;
 }
-
+#teléfono .pantalla-menu{
+  display: none;
+}
 .inputNumero p {
   font-size: 1.4rem;
   font-weight: bolder;
@@ -517,7 +562,9 @@ hr {
   border-radius: 60px;
 }
 
-.menu-telefono,.menu-nevera{
+.menu-telefono,
+.menu-nevera,
+.menu-termostato{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -525,16 +572,23 @@ hr {
   transition: transform .2s ease-in-out;
 }
 
-.menu-telefono input[type="radio"],.menu-nevera input[type="radio"] {
+.menu-telefono input[type="radio"],
+.menu-nevera input[type="radio"],
+.menu-termostato input[type="radio"]
+ {
   display: none
 }
 
-.menu-telefono label,.menu-nevera label {
+.menu-telefono label,
+.menu-nevera label,
+.menu-termostato label {
   font-size: 1rem;
   margin: 0 2em;
 }
 
-.menu-telefono input[type="radio"]:checked+label,.menu-nevera input[type="radio"]:checked+label {
+.menu-telefono input[type="radio"]:checked+label,
+.menu-nevera input[type="radio"]:checked+label,
+.menu-termostato input[type="radio"]:checked+label {
   font-weight: bolder;
   color: green;
   border-bottom: 5px dotted;
