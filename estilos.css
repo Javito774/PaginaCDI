@@ -557,16 +557,16 @@ main>div {
   position: relative;
 }
 #teléfono svg#btn-borrar {
-  width: 30px;
-  height: 30px;
+  width: 1.5em;
+  height: 1.5em;
 }
 
 #teléfono #iconoLlamar {
   background: green;
   padding: 0.5em;
-  width: 50px;
-  height: 50px;
-  border-radius: 60px;
+  width: 2.3em;
+  height: 2.3em;
+  border-radius: 3em;
 }
 
 .menu-telefono,
