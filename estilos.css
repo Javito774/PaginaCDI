@@ -536,12 +536,13 @@ main>div {
 }
 #teléfono .contenedor-botones {
   padding: 1em 0;
+  padding-bottom: 2em;
   display: grid;
   align-items: center;
   justify-content: center;
   width: 180px;
   margin: 0 auto;
-  grid-template-columns: repeat(3, 80px);
+  grid-template-columns: repeat(3, 3.5rem);
 }
 
 .contenedor-botones>* {
@@ -550,7 +551,6 @@ main>div {
 }
 #teléfono #telefonia
 {
-  bottom: 02em;
   display: grid;
   height: 100%;
   align-content: end;
