@@ -273,6 +273,12 @@ hr {
   align-items: center;
 }
 
+/* ESTILOS APAGAR SISTEMA */
+
+#apagado {
+  justify-content: center;
+}
+
 /* ESTILOS LISTA DE CONTACTOS */
 .pantallas {
   height: 100%;

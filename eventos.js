@@ -182,7 +182,7 @@ function mostrarCarpeta()
 
 function mostrarHabitacion(numeroHabitacion)
 {
-	
+
 	var mensaje="";
 	var estancia = habitaciones[numeroHabitacion];
 	estancia.interfaz.style.display="grid";
@@ -211,7 +211,7 @@ function mostrarHabitacion(numeroHabitacion)
 		}
 		else
 			mensaje+='<div onclick="habitaciones['+numeroHabitacion+'].electrodomesticos['+i+'].cambiarEstado();habitaciones['+numeroHabitacion+'].electrodomesticos['+i+'].imprimir(this);">';
-		
+
 		mensaje+='<img src="'+estancia.electrodomesticos[i].icono+'"/><h4>'+estancia.electrodomesticos[i].nombre+'</h4><p>'+estancia.electrodomesticos[i].estado+'</p></div>';
 		estancia.interfaz.innerHTML=mensaje;
 	}
