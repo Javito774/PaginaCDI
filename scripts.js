@@ -3,6 +3,7 @@ var metodosDePago = [];
 var agendaContactos = [];
 var restaurantesFavoritos = Array(3);
 var electrodomesticoActual=null;
+var telefono;
 
 //FUNCIONES QUE INICIAN TODAS LAS ESTANCIAS DE LA CASA.
 function inicio()
@@ -100,6 +101,14 @@ function inicio()
 	banio1.electrodomesticos.push(new Termostato(banio1.electrodomesticos.length));
 	banio1.electrodomesticos.push(new Grifo(banio1.electrodomesticos.length,"lavabo"));
 	banio1.electrodomesticos.push(new Grifo(banio1.electrodomesticos.length,"ducha"));
+
+	aniadirContacto(new Contacto("Marge",123456789,"imagenes/margeD.png"));
+	aniadirContacto(new Contacto("Homer",234567898,"imagenes/homerD.png"));
+	aniadirContacto(new Contacto("Lisa",466855684,"imagenes/lisaD.png"));
+	aniadirContacto(new Contacto("Bart",444754478,"imagenes/bartD.png"));
+	aniadirContacto(new Contacto("Milhouse",236852369,"imagenes/tioc.png"));
+	aniadirContacto(new Contacto("Aurelia",236875687));
+	telefono = new Telefono();
 }
 
 document.addEventListener("DOMContentLoaded", inicio);
