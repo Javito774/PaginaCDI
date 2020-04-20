@@ -4,7 +4,7 @@ class Combi extends Electrodomestico
 	{
 		super(idAux,"Combinado","_ºC | _ºC","assets/fridge.png",true);
 		this.temNevera = null;
-		this.temCongelador = null; 
+		this.temCongelador = null;
 		this.interfaz = document.querySelector(".contenedor-nevera");
 	}
 	subirTemNevera(temperatura)
@@ -22,14 +22,14 @@ class Combi extends Electrodomestico
 		this.actualizarEstado();
 	}
 	subirTemCongelador()
-	{	
+	{
 		if(this.temCongelador<-16)
 			this.temCongelador++;
 		this.mostrarTemperaturaCongelador();
 		this.actualizarEstado();
 	}
 	bajarTemCongelador()
-	{	
+	{
 		if(this.temCongelador>-24)
 			this.temCongelador--;
 		this.mostrarTemperaturaCongelador();
@@ -105,9 +105,9 @@ class Combi extends Electrodomestico
 			mensaje+="</div>";
 			mensaje+="<p>La temperatura recomendada por el fabricante es de 4ºC</p>";
 			contenedor.innerHTML=mensaje;
-			this.mostrarTemperaturaNevera();	
+			this.mostrarTemperaturaNevera();
 		}
-		
+
 	}
 	mostrarInterfazCongelador()
 	{
@@ -126,7 +126,7 @@ class Combi extends Electrodomestico
 			mensaje+="</div>";
 			mensaje+="<p>La temperatura recomendada por el fabricante es de -18ºC</p>";
 			contenedor.innerHTML=mensaje;
-			this.mostrarTemperaturaCongelador();	
+			this.mostrarTemperaturaCongelador();
 		}
 	}
 }
