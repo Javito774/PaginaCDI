@@ -108,6 +108,20 @@ function inicio()
 	aniadirContacto(new Contacto("Bart",444754478,"imagenes/bartD.png"));
 	aniadirContacto(new Contacto("Milhouse",236852369,"imagenes/tioc.png"));
 	aniadirContacto(new Contacto("Aurelia",236875687));
+
+	aniadirContacto(new Contacto("Laura",236875687));
+	aniadirContacto(new Contacto("Paquito",236875687));
+	aniadirContacto(new Contacto("Yijun",236875687));
+	aniadirContacto(new Contacto("Ubi uwu",236875687,"imagenes/ubi.png"));
+	aniadirContacto(new Contacto("Ivinchiwinchi",236875687,"imagenes/ivan.jpeg"));
+	aniadirContacto(new Contacto("La paca",236875687));
+	aniadirContacto(new Contacto("Coraline",236875687));
+	aniadirContacto(new Contacto("Nanito",236875687));
+	aniadirContacto(new Contacto("Guillermito",236875687));
+	aniadirContacto(new Contacto("Jony",236875687));
+	aniadirContacto(new Contacto("Daniel Garcia Garuti",236875687,"imagenes/dani.png"));
+	aniadirContacto(new Contacto("Javier Herrero",689970969,"imagenes/javi2.jpg"))
+
 	telefono = new Telefono();
 }
 
