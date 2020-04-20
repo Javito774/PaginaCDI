@@ -548,7 +548,14 @@ main>div {
   display: table;
   margin: 0 auto;
 }
-
+#teléfono #telefonia
+{
+  bottom: 02em;
+  display: grid;
+  height: 100%;
+  align-content: end;
+  position: relative;
+}
 #teléfono svg#btn-borrar {
   width: 30px;
   height: 30px;
