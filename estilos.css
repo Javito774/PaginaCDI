@@ -259,6 +259,7 @@ main>div {
   color: #333;
   opacity: 0;
   transition: opacity 1s ease-in-out;
+  transform-origin: top left;
 }
 
 #PantallaSecundaria {
