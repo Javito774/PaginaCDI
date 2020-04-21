@@ -304,8 +304,8 @@
 				<div id="emergencias_container">
 					<p class='mensaje-confirmacion'>¿Está seguro de que desea llamar a emergencias?</p>
 					<div id='emergencias_buttons'>
-						<button class='emergencias_button'>NO</button>
-						<button class='emergencias_button' style="background-color: #4ecf32;">SI</button>
+						<button class='emergencias_button' onclick="mostrarMenu(3);">NO</button>
+						<button class='emergencias_button' style="background-color: #4ecf32;" onclick="mostrarMenu(2);telefono.llamar('Emergencias 112')">SI</button>
 					</div>
 				</div>
 			</div>
