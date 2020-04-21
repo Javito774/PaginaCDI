@@ -193,9 +193,9 @@ main>div {
   cursor: pointer;
 }
 
-#menuPrincipal img:hover{
+/* #menuPrincipal img:hover{
   background-color: #f8c8a0;
-}
+} INÚTIL */
 
 #mapa {
   position: absolute;
@@ -476,9 +476,11 @@ main>div {
   font-weight: bolder;
   padding: 0 1em;
 }
-/*ESTILOS TV*/
 
-.contenedor-tv{
+
+/*ESTILOS TV APAGADA*/
+
+.contenedor-tv {
 	grid-template-rows: 1fr auto;
 }
 
@@ -526,7 +528,7 @@ main>div {
 }
 
 .contenedor-tv .header {
-	font-size: 15px;
+	font-size: 1rem;
 	text-align: center;
 }
 

@@ -4,6 +4,7 @@ var agendaContactos = [];
 var restaurantesFavoritos = Array(3);
 var electrodomesticoActual=null;
 var telefono;
+var canalesTV = [];
 
 //FUNCIONES QUE INICIAN TODAS LAS ESTANCIAS DE LA CASA.
 function inicio()
@@ -120,10 +121,18 @@ function inicio()
 	aniadirContacto(new Contacto("Guillermito",236875687));
 	aniadirContacto(new Contacto("Jony",236875687));
 	aniadirContacto(new Contacto("Daniel Garcia Garuti",236875687,"imagenes/dani.png"));
-	aniadirContacto(new Contacto("Javier Herrero",689970969,"imagenes/javi2.jpg"))
+	aniadirContacto(new Contacto("Javier Herrero",689970969,"imagenes/javi2.jpg"));
 
 	telefono = new Telefono();
 	mostrarMenuTelefono();
+
+	canalesTV[0] = new Canal (1, "TVE");
+	canalesTV[1] = new Canal (2, "LA 2");
+	canalesTV[2] = new Canal (3, "TELEMADRID");
+	canalesTV[3] = new Canal (4, "ANTENA 3");
+	canalesTV[4] = new Canal (5, "TELECINCO");
+	canalesTV[5] = new Canal (6, "LA SEXTA");
+	canalesTV[6] = new Canal (7, "PARAMOUNT CHANNEL");
 }
 
 document.addEventListener("DOMContentLoaded", inicio);

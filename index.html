@@ -137,7 +137,7 @@
 				<div id="ventanaEstancia">
 
 				</div>
-				<div class="contenedor-tv contenedor-electrodomestico">
+				<div class="contenedor-tv contenedor-electrodomestico" style="display:none;">
 					<div class="header">
 						<p>TV apagada. Pulse cualquier botón para encenderla</p>
 					</div>
@@ -166,6 +166,39 @@
 						<div>
 							<img src="assets/volume_off.svg" style="justify-content: center;">
 							<p class="letrero">DESACTIVAR</p>
+						</div>
+					</div>
+				</div>
+				<div class="contenedor-tv">
+					<div class="header">
+						<p>CH : 5 | Pasapalabra</p>
+						<p>VOL : 14 | Barra volumen</p>
+						<div class="mando">
+							<div class="boton_arriba"><img src="assets/keyboard_arrow_up-24px.svg"></div>
+							<div>1</div>
+							<div>2</div>
+							<div>3</div>
+							<div class="boton_arriba"><img src="assets/add.svg"></div>
+							<div class="boton">CH</div>
+							<div>4</div>
+							<div>5</div>
+							<div>6</div>
+							<div class="boton" style="align-self: center; justify-self: center;">VOL</div>
+							<div class="boton_abajo"><img src="assets/expand_more-24px.svg"></div>
+							<div>7</div>
+							<div>8</div>
+							<div>9</div>
+							<div class="boton_abajo"><img src="assets/remove.svg"></div>
+							<div></div>
+							<div>
+								<img src="assets/arrow_back.svg">
+								<p class="letrero">ATRÁS</p>
+							</div>
+							<div>0</div>
+							<div>
+								<img src="assets/volume_off.svg" style="justify-content: center;">
+								<p class="letrero">DESACTIVAR</p>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -348,7 +381,7 @@
 	<div id="menuPrincipal">
 		<img onclick="mostrarMenu(0);" src="assets/home.svg">
 		<img onclick="mostrarMenu(1);" src="assets/location_on.svg">
-		<img onclick="mostrarMenu(2);electrodomesticoActual=telefono;" src="assets/phone.svg">
+		<img onclick="mostrarMenu(2); electrodomesticoActual=telefono;" src="assets/phone.svg">
 		<img onclick="mostrarMenu(3);" src="assets/notification_important.svg">
 		<img onclick="mostrarMenu(4)" src="assets/power_settings_new.svg">
 	</div>
