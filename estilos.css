@@ -193,6 +193,10 @@ main>div {
   cursor: pointer;
 }
 
+#menuPrincipal img:hover{
+  background-color: #f8c8a0;
+}
+
 #mapa {
   position: absolute;
   top: 50%;
