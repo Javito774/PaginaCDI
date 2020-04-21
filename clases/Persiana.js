@@ -3,7 +3,7 @@ class Persiana extends Electrodomestico
 	constructor(idAux,nombre)
 	{
 		super(idAux,nombre,"bajada","assets/persiana.png",false);
-		this.icono2 = "icono2";
+		this.icono2 = "assets/persianaC.png";
 	}
 	cambiarEstado()
 	{
