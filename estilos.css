@@ -119,6 +119,7 @@ main>div {
 
 .mensaje-confirmacion {
   padding: 0.5rem 0;
+  margin-bottom: 1.5em;
 }
 
 .contenedor-joystick {
@@ -178,6 +179,9 @@ main>div {
   display: flex;
   justify-content: center;
   background: cadetblue;
+  position: relative;
+  top: 0%;
+  transition: top .3s ease-in-out;
 }
 
 #menuPrincipal img {
@@ -607,7 +611,8 @@ main>div {
 
 .menu-telefono,
 .menu-nevera,
-.menu-termostato{
+.menu-termostato,
+.menu-peliculas{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -617,21 +622,24 @@ main>div {
 
 .menu-telefono input[type="radio"],
 .menu-nevera input[type="radio"],
-.menu-termostato input[type="radio"]
+.menu-termostato input[type="radio"],
+.menu-peliculas input[type="radio"]
  {
   display: none
 }
 
 .menu-telefono label,
 .menu-nevera label,
-.menu-termostato label {
+.menu-termostato label,
+.menu-peliculas label{
   font-size: 1rem;
   margin: 0 2em;
 }
 
 .menu-telefono input[type="radio"]:checked+label,
 .menu-nevera input[type="radio"]:checked+label,
-.menu-termostato input[type="radio"]:checked+label {
+.menu-termostato input[type="radio"]:checked+label,
+.menu-peliculas input[type="radio"]:checked+label{
   font-weight: bolder;
   color: green;
   border-bottom: 5px dotted;
