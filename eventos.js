@@ -174,10 +174,6 @@ function mostrarCarpeta()
 	var pantalla = document.querySelector("#PantallaSecundaria>.indicador-carpeta>h3");
 	if(pantallas.length!=0)
 	{
-		if(pantallas.length==1)
-			 document.querySelector("#PantallaSecundaria>.indicador-carpeta>img").style.transform="translateY(100%)";
-		else
-			document.querySelector("#PantallaSecundaria>.indicador-carpeta>img").style.transform="none";
 		pantalla.innerHTML=pantallas[0];
 		for(var i=1;i<pantallas.length;i++)
 		{
@@ -232,7 +228,10 @@ function retrocederVentana()
 {
 	if(electrodomesticoActual!=null)
 		electrodomesticoActual=null;
-	var pantallaActual = pantallas.pop();
-	pantallaActual.interfaz.style.display="none";
-	mostrarCarpeta();
+  var pantallaActual = pantallas.pop();
+  if(pantallas.length==0)
+    mostrarMenu(menuNum);
+  else
+	   pantallaActual.interfaz.style.display="none";
+  mostrarCarpeta();
 }
