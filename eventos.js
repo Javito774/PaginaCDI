@@ -1,7 +1,5 @@
 var pantallas = []
 
-
-
 //@TODO organizar distintos temporizadores para que no tengan el mismo nombre.
 
 //CONTROL DEL RELOJ
@@ -149,6 +147,7 @@ function quitarNumeroATelefono()
 	{
 		numeroMarcado="";
 		mostrarMenuTelefono();
+    telefono.interfaz.querySelector('#iconoLlamar').removeAttribute('onclick');
 	}
 	telefono.interfaz.querySelector(".inputNumero .numTelefono").innerHTML = numeroMarcado;
 }
@@ -156,6 +155,7 @@ function vaciarNumeroTelefono()
 {
   numeroMarcado="";
   telefono.interfaz.querySelector(".inputNumero .numTelefono").innerHTML = numeroMarcado;
+  telefono.interfaz.querySelector('#iconoLlamar').removeAttribute('onclick');
 }
 function esconderMenuTelefono()
 {
@@ -164,10 +164,9 @@ function esconderMenuTelefono()
 }
 function mostrarMenuTelefono()
 {
-	telefono.interfaz.querySelector('#btn-borrar').style.display="none";
+	telefono.interfaz.querySelector('.contenedor-botones #btn-borrar').style.display="none";
 	telefono.interfaz.querySelector('.menu-telefono').style.transform="none";
 }
-mostrarMenuTelefono();
 
 //MANEJAR MOVIMIENTO DE VENTANAS ENTRE DOMOTICA
 function mostrarCarpeta()

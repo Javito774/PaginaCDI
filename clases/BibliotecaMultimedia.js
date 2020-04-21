@@ -5,7 +5,7 @@ class BibliotecaMultimedia
 		this.nombre = nombre;
 		this.peliculas = [];
 	}
-	añadirPelicula(pelicula)
+	aniadirPelicula(pelicula)
 	{
 		this.peliculas.push(pelicula);
 	}

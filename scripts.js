@@ -123,6 +123,7 @@ function inicio()
 	aniadirContacto(new Contacto("Javier Herrero",689970969,"imagenes/javi2.jpg"))
 
 	telefono = new Telefono();
+	mostrarMenuTelefono();
 }
 
 document.addEventListener("DOMContentLoaded", inicio);
