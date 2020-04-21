@@ -37,7 +37,7 @@ class Telefono{
       else {
         mensaje+="<hr/>";
       }
-      mensaje+="<div class='contacto'>";
+      mensaje+="<div class='contacto' onclick='telefono.llamar(\""+agendaContactos[i].nombre+"\");'>";
       mensaje+=agendaContactos[i].imagen;
       mensaje+="<p class='nombre-contacto'>"+agendaContactos[i].nombre+"</p>";
       mensaje+="</div>"
@@ -45,8 +45,22 @@ class Telefono{
     mensaje+="</div></div>";
     contenedor.innerHTML = mensaje;
   }
-  llamar(opcion,numero)
+  llamar(nombre,imagen)
   {
-
+    this.mostrarMenu(0);
+    this.interfaz.querySelector("#llamada h2").innerHTML=nombre;
+    this.interfaz.querySelector(".menu-telefono").style.transform="translateY(-100%)";
+    if(imagen!=null)
+      this.interfaz.querySelector("#llamada .imagen-contacto").innerHTML=imagen;
+    else
+      this.interfaz.querySelector("#llamada .imagen-contacto").innerHTML="<p>"+nombre[0]+"</p>";
+  }
+  colgar()
+  {
+    this.interfaz.querySelector(".menu-telefono").style.transform="none";
+    this.interfaz.querySelectorAll(".menu-telefono input")[0].checked=true;
+    this.mostrarMenu(1);
+    vaciarNumeroTelefono();
+    mostrarMenuTelefono();
   }
 }

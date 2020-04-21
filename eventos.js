@@ -126,14 +126,17 @@ function desactivarmapa()
 var numeroMarcado = "";
 function aniadirNumeroATelefono(numero)
 {
-	if(document.querySelector('#teléfono .menu-telefono').style.transform=="none" || document.querySelector('#teléfono .menu-telefono').style.transform=="")
+	if(telefono.interfaz.querySelector('.menu-telefono').style.transform=="none" || telefono.interfaz.querySelector('.menu-telefono').style.transform=="")
+  {
 		esconderMenuTelefono();
+  }
 	if(numeroMarcado.length%4==0)
 	{
 		numeroMarcado = numeroMarcado.concat(' ');
 	}
 	numeroMarcado = numeroMarcado.concat(numero);
 	document.querySelector(".inputNumero .numTelefono").innerHTML = numeroMarcado;
+  telefono.interfaz.querySelector('#iconoLlamar').setAttribute('onclick','telefono.llamar("'+numeroMarcado+'");');
 }
 function quitarNumeroATelefono()
 {
@@ -147,17 +150,22 @@ function quitarNumeroATelefono()
 		numeroMarcado="";
 		mostrarMenuTelefono();
 	}
-	document.querySelector(".inputNumero .numTelefono").innerHTML = numeroMarcado;
+	telefono.interfaz.querySelector(".inputNumero .numTelefono").innerHTML = numeroMarcado;
+}
+function vaciarNumeroTelefono()
+{
+  numeroMarcado="";
+  telefono.interfaz.querySelector(".inputNumero .numTelefono").innerHTML = numeroMarcado;
 }
 function esconderMenuTelefono()
 {
-	document.querySelector('#teléfono #btn-borrar').style.display="table";
-	document.querySelector('#teléfono .menu-telefono').style.transform="translateY(-100%)";
+	telefono.interfaz.querySelector('#btn-borrar').style.display="table";
+	telefono.interfaz.querySelector('.menu-telefono').style.transform="translateY(-100%)";
 }
 function mostrarMenuTelefono()
 {
-	document.querySelector('#teléfono #btn-borrar').style.display="none";
-	document.querySelector('#teléfono .menu-telefono').style.transform="none";
+	telefono.interfaz.querySelector('#btn-borrar').style.display="none";
+	telefono.interfaz.querySelector('.menu-telefono').style.transform="none";
 }
 mostrarMenuTelefono();
 
