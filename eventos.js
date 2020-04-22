@@ -26,6 +26,11 @@ var menuNum = -1;
 function mostrarMenu(numero)
 {
 	clearTimeout(intervaloAnimacion);
+  var numeroAux = pantallas.length;
+  for(var i=1;i<numeroAux;i++)
+  {
+    retrocederVentana();
+  }
 	var pantalla1 = document.querySelector("#controlesSilla");
 	var pantalla2 = document.querySelector("#PantallaSecundaria");
 	var menuElem = document.querySelectorAll(".categoria-menu");
@@ -41,11 +46,6 @@ function mostrarMenu(numero)
 		menuNum = -1;
 		pantalla1.style.width="100%";
 		pantalla2.style.width="0%";
-    var numero = pantallas.length;
-    for(var i=1;i<numero;i++)
-    {
-      retrocederVentana();
-    }
 	}
 	else
 	{
