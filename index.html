@@ -176,39 +176,6 @@
 						</div>
 					</div>
 				</div>
-				<div class="contenedor-tv">
-					<div class="header">
-						<p>CH : 5 | Pasapalabra</p>
-						<p>VOL : 14 | Barra volumen</p>
-						<div class="mando">
-							<div class="boton_arriba"><img src="assets/keyboard_arrow_up-24px.svg"></div>
-							<button onclick="aniadirNumeroAMando('1');">1</button>
-							<button onclick="aniadirNumeroAMando('2');">2</button>
-							<button onclick="aniadirNumeroAMando('3');">3</button>
-							<div class="boton_arriba"><img src="assets/add.svg"></div>
-							<div class="boton">CH</div>
-							<button onclick="aniadirNumeroAMando('4');">4</button>
-							<button onclick="aniadirNumeroAMando('5');">5</button>
-							<button onclick="aniadirNumeroAMando('6');">6</button>
-							<div class="boton" style="align-self: center; justify-self: center;">VOL</div>
-							<div class="boton_abajo"><img src="assets/expand_more-24px.svg"></div>
-							<button onclick="aniadirNumeroAMando('7');">7</button>
-							<button onclick="aniadirNumeroAMando('8');">8</button>
-							<button onclick="aniadirNumeroAMando('9');">9</button>
-							<div class="boton_abajo"><img src="assets/remove.svg"></div>
-							<div></div>
-							<div>
-								<img src="assets/arrow_back.svg">
-								<p class="letrero">ATRÁS</p>
-							</div>
-							<button onclick="aniadirNumeroAMando('0');">0</button>
-							<div>
-								<img src="assets/volume_off.svg" style="justify-content: center;">
-								<p class="letrero">DESACTIVAR</p>
-							</div>
-						</div>
-					</div>
-				</div>
 				<div class="contenedor-microondas contenedor-electrodomestico">
 					<div class="tiempo">
 						<img src="assets/remove.svg"/>
@@ -344,7 +311,7 @@
 					<label for="contactos-menu" onclick="electrodomesticoActual.mostrarMenu(2)">Contactos</label>
 				</div>
 				<div class="pantallas">
-					<div class="pantalla-menu" id="llamada">
+					<div class="pantalla-menu" id="llamada" >
 						<h2>Aa Mama</h2>
 						<p>0034992 | SPRINGFIELD</p>
 						<div class="imagen-contacto">
@@ -457,7 +424,7 @@
 	<div id="menuPrincipal">
 		<img onclick="mostrarMenu(0);" src="assets/home.svg">
 		<img onclick="mostrarMenu(1);" src="assets/location_on.svg">
-		<img onclick="mostrarMenu(2); electrodomesticoActual=telefono;" src="assets/phone.svg">
+		<img onclick="mostrarMenu(2);electrodomesticoActual=telefono;" src="assets/phone.svg">
 		<img onclick="mostrarMenu(3);" src="assets/notification_important.svg">
 		<img onclick="mostrarMenu(4)" src="assets/power_settings_new.svg">
 	</div>

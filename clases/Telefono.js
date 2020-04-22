@@ -25,7 +25,7 @@ class Telefono{
     {
       if(agendaContactos[i].nombre[0]!=letra)
       {
-        if(i!=0)  
+        if(i!=0)
         {
           mensaje+="</div></div>";
         }

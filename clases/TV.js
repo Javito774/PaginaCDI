@@ -38,13 +38,4 @@ class TV extends Electrodomestico{
 	{
 		this.estado = "apagada";
 	}
-	//DE AQUÍ HACIA ABAJO, EN PRODUCCIÓN
-	// mostrarMenu(numero)
-	// {
-	// 	var pants = this.interfaz.querySelectorAll(".pantallas")
-	// }
-	// marcarCanal(canal)
-	// {
-	// 	this.mostrarMenu(0);
-	// }
 }

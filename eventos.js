@@ -167,18 +167,6 @@ function mostrarMenuTelefono()
 	telefono.interfaz.querySelector('.menu-telefono').style.transform="none";
 }
 
-//CONTROLAR EL MANDO TV
-var canalMarcado = "";
-function aniadirNumeroAMando(numero)
-{
-  //No sé si sería en vez de mando, TV
-  if(mando.interfaz.querySelector(" .contenedor-menu").style.tranform == "none" || mando.interfaz.querySelector(" .contenedor-menu").style.tranform == "")
-  {
-    esconderMapa();
-  }
-  else
-}
-
 //MANEJAR MOVIMIENTO DE VENTANAS ENTRE DOMOTICA
 function mostrarCarpeta()
 {
