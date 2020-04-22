@@ -120,7 +120,18 @@ main>div {
   height: 100vh;
   z-index: 2000;
 }
-
+#sistemaEntrada{
+  position: absolute;
+  z-index: 10000;
+  width: 3em;
+  height: 3em;
+  top: 8.5em;
+  left: 12em;
+  transform: rotate(-90deg);
+  box-shadow: 0 0 0.5em;
+  border-radius: 4em;
+  padding: .5em;
+}
 #emergencias_container {
   align-items: center;
   border-radius: 1rem;
