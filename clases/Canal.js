@@ -2,20 +2,19 @@ class Canal {
 
   constructor(numero, nombre)
   {
-    this.numero = 0;
-    this.nombre = "";
+    this.numero = numero;
+    this.nombre = nombre;
   }
 
   mostrarCanal(numero)
   {
-    var contenedor = this.interfaz.querySelector("contenedor-tv .header");
+    var contenedor = document.querySelector("contenedor-tv .header");
     var mensaje = "";
-    var enc = new Boolean(false);
-    var numActual = canalesTV[0];
-
+    var enc = false;
+    var i=0; 
     while (enc == false && i<canalesTV.length)
     {
-      if (numActual != numero) i++;
+      if (i+1 != numero) i++;
       else enc = true;
     }
 
@@ -26,6 +25,14 @@ class Canal {
     }
 
     //RECORDAR PONER EL VOLUMEN, ESE NO CAMBIA ENCUENTRES O NO EL CANAL Q BUSCABAS
+
+    marcarCanal(numero)
+    {
+      this.interfaz.querySelector()
+
+    }
+
+
   }
 
 }

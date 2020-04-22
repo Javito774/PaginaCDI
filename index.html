@@ -101,7 +101,8 @@
     fill: yellow;
     opacity: .4;
 "></path>
-							<path class="borde" d="m 437.17015,526.04412 h 85.05038 v 111.9891 l 66.37264,-0.4867 v 196.8499 H 201.77618 l -0.68829,-261.5488 159.68246,0.6883 0.68829,-48.86837 h 31.66118" id="path76" style="stroke-dasharray: 1348.85; stroke-dashoffset: 0;"></path>
+							<path class="borde" d="m 437.17015,526.04412 h 85.05038 v 111.9891 l 66.37264,-0.4867 v 196.8499 H 201.77618 l -0.68829,-261.5488 159.68246,0.6883 0.68829,-48.86837 h 31.66118" id="path76"
+								style="stroke-dasharray: 1348.85; stroke-dashoffset: 0;"></path>
 						</g>
 						<g id="habitacion1" transform="translate(-9.185704,-8.582418)" class="relleno" style="
 ">
@@ -175,26 +176,26 @@
 						<p>VOL : 14 | Barra volumen</p>
 						<div class="mando">
 							<div class="boton_arriba"><img src="assets/keyboard_arrow_up-24px.svg"></div>
-							<div>1</div>
-							<div>2</div>
-							<div>3</div>
+							<button onclick="aniadirNumeroAMando('1');">1</button>
+							<button onclick="aniadirNumeroAMando('2');">2</button>
+							<button onclick="aniadirNumeroAMando('3');">3</button>
 							<div class="boton_arriba"><img src="assets/add.svg"></div>
 							<div class="boton">CH</div>
-							<div>4</div>
-							<div>5</div>
-							<div>6</div>
+							<button onclick="aniadirNumeroAMando('4');">4</button>
+							<button onclick="aniadirNumeroAMando('5');">5</button>
+							<button onclick="aniadirNumeroAMando('6');">6</button>
 							<div class="boton" style="align-self: center; justify-self: center;">VOL</div>
 							<div class="boton_abajo"><img src="assets/expand_more-24px.svg"></div>
-							<div>7</div>
-							<div>8</div>
-							<div>9</div>
+							<button onclick="aniadirNumeroAMando('7');">7</button>
+							<button onclick="aniadirNumeroAMando('8');">8</button>
+							<button onclick="aniadirNumeroAMando('9');">9</button>
 							<div class="boton_abajo"><img src="assets/remove.svg"></div>
 							<div></div>
 							<div>
 								<img src="assets/arrow_back.svg">
 								<p class="letrero">ATRÁS</p>
 							</div>
-							<div>0</div>
+							<button onclick="aniadirNumeroAMando('0');">0</button>
 							<div>
 								<img src="assets/volume_off.svg" style="justify-content: center;">
 								<p class="letrero">DESACTIVAR</p>
@@ -212,7 +213,7 @@
 						<input id="congelador-menu" type="radio" name="select-nevera">
 						<label for="congelador-menu" onclick="electrodomesticoActual.mostrarInterfazCongelador();">Congelador</label>
 					</div>
-					<div class="boton-apagado" style="cursor:pointer;">
+					<div class="boton-apagado">
 						<img src="assets/power_settings_new.png">
 						<p class="estado">apagado</p>
 					</div>
@@ -268,7 +269,7 @@
 					<label for="contactos-menu" onclick="electrodomesticoActual.mostrarMenu(2)">Contactos</label>
 				</div>
 				<div class="pantallas">
-					<div class="pantalla-menu" id="llamada" >
+					<div class="pantalla-menu" id="llamada">
 						<h2>Aa Mama</h2>
 						<p>0034992 | SPRINGFIELD</p>
 						<div class="imagen-contacto">
