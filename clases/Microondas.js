@@ -17,6 +17,7 @@ class Microondas extends Electrodomestico
 		this.modos = [];
 		this.modo = 0;
 		this.potencia = [];
+		this.interfaz = document.querySelector(".contenedor-microondas");
 	}
 	iniciarTemporizador()
 	{

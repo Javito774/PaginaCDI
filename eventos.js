@@ -30,7 +30,6 @@ function mostrarMenu(numero)
 	var pantalla2 = document.querySelector("#PantallaSecundaria");
 	var menuElem = document.querySelectorAll(".categoria-menu");
   var botones = document.querySelectorAll("#menuPrincipal img");
-	pantallas = [];
 	if(menuNum == 0)
 	{
 		desactivarmapa();
@@ -42,13 +41,15 @@ function mostrarMenu(numero)
 		menuNum = -1;
 		pantalla1.style.width="100%";
 		pantalla2.style.width="0%";
-		if(numero==0)
-		{
-			document.querySelector("#ventanaEstancia").style.display="none";
-		}
+    var numero = pantallas.length;
+    for(var i=1;i<numero;i++)
+    {
+      retrocederVentana();
+    }
 	}
 	else
 	{
+    pantallas = [];
 		if(menuNum!=-1)
 		{
 			menuElem[menuNum].style.display="none";

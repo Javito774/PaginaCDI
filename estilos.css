@@ -429,6 +429,10 @@ main>div {
 .contenedor-termostato{
   grid-template-rows: auto auto 1fr;
 }
+.contenedor-microondas{
+  grid-template-rows: auto 1fr;
+}
+
 .contenedor-tv{
   grid-template-rows: auto 1fr 1fr;
 }
@@ -468,7 +472,8 @@ main>div {
   padding-bottom: 3em;
 }
 .contenedor-nevera .temperatura,
-.contenedor-termostato .temperatura{
+.contenedor-termostato .temperatura,
+.contenedor-microondas>.tiempo{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -480,7 +485,8 @@ main>div {
   line-height: 6;
 }
 .contenedor-nevera .temperatura img,
-.contenedor-termostato .temperatura img{
+.contenedor-termostato .temperatura img,
+.contenedor-microondas .tiempo img{
   width: 3rem;
   height: 3rem;
   padding: .5rem;
@@ -494,8 +500,12 @@ main>div {
   color: #9d9d9d;
   line-height: 5;
 }
+.contenedor-microondas .display-tiempo{
+  display: flex;
+}
 .contenedor-nevera .temperatura p,
-.contenedor-termostato .temperatura p{
+.contenedor-termostato .temperatura p,
+.contenedor-microondas .display-tiempo{
   font-size: 4rem;
   font-weight: bolder;
   padding: 0 1em;
