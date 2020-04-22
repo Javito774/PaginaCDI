@@ -694,7 +694,8 @@ main>div {
 .menu-telefono,
 .menu-nevera,
 .menu-termostato,
-.menu-peliculas{
+.menu-peliculas,
+.contenedor-microondas .controles>div{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -706,7 +707,8 @@ main>div {
 .menu-telefono input[type="radio"],
 .menu-nevera input[type="radio"],
 .menu-termostato input[type="radio"],
-.menu-peliculas input[type="radio"]
+.menu-peliculas input[type="radio"],
+.contenedor-microondas .controles input[type="radio"]
  {
   display: none
 }
@@ -714,7 +716,8 @@ main>div {
 .menu-telefono label,
 .menu-nevera label,
 .menu-termostato label,
-.menu-peliculas label{
+.menu-peliculas label,
+.contenedor-microondas .controles label{
     margin: 0 1em;
     box-shadow: 0 0 0.2em;
     padding: .5em;
@@ -725,10 +728,33 @@ main>div {
 .menu-telefono input[type="radio"]:checked+label,
 .menu-nevera input[type="radio"]:checked+label,
 .menu-termostato input[type="radio"]:checked+label,
-.menu-peliculas input[type="radio"]:checked+label{
+.menu-peliculas input[type="radio"]:checked+label,
+.contenedor-microondas .controles input[type="radio"]:checked+label{
   color: green;
 }
+.contenedor-microondas .controles input[type="radio"]:checked+label{
+  box-shadow: 0 0 0.5em;
+}
+.contenedor-microondas .controles{
+  width: 60%;
+  margin: 0 auto;
+}
+.contenedor-microondas .controles>p
+{
+  font-weight: bolder;
+  padding-top: 2em;
+  font-size: .8rem;
+}
+.contenedor-microondas .controles label {
+    line-height: 2.8rem;
+    width: 3.5rem;
+    border-radius: 20em;
+    text-align: center;
+}
 
+.contenedor-microondas .controles>div {
+    padding: .5em 0;
+}
 /*ESTILOS PARTE DOMOTICA*/
 #ventanaEstancia {
   background: #fff;
