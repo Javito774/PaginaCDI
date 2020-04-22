@@ -110,13 +110,19 @@ main>div {
   font-size: 0.8rem;
 }
 
-#emergencias {
+#emergencias,
+#apagado {
   justify-content: center;
+  align-items: center;
+  position: absolute;
+  background: rgba(255,255,255,.9);
+  width: 100%;
+  height: 100vh;
+  z-index: 2000;
 }
 
 #emergencias_container {
   align-items: center;
-  border: 1px solid #d9d9d9;
   border-radius: 1rem;
   padding: 30px;
   height: 40%;
@@ -126,19 +132,21 @@ main>div {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
 }
 
 .emergencias_button {
-    padding: 0.5rem 2rem;
-    border: none;
-    margin: 0 1em;
-    border-radius: 1em;
+  padding: 0.5rem 2rem;
+  border: none;
+  margin: 0 1em;
+  border-radius: .5em;
+  font-size: 1.2rem;
 }
 
 .mensaje-confirmacion {
   padding: 0.5rem 0;
   margin-bottom: 1.5em;
+  font-size: 1.5rem;
+  font-weight: bolder;
 }
 
 .contenedor-joystick {
@@ -215,7 +223,7 @@ main>div {
 #menuPrincipal img[seleccionado]
 {
   background-color: #f8c8a0;
-  border: 2px solid; 
+  border: 2px solid;
 }
 
 #mapa {
@@ -284,7 +292,6 @@ main>div {
 }
 
 #PantallaSecundaria {
-  position: relative;
   overflow: hidden;
   display: grid;
   grid-template-rows: auto 1fr;
@@ -310,12 +317,6 @@ main>div {
   display: none;
   height: 65vh;
   overflow: hidden;
-}
-
-/* ESTILOS APAGAR SISTEMA */
-
-#apagado {
-  justify-content: center;
 }
 
 /* ESTILOS LISTA DE CONTACTOS */
@@ -678,7 +679,6 @@ main>div {
   z-index: 200;
   display: none;
   grid-template-columns: repeat(3, 8rem);
-  grid-template-rows: min-content;
   justify-content: center;
   justify-self: center;
   width: 100%;
