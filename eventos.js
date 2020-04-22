@@ -29,6 +29,7 @@ function mostrarMenu(numero)
 	var pantalla1 = document.querySelector("#controlesSilla");
 	var pantalla2 = document.querySelector("#PantallaSecundaria");
 	var menuElem = document.querySelectorAll(".categoria-menu");
+  var botones = document.querySelectorAll("#menuPrincipal img");
 	pantallas = [];
 	if(menuNum == 0)
 	{
@@ -37,6 +38,7 @@ function mostrarMenu(numero)
 	if(menuNum == numero)
 	{
 		menuElem[menuNum].style.display="none";
+    botones[menuNum].removeAttribute('seleccionado');
 		menuNum = -1;
 		pantalla1.style.width="100%";
 		pantalla2.style.width="0%";
@@ -50,28 +52,24 @@ function mostrarMenu(numero)
 		if(menuNum!=-1)
 		{
 			menuElem[menuNum].style.display="none";
+      botones[menuNum].removeAttribute('seleccionado');
 			menuNum = numero;
-			menuElem[menuNum].style.display="grid";
-			pantallas.push(menuElem[menuNum].getAttribute("id"));
-			mostrarCarpeta();
-			if(menuNum == 0)
-			{
-				activarmapa();
-			}
 		}
 		else
 		{
 			menuNum = numero;
 			pantalla1.style.width="50%";
 			pantalla2.style.width="50%";
-			menuElem[menuNum].style.display="grid";
-			pantallas.push(menuElem[menuNum].getAttribute("id"));
-			mostrarCarpeta();
-			if(menuNum == 0)
-			{
-				activarmapa();
-			}
+
 		}
+    botones[menuNum].setAttribute('seleccionado','');
+    menuElem[menuNum].style.display="grid";
+    pantallas.push(menuElem[menuNum].getAttribute("id"));
+    mostrarCarpeta();
+    if(menuNum == 0)
+    {
+      activarmapa();
+    }
 	}
 }
 

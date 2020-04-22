@@ -212,7 +212,8 @@ main>div {
   cursor: pointer;
 }
 
-#menuPrincipal img:hover{
+#menuPrincipal img[seleccionado]
+{
   background-color: #f8c8a0;
 }
 
