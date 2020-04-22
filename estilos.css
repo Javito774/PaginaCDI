@@ -215,6 +215,7 @@ main>div {
 #menuPrincipal img[seleccionado]
 {
   background-color: #f8c8a0;
+  border: 2px solid; 
 }
 
 #mapa {
