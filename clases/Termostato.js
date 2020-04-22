@@ -11,9 +11,15 @@ class Termostato extends Electrodomestico
 	switchTermostato()
 	{
 		if(this.temperaturaDeseada == null)
+		{
 			this.temperaturaDeseada=22;
+			this.interfaz.querySelector(".boton-apagado").setAttribute('encendido','');
+		}
 		else
+		{
 			this.temperaturaDeseada=null;
+			this.interfaz.querySelector(".boton-apagado").removeAttribute('encendido');
+		}
 		this.actualizarEstado();
 		this.mostrarInterfaz();
 	}
@@ -47,7 +53,7 @@ class Termostato extends Electrodomestico
 	mostrarInterfaz()
 	{
 		var contenedor = this.interfaz.querySelector(".contenedor-mensaje");
-		this.interfaz.querySelector(".boton-apagado img").setAttribute("onclick","electrodomesticoActual.switchTermostato();");
+		this.interfaz.querySelector(".boton-apagado").setAttribute("onclick","electrodomesticoActual.switchTermostato();");
 		var mensaje="";
 		if(this.temperaturaDeseada==null)
 		{

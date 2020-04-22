@@ -137,19 +137,22 @@
 
 				</div>
 				<div class="contenedor-tv contenedor-electrodomestico">
-					<div class="boton-apagado">
-						<img src="assets/power_settings_new.png">
-						<p class="estado">apagado</p>
+					<div class="boton-apagado" onclick="electrodomesticoActual.switchTV();">
+						<svg viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M13 3h-2v10h2V3zm4.83 2.17l-1.42 1.42C17.99 7.86 19 9.81 19 12c0 3.87-3.13 7-7 7s-7-3.13-7-7c0-2.19 1.01-4.14 2.58-5.42L6.17 5.17C4.23 6.82 3 9.26 3 12c0 4.97 4.03 9 9 9s9-4.03 9-9c0-2.74-1.23-5.18-3.17-6.83z"/></svg>
 					</div>
 					<div class="contenedor-mensaje">
-						<p class="mensaje">TV apagada. Pulse cualquier botón para encenderla</p>
+						<p class="canal">CH: 1 | RTV</p>
+						<div class="volumen"><p>VOL<p><div><div></div></div></div>
+					</div>
+					<div class="contenedor-numeros">
+
 					</div>
 					<div class="mando">
 						<div class="boton boton_arriba"><img src="assets/keyboard_arrow_up-24px.svg"></div>
 						<div><p>1</p></div>
 						<div><p>2</p></div>
 						<div><p>3</p></div>
-						<div class="boton boton_arriba"><img src="assets/add.svg"></div>
+						<div class="boton boton_arriba" onclick="electrodomesticoActual.subirVolumen();"><img src="assets/add.svg"></div>
 						<div class="boton"><p>CH</p></div>
 						<div><p>4</p></div>
 						<div><p>5</p></div>
@@ -159,19 +162,14 @@
 						<div><p>7</p></div>
 						<div><p>8</p></div>
 						<div><p>9</p></div>
-						<div class="boton boton_abajo"><img src="assets/remove.svg"></div>
+						<div class="boton boton_abajo" onclick="electrodomesticoActual.bajarVolumen();"><img src="assets/remove.svg"></div>
 						<div></div>
-						<div>
-							<div>
-								<img src="assets/arrow_back.svg">
-								<p class="letrero">ATRÁS</p>
-							</div>
-						</div>
+						<div></div>
 						<div><p>0</p></div>
 						<div>
 							<div>
 								<img src="assets/volume_off.svg">
-								<p class="letrero">DESACTIVAR</p>
+								<p class="letrero">SILECIO</p>
 							</div>
 						</div>
 					</div>
@@ -197,8 +195,7 @@
 						<label for="congelador-menu" onclick="electrodomesticoActual.mostrarInterfazCongelador();">Congelador</label>
 					</div>
 					<div class="boton-apagado">
-						<img src="assets/power_settings_new.png">
-						<p class="estado">apagado</p>
+						<svg viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M13 3h-2v10h2V3zm4.83 2.17l-1.42 1.42C17.99 7.86 19 9.81 19 12c0 3.87-3.13 7-7 7s-7-3.13-7-7c0-2.19 1.01-4.14 2.58-5.42L6.17 5.17C4.23 6.82 3 9.26 3 12c0 4.97 4.03 9 9 9s9-4.03 9-9c0-2.74-1.23-5.18-3.17-6.83z"/></svg>
 					</div>
 					<div class="contenedor-mensaje">
 					</div>
@@ -211,8 +208,7 @@
 						<label for="programa-menu" onclick="electrodomesticoActual.mostrarInterfaz();">Programa</label>
 					</div>
 					<div class="boton-apagado">
-						<img src="assets/power_settings_new.png">
-						<p class="estado">apagado</p>
+						<svg viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M13 3h-2v10h2V3zm4.83 2.17l-1.42 1.42C17.99 7.86 19 9.81 19 12c0 3.87-3.13 7-7 7s-7-3.13-7-7c0-2.19 1.01-4.14 2.58-5.42L6.17 5.17C4.23 6.82 3 9.26 3 12c0 4.97 4.03 9 9 9s9-4.03 9-9c0-2.74-1.23-5.18-3.17-6.83z"/></svg>
 					</div>
 					<div class="contenedor-mensaje">
 						<p class="mensaje">El termostato está apagado, pulse el botón de encendido para iniciar el sistema.</p>

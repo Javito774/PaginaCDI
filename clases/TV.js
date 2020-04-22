@@ -22,20 +22,25 @@ class TV extends Electrodomestico{
 	}
 	subirVolumen()
 	{
-		if(this.vol<100)
+		if(this.vol<25)
 			this.vol++;
+		this.interfaz.querySelector(".volumen>div>div").style.width=this.vol*4+"%";
 	}
 	bajarVolumen()
 	{
 		if(this.vol>0)
 			this.vol--;
+		this.interfaz.querySelector(".volumen>div>div").style.width=this.vol*4+"%";
 	}
-	encender()
+	switchTV()
 	{
-		this.estado = "encendida";
-	}
-	apagar()
-	{
-		this.estado = "apagada";
+		if(this.estado == "encendida"){
+			this.estado = "apagada";
+			this.interfaz.querySelector(".boton-apagado").removeAttribute('encendido');
+		}
+		else {
+			this.estado = "encendida";
+			this.interfaz.querySelector(".boton-apagado").setAttribute('encendido','');
+		}
 	}
 }

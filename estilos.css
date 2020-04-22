@@ -439,13 +439,24 @@ main>div {
 .contenedor-nevera .boton-apagado,
 .contenedor-termostato .boton-apagado,
 .contenedor-tv .boton-apagado{
-  text-align: center;
-  padding-top: 1em;
-  padding-bottom: 2em;
+  display: flex;
+  margin: 0 auto;
+  box-shadow: 0 0 0.5em #888;
+  border-radius: 16em;
+  margin: .5em auto;
+  height: 2.5em;
+  width: 2.5em;
+  justify-content: center;
 }
-.contenedor-nevera .boton-apagado img,
-.contenedor-termostato .boton-apagado img,
-.contenedor-tv .boton-apagado img{
+.contenedor-nevera .boton-apagado[encendido],
+.contenedor-termostato .boton-apagado[encendido],
+.contenedor-tv .boton-apagado[encendido] {
+    box-shadow: 0 0 0.5em green;
+    fill: green;
+}
+.contenedor-nevera .boton-apagado svg,
+.contenedor-termostato .boton-apagado svg,
+.contenedor-tv .boton-apagado svg{
   width: 1.5em;
 }
 .contenedor-nevera .boton-apagado p,
@@ -457,6 +468,7 @@ main>div {
 .contenedor-termostato .contenedor-mensaje,
 .contenedor-tv .contenedor-mensaje{
   align-self: baseline;
+  padding-top: 1.5em;
 }
 .contenedor-nevera .contenedor-mensaje .mensaje,
 .contenedor-termostato .contenedor-mensaje .mensaje,
@@ -517,35 +529,36 @@ main>div {
   grid-template-rows: repeat(4, 3rem);
   justify-content: center;
   justify-items: center;
-  font-size: .7rem;
+  font-size: 1rem;
   padding-bottom: 1.5em;
 }
-.mando>div
+.contenedor-tv .mando>div
 {
   width: 100%;
   height: 100%;
   text-align: center;
 }
-.mando div>p{
+.contenedor-tv .mando div>p{
   text-align: center;
   line-height: 3rem;
 }
-.mando .boton img {
+.contenedor-tv .mando .boton img {
   position: relative;
   height: 100%;
   width: 1.2rem;
 }
-.mando>div>div
+.contenedor-tv .mando>div>div
 {
   height: 100%;
 }
-.mando>div>div>img{
+.contenedor-tv .mando>div>div>img{
   height: 50%;
   width: 1.1rem;
 }
 .contenedor-tv .boton {
 	background-color: #D9D9D9;
-	width: 80%;
+	width: 80% !important;
+  font-size: .7rem;
 }
 
 .contenedor-tv .boton_arriba {
@@ -560,10 +573,43 @@ main>div {
 	border-bottom-right-radius: .7em;
 }
 .contenedor-tv .letrero {
-  line-height: 1rem;
+  line-height: 1rem !important;
   font-size: 0.5rem;
 }
+.contenedor-tv .contenedor-mensaje{
+    margin: 0 7em;
+  }
+.contenedor-tv .contenedor-mensaje p {
+    font-size: 1rem;
+}
 
+.contenedor-tv .contenedor-mensaje span {
+    font-weight: bolder;
+}
+
+.contenedor-tv .volumen {
+    display: flex;
+    align-items: center;
+}
+.contenedor-tv .volumen>p
+{
+    margin-right: 1em;
+}
+.contenedor-tv .volumen>div
+{
+    width: 100%;
+    height: 10px;
+    border-radius: 10px;
+    background: #f1f1f1;
+}
+.contenedor-tv .volumen>div>div
+{
+    width: 0%;
+    height: 100%;
+    border-radius: 10px;
+    background: #888;
+    transition: width .5s ease-in-out;
+}
 
 /*ESTILOS TELEFONO*/
 
