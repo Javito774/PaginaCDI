@@ -125,8 +125,8 @@ main>div {
   z-index: 10000;
   width: 3em;
   height: 3em;
-  top: 8.5em;
-  left: 12em;
+  top: 48%;
+  left: 90%;
   transform: rotate(-90deg);
   box-shadow: 0 0 0.5em;
   border-radius: 4em;
