@@ -15,7 +15,26 @@
         transform: translate(-50%,-50%) rotate(90deg);
   }
 }
+::-webkit-scrollbar {
+  width: 5px;
+}
 
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 2em;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 2em;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: green;
+}
 * {
   margin: 0;
   padding: 0;
@@ -287,11 +306,8 @@ main>div {
 .categoria-menu {
   position: relative;
   display: none;
-  height: 100%;
-  overflow-x: hidden;
-  overflow-y: scroll;
-  left: 20px;
-  align-items: center;
+  height: 65vh;
+  overflow: hidden;
 }
 
 /* ESTILOS APAGAR SISTEMA */
@@ -309,9 +325,6 @@ main>div {
   height: 60vh;
   overflow-y: scroll;
   position: relative;
-  left: 20px;
-  /* overflow: hidden;
-  overflow-y: scroll; */
 }
 
 #contactos .letra {
@@ -627,6 +640,7 @@ main>div {
   align-items: center;
   overflow: hidden;
   transition: transform .2s ease-in-out;
+  padding: 1em 0;
 }
 
 .menu-telefono input[type="radio"],
@@ -641,17 +655,18 @@ main>div {
 .menu-nevera label,
 .menu-termostato label,
 .menu-peliculas label{
-  font-size: 1rem;
-  margin: 0 2em;
+    margin: 0 1em;
+    box-shadow: 0 0 0.2em;
+    padding: .5em;
+    border-radius: 1em;
+    font-size: .8rem;
 }
 
 .menu-telefono input[type="radio"]:checked+label,
 .menu-nevera input[type="radio"]:checked+label,
 .menu-termostato input[type="radio"]:checked+label,
 .menu-peliculas input[type="radio"]:checked+label{
-  font-weight: bolder;
   color: green;
-  border-bottom: 5px dotted;
 }
 
 /*ESTILOS PARTE DOMOTICA*/
@@ -684,4 +699,54 @@ main>div {
 
 #ventanaEstancia>div>p {
   font-size: 0.7rem;
+}
+
+/*ESTILOS DE LOS SERVICIOS*/
+
+/* SELECCION DE SERVICIO*/
+#servicios .botones
+{
+  display: none;
+}
+/* PELICULAS */
+
+#servicios .netlis {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  height: 100%;
+}
+
+#servicios .netlis .sub-menu.biblioteca
+{
+  display: grid;
+  grid-template-columns: repeat(4,auto);
+  overflow-y: scroll;
+  height: 55vh;
+  justify-content: center;
+  grid-gap: 1em;
+  padding-top: 1em;
+}
+#servicios .netlis .sub-menu.peliculas,
+#servicios .netlis .sub-menu.series
+{
+  display: none;
+}
+
+.pelicula {
+    text-align: center;
+}
+
+.pelicula img {
+    border-radius: .7em;
+    height: 9em;
+}
+
+.pelicula p.nombre {
+    font-size: .8rem;
+    font-weight: bold;
+}
+
+.pelicula p.caducidad {
+    font-size: .7rem;
+    color: #9d9d9d;
 }
