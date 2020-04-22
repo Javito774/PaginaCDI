@@ -75,31 +75,45 @@ class Combi extends Electrodomestico
 	switchNevera()
 	{
 		if(this.temNevera==null)
+		{
 			this.temNevera = 4;
+			this.interfaz.querySelector(".boton-apagado").setAttribute('encendido','');
+		}
 		else
+		{
 			this.temNevera = null;
+			this.interfaz.querySelector(".boton-apagado").removeAttribute('encendido');
+		}
 		this.mostrarInterfazNevera();
 	}
 	switchCongelador()
 	{
 		if(this.temCongelador==null)
+		{
 			this.temCongelador = -18;
+			this.interfaz.querySelector(".boton-apagado").setAttribute('encendido','');
+		}
 		else
+		{
 			this.temCongelador = null;
+			this.interfaz.querySelector(".boton-apagado").removeAttribute('encendido');
+		}
 		this.mostrarInterfazCongelador();
 	}
 	mostrarInterfazNevera()
 	{
 		var contenedor = this.interfaz.querySelector(".contenedor-mensaje");
-		this.interfaz.querySelector(".boton-apagado img").setAttribute("onclick","electrodomesticoActual.switchNevera();");
+		this.interfaz.querySelector(".boton-apagado").setAttribute("onclick","electrodomesticoActual.switchNevera();");
 		var mensaje="";
 		if(this.temNevera==null)
 		{
 			mensaje+="<p class='mensaje'>La nevera está apagada, pulse el botón de encendido para iniciar el sistema.</p>"
 			contenedor.innerHTML=mensaje;
+			this.interfaz.querySelector(".boton-apagado").removeAttribute('encendido');
 		}
 		else
 		{
+			this.interfaz.querySelector(".boton-apagado").setAttribute('encendido','');
 			mensaje += "<div class='temperatura'>";
 			mensaje+="<img class='bajartemp-btn' src='assets/remove.svg' onclick='electrodomesticoActual.bajarTemNevera()'/><p></p><img class='subirtemp-btn' src='assets/add.svg' onclick='electrodomesticoActual.subirTemNevera();'/>";
 			mensaje+="</div>";
@@ -112,15 +126,17 @@ class Combi extends Electrodomestico
 	mostrarInterfazCongelador()
 	{
 		var contenedor = this.interfaz.querySelector(".contenedor-mensaje");
-		this.interfaz.querySelector(".boton-apagado img").setAttribute("onclick","electrodomesticoActual.switchCongelador();");
+		this.interfaz.querySelector(".boton-apagado").setAttribute("onclick","electrodomesticoActual.switchCongelador();");
 		var mensaje="";
 		if(this.temCongelador==null)
 		{
 			mensaje+="<p class='mensaje'>El congelador está apagado, pulse el botón de encendido para iniciar el sistema.</p>"
 			contenedor.innerHTML=mensaje;
+			this.interfaz.querySelector(".boton-apagado").removeAttribute('encendido');
 		}
 		else
 		{
+			this.interfaz.querySelector(".boton-apagado").setAttribute('encendido','');
 			mensaje += "<div class='temperatura'>";
 			mensaje+="<img class='bajartemp-btn' src='assets/remove.svg' onclick='electrodomesticoActual.bajarTemCongelador()'/><p></p><img class='subirtemp-btn' src='assets/add.svg' onclick='electrodomesticoActual.subirTemCongelador();'/>";
 			mensaje+="</div>";
