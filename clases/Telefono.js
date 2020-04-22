@@ -61,6 +61,7 @@ class Telefono{
     document.querySelector("#menuPrincipal").style.top="0%";
     this.interfaz.querySelector(".menu-telefono").style.transform="none";
     this.interfaz.querySelectorAll(".menu-telefono input")[0].checked=true;
+    mostrarMenu(menuNum);
     this.mostrarMenu(1);
     vaciarNumeroTelefono();
     mostrarMenuTelefono();

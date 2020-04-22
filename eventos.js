@@ -29,7 +29,7 @@ function mostrarMenu(numero)
 	var pantalla1 = document.querySelector("#controlesSilla");
 	var pantalla2 = document.querySelector("#PantallaSecundaria");
 	var menuElem = document.querySelectorAll(".categoria-menu");
-	pantallas = [];
+  var botones = document.querySelectorAll("#menuPrincipal img");
 	if(menuNum == 0)
 	{
 		desactivarmapa();
@@ -37,41 +37,40 @@ function mostrarMenu(numero)
 	if(menuNum == numero)
 	{
 		menuElem[menuNum].style.display="none";
+    botones[menuNum].removeAttribute('seleccionado');
 		menuNum = -1;
 		pantalla1.style.width="100%";
 		pantalla2.style.width="0%";
-		if(numero==0)
-		{
-			document.querySelector("#ventanaEstancia").style.display="none";
-		}
+    var numero = pantallas.length;
+    for(var i=1;i<numero;i++)
+    {
+      retrocederVentana();
+    }
 	}
 	else
 	{
+    pantallas = [];
 		if(menuNum!=-1)
 		{
 			menuElem[menuNum].style.display="none";
+      botones[menuNum].removeAttribute('seleccionado');
 			menuNum = numero;
-			menuElem[menuNum].style.display="grid";
-			pantallas.push(menuElem[menuNum].getAttribute("id"));
-			mostrarCarpeta();
-			if(menuNum == 0)
-			{
-				activarmapa();
-			}
 		}
 		else
 		{
 			menuNum = numero;
 			pantalla1.style.width="50%";
 			pantalla2.style.width="50%";
-			menuElem[menuNum].style.display="grid";
-			pantallas.push(menuElem[menuNum].getAttribute("id"));
-			mostrarCarpeta();
-			if(menuNum == 0)
-			{
-				activarmapa();
-			}
+
 		}
+    botones[menuNum].setAttribute('seleccionado','');
+    menuElem[menuNum].style.display="grid";
+    pantallas.push(menuElem[menuNum].getAttribute("id"));
+    mostrarCarpeta();
+    if(menuNum == 0)
+    {
+      activarmapa();
+    }
 	}
 }
 
@@ -166,6 +165,18 @@ function mostrarMenuTelefono()
 {
 	telefono.interfaz.querySelector('.contenedor-botones #btn-borrar').style.display="none";
 	telefono.interfaz.querySelector('.menu-telefono').style.transform="none";
+}
+
+//CONTROLAR EL MANDO TV
+var canalMarcado = "";
+function aniadirNumeroAMando(numero)
+{
+  //No sé si sería en vez de mando, TV
+  if(mando.interfaz.querySelector(" .contenedor-menu").style.tranform == "none" || mando.interfaz.querySelector(" .contenedor-menu").style.tranform == "")
+  {
+    esconderMapa();
+  }
+  else
 }
 
 //MANEJAR MOVIMIENTO DE VENTANAS ENTRE DOMOTICA
