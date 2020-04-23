@@ -533,6 +533,20 @@ main>div {
   font-weight: bolder;
   padding: 0 1em;
 }
+.contenedor-microondas .acciones{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 6em;
+}
+.contenedor-microondas .acciones img{
+  width: 2.5rem;
+  padding: .5rem;
+  border-radius: 2.5rem;
+  box-shadow: 0 0 .2rem;
+  margin: 0 .3em;
+  display: none;
+}
 /*ESTILOS TV*/
 .contenedor-tv .mando{
   display: grid;
