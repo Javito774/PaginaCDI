@@ -26,14 +26,16 @@ class Microondas extends Electrodomestico
 		this.mostrarbtnStop();
 		this.mostrarbtnsSubBaj();
 		this.intervalo = setInterval(()=>{
-			if(this.temporizador>0)
+			if(this.temporizador>1)
 			{
 				this.temporizador--;
 				this.actualizarEstado();
-				console.log(this.estado);
 			}
 			else
+			{
 				clearInterval(this.intervalo);
+				this.stopTemporizador();
+			}
 		},1000);
 	}
 	mostrarbtnPause()
@@ -84,17 +86,21 @@ class Microondas extends Electrodomestico
 	}
 	stopTemporizador()
 	{
+		clearInterval(this.intervalo);
 		this.mostrarbtnPause();
 		this.mostrarbtnStop();
 		this.mostrarbtnsSubBaj();
-		clearInterval(this.intervalo);
+		this.interfaz.querySelector(".tiempo .bajar").style.display="none";
 		this.temporizador=0;
 		this.actualizarEstado();
 	}
 	subirTiempo()
 	{
 		if(this.temporizador==0)
+		{
 			this.mostrarbtnPlay();
+			this.interfaz.querySelector(".tiempo .bajar").style.display="block";
+		}
 		this.temporizador+=15;
 		this.actualizarEstado();
 	}
@@ -106,6 +112,7 @@ class Microondas extends Electrodomestico
 		{
 			this.temporizador=0;
 			this.mostrarbtnPlay();
+			this.interfaz.querySelector(".tiempo .bajar").style.display="none";
 		}
 		this.actualizarEstado();
 	}
