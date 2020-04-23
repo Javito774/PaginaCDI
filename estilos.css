@@ -229,7 +229,7 @@ main>div {
 
 #menuPrincipal img[seleccionado]
 {
-  background-color: pink;
+  background-color: #FC9E22;
   border: 2px solid;
   box-shadow: 0 0 1em #fff;
 }
