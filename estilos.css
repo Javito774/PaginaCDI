@@ -1,4 +1,4 @@
-@media (max-width: 1600px) {
+@media (max-width: 2000px) {
   :root {
     font-size: 16pt;
   }
@@ -318,6 +318,9 @@ main>div {
 }
 #PantallaSecundaria>.indicador-carpeta>img{
   padding: 0 1em;
+  position: relative;
+  top: 0;
+  transition: top .2s ease-in-out;
 }
 
 .categoria-menu {
@@ -333,7 +336,7 @@ main>div {
 }
 
 #contactos {
-  height: 60vh;
+  height: 55vh;
   overflow-y: scroll;
   position: relative;
 }
@@ -435,7 +438,45 @@ main>div {
   align-items: center;
   z-index: 300;
 }
+/*ESTILOS PERSIANA*/
+.contenedor-persiana .abierta {
+    display: flex;
+    align-items: center;
 
+}
+.contenedor-persiana .abierta>p
+{
+    margin-right: 1em;
+}
+.contenedor-persiana .abierta>div
+{
+    width: 50%;
+    height: 40vh;
+    border-radius: 10px;
+    background-color: #1fc8db;
+    background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+    margin: 0 auto;
+    border: 4px solid;
+}
+.contenedor-persiana .abierta>div>div
+{
+    width: 100%;
+    height: 0%;
+    border-radius: 10px;
+    background-image: repeating-linear-gradient(#333,#333 4px,white 4px,white 20px,#333 20px,#333 24px,transparent 24px,transparent 26px);
+    transition: height .2s ease-in-out;
+}
+.contenedor-persiana img{
+  width: 3rem;
+  padding: .5rem;
+  box-shadow: 0 0 0.3rem;
+  border-radius: 3rem;
+  margin: 0 .5rem;
+}
+.contenedor-persiana .botones-persiana{
+  display: flex;
+  justify-content: center;
+}
 /*ESTILOS COMBI*/
 .contenedor-nevera,
 .contenedor-termostato{
@@ -595,6 +636,8 @@ main>div {
   width: 100%;
   height: 100%;
   background:#fff;
+  display: none;
+  z-index: 2;
 }
 .contenedor-termostato .nuevo-programa h2{
   margin-bottom: .5em;

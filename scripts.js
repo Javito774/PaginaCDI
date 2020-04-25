@@ -4,6 +4,7 @@ var agendaContactos = [];
 var restaurantesFavoritos = Array(3);
 var electrodomesticoActual=null;
 var telefono;
+var programa;
 
 //FUNCIONES QUE INICIAN TODAS LAS ESTANCIAS DE LA CASA.
 function inicio()
@@ -124,6 +125,9 @@ function inicio()
 
 	telefono = new Telefono();
 	mostrarMenuTelefono();
+
+	programa = new Programa();
+	programa.interfaz.querySelector(".display-temperatura").innerHTML=programa.temperatura+'ºC';
 }
 
 document.addEventListener("DOMContentLoaded", inicio);

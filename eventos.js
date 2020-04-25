@@ -168,6 +168,14 @@ function mostrarMenuTelefono()
 }
 
 //MANEJAR MOVIMIENTO DE VENTANAS ENTRE DOMOTICA
+function esconderFlechaAtras()
+{
+  document.querySelector("#PantallaSecundaria>.indicador-carpeta>img").style.top="100%";
+}
+function mostrarFlechaAtras()
+{
+  document.querySelector("#PantallaSecundaria>.indicador-carpeta>img").style.top="0";
+}
 function mostrarCarpeta()
 {
 	var pantalla = document.querySelector("#PantallaSecundaria>.indicador-carpeta>h3");

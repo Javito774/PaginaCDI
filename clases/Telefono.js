@@ -51,6 +51,7 @@ class Telefono{
     this.interfaz.querySelector("#llamada h2").innerHTML=nombre;
     this.interfaz.querySelector(".menu-telefono").style.transform="translateY(-100%)";
     document.querySelector("#menuPrincipal").style.top="100%";
+    esconderFlechaAtras();
     if(imagen!=null)
       this.interfaz.querySelector("#llamada .imagen-contacto").innerHTML=imagen;
     else
@@ -63,6 +64,7 @@ class Telefono{
     this.interfaz.querySelectorAll(".menu-telefono input")[0].checked=true;
     mostrarMenu(menuNum);
     this.mostrarMenu(1);
+    mostrarFlechaAtras();
     vaciarNumeroTelefono();
     mostrarMenuTelefono();
   }

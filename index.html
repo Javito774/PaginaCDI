@@ -137,6 +137,23 @@
 				<div id="ventanaEstancia">
 
 				</div>
+				<div class="contenedor-persiana contenedor-electrodomestico">
+          <div class="contenedor-barra">
+          </div>
+          <div class="mando-persiana">
+            <div class="abierta">
+							<div>
+								<div>
+								</div>
+							</div>
+						</div>
+					</div>
+          <div class="botones-persiana">
+            <img  src="assets/keyboard_arrow_up-24px.svg"  onclick="electrodomesticoActual.bajarPersiana();">
+          	<img src="assets/expand_more-24px.svg" onclick="electrodomesticoActual.subirPersiana()">
+        </div>
+
+        </div>
 				<div class="contenedor-tv contenedor-electrodomestico">
 					<div class="boton-apagado" onclick="electrodomesticoActual.switchTV();">
 						<svg viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M13 3h-2v10h2V3zm4.83 2.17l-1.42 1.42C17.99 7.86 19 9.81 19 12c0 3.87-3.13 7-7 7s-7-3.13-7-7c0-2.19 1.01-4.14 2.58-5.42L6.17 5.17C4.23 6.82 3 9.26 3 12c0 4.97 4.03 9 9 9s9-4.03 9-9c0-2.74-1.23-5.18-3.17-6.83z"/></svg>
@@ -233,24 +250,24 @@
 					<div class="nuevo-programa">
 						<h2>Nuevo Programa</h2>
 						<div>
-							<img src="assets/remove.svg"/>
-							<p class="display-temperatura">22ºC</p>
-							<img src="assets/add.svg"/>
+							<img src="assets/remove.svg" onclick="programa.temperatura--;document.querySelector('.nuevo-programa .display-temperatura').innerHTML=programa.temperatura+'ºC';"/>
+							<p class="display-temperatura"></p>
+							<img src="assets/add.svg" onclick="programa.temperatura++;document.querySelector('.nuevo-programa .display-temperatura').innerHTML=programa.temperatura+'ºC';"/>
 						</div>
 						<div>
 							<div>
 								<label>Hora de inicio</label>
-								<input type="time"/>
+								<input type="time" onblur="programa.horaInicio = this.value"/>
 							</div>
 							<div>
 								<label>Hora de fin</label>
-								<input type="time"/>
+								<input type="time" onblur="programa.horaFin = this.value"/>
 							</div>
 						</div>
 						<div>
 							<div>
 								<label>Fecha</label>
-								<input type="date"/>
+								<input type="date" onblur="programa.fecha = this.value"/>
 							</div>
 						</div>
 
@@ -264,8 +281,8 @@
 							<p>Domingo</p>
 						</div>
 						<div class="contenedor-botones">
-							<button>CANCELAR</button>
-							<button>HECHO</button>
+							<button onclick="programa.vaciarCampos(); programa.interfaz.style.display='none';mostrarFlechaAtras();">CANCELAR</button>
+							<button onclick="if(programa.validar()){electrodomesticoActual.programas.push(programa);programa=new Programa();programa.interfaz.style.display='none';mostrarFlechaAtras();electrodomesticoActual.imprimirProgramas();}">GUARDAR</button>
 						</div>
 					</div>
 					<div class="menu-termostato">
