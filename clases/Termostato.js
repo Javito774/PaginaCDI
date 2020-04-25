@@ -75,23 +75,16 @@ class Termostato extends Electrodomestico
 				}
 				else {
 					mensaje += "<div class='contenedor-botones'><img src='assets/more_vert.svg'/><img src='assets/add.svg'/></div>";
-					mensaje += "<div class='contenedor-programas'><div class='programa'>";
-          mensaje +=  '<p class="display-temperatura">22ºC</p>';
-          mensaje +=  '<p>22 abr 2020</p>';
-        	mensaje += '</div>';
-    			mensaje +='<div class="programa">';
-          mensaje +=  '<p class="display-temperatura">22ºC</p>';
-          mensaje += '<p>22 abr 2020</p>';
-        	mensaje +='</div><div class="programa">';
-          mensaje +=  '<p class="display-temperatura">22ºC</p>';
-          mensaje +=  '<p>22 abr 2020</p>';
-        	mensaje += '</div><div class="programa">';
-          mensaje += '<p class="display-temperatura">22ºC</p>';
-          mensaje +=  '<p>22 abr 2020</p>'
-        	mensaje += '</div><div class="programa">';
-          mensaje +=  '<p class="display-temperatura">22ºC</p>';
-          mensaje +=  '<p>22 abr 2020</p>';
-        	mensaje += "</div></div>";
+					mensaje += "<div class='contenedor-programas'>";
+					for(var i = 0; i<5;i++)
+					{
+						mensaje += "<div class='programa'>";
+	          mensaje += '<p class="display-temperatura">22ºC</p>';
+	          mensaje += '<p>22 abr 2020</p>';
+						mensaje += '<div class="toggle" onclick="this.hasAttribute(\'activo\') ? (this.removeAttribute(\'activo\')) : (this.setAttribute(\'activo\',\'\'));"><div></div></div>';
+	        	mensaje += '</div>';
+					}
+        	mensaje += "</div>";
 					contenedor.innerHTML=mensaje;
 				}
 			},10);

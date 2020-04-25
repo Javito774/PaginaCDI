@@ -230,6 +230,44 @@
 					</div>
 				</div>
 				<div class="contenedor-termostato contenedor-electrodomestico">
+					<div class="nuevo-programa">
+						<h2>Nuevo Programa</h2>
+						<div>
+							<img src="assets/remove.svg"/>
+							<p class="display-temperatura">22ºC</p>
+							<img src="assets/add.svg"/>
+						</div>
+						<div>
+							<div>
+								<label>Hora de inicio</label>
+								<input type="time"/>
+							</div>
+							<div>
+								<label>Hora de fin</label>
+								<input type="time"/>
+							</div>
+						</div>
+						<div>
+							<div>
+								<label>Fecha</label>
+								<input type="date"/>
+							</div>
+						</div>
+
+						<div>
+							<p>Lunes</p>
+							<p>Martes</p>
+							<p>Miercoles</p>
+							<p>Jueves</p>
+							<p>Viernes</p>
+							<p>Sábado</p>
+							<p>Domingo</p>
+						</div>
+						<div class="contenedor-botones">
+							<button>CANCELAR</button>
+							<button>HECHO</button>
+						</div>
+					</div>
 					<div class="menu-termostato">
 						<input id="termostato-menu" type="radio" name="select-termostato" checked="true">
 						<label for="termostato-menu" onclick="electrodomesticoActual.mostrarInterfaz();">Manual</label>
