@@ -74,7 +74,24 @@ class Termostato extends Electrodomestico
 					this.interfaz.querySelector(".temperatura p").innerHTML=this.temperaturaDeseada+"ºC";
 				}
 				else {
-					mensaje += "<h2>PROGRAMAS</h2>";
+					mensaje += "<div class='contenedor-botones'><img src='assets/more_vert.svg'/><img src='assets/add.svg'/></div>";
+					mensaje += "<div class='contenedor-programas'><div class='programa'>";
+          mensaje +=  '<p class="display-temperatura">22ºC</p>';
+          mensaje +=  '<p>22 abr 2020</p>';
+        	mensaje += '</div>';
+    			mensaje +='<div class="programa">';
+          mensaje +=  '<p class="display-temperatura">22ºC</p>';
+          mensaje += '<p>22 abr 2020</p>';
+        	mensaje +='</div><div class="programa">';
+          mensaje +=  '<p class="display-temperatura">22ºC</p>';
+          mensaje +=  '<p>22 abr 2020</p>';
+        	mensaje += '</div><div class="programa">';
+          mensaje += '<p class="display-temperatura">22ºC</p>';
+          mensaje +=  '<p>22 abr 2020</p>'
+        	mensaje += '</div><div class="programa">';
+          mensaje +=  '<p class="display-temperatura">22ºC</p>';
+          mensaje +=  '<p>22 abr 2020</p>';
+        	mensaje += "</div></div>";
 					contenedor.innerHTML=mensaje;
 				}
 			},10);
