@@ -213,7 +213,7 @@ main>div {
 #menuPrincipal {
   display: flex;
   justify-content: center;
-  background: #444;
+  background: #555;
   position: relative;
   top: 0%;
   transition: top .3s ease-in-out;
@@ -727,7 +727,7 @@ main>div {
   align-items: center;
   overflow: hidden;
   transition: transform .2s ease-in-out;
-  padding: 1em 0;
+  padding: .5em 0;
 }
 
 .menu-telefono input[type="radio"],
@@ -826,7 +826,9 @@ main>div {
   height: 100%;
 }
 
-#servicios .netlis .sub-menu.biblioteca
+#servicios .netlis .sub-menu.biblioteca,
+#servicios .netlis .sub-menu.peliculas,
+#servicios .netlis .sub-menu.series
 {
   display: grid;
   grid-template-columns: repeat(4,auto);

@@ -254,24 +254,13 @@
 				<div class="netlis">
 					<div class="menu-peliculas">
 						<input id="biblioteca-menu" type="radio" name="select-peliculas" checked="true">
-						<label for="biblioteca-menu">Biblioteca</label>
+						<label for="biblioteca-menu" onclick="cambiarVentanaPeliculas(0);">Biblioteca</label>
 						<input id="peliculas-menu" type="radio" name="select-peliculas">
-						<label for="peliculas-menu">Películas</label>
+						<label for="peliculas-menu" onclick="cambiarVentanaPeliculas(1);">Películas</label>
 						<input id="series-menu" type="radio" name="select-peliculas">
-						<label for="series-menu">Series</label>
+						<label for="series-menu" onclick="cambiarVentanaPeliculas(2);">Series</label>
 					</div>
 					<div class="sub-menu biblioteca">
-						<div class="pantalla-pelicula">
-							<div class="cartel">
-								<img src="assets/pelicula1.jpg"/>
-							</div>
-							<div class="datos">
-								<p class="titulo">Harry Pajoter</p>
-								<p class="año">1998 · 121 minutos</p>
-								<p class="descripcion">Una historia apasionante que te llenara el corazon de sida y gonorrea para que puedas disfrutar tus ultimos dias como parajaro azul en el viento verde de este mundo negro.</p>
-								<button type="button"><span>4,99€</span> Alquilar</button>
-							</div>
-						</div>
 						<div class="pelicula">
 							<img src="assets/pelicula1.jpg"/>
 							<p class="nombre">Harry Pajoter</p>
@@ -328,7 +317,29 @@
 							<p class="caducidad">caduca en 5 días</p>
 						</div>
 					</div>
-					<div class="sub-menu peliculas"></div>
+					<div class="sub-menu peliculas">
+						<div class="pantalla-pelicula">
+							<div class="cartel">
+								<img src="assets/pelicula1.jpg"/>
+							</div>
+							<div class="datos">
+								<p class="titulo">Harry Pajoter</p>
+								<p class="año">1998 · 121 minutos</p>
+								<p class="descripcion">Una historia apasionante que te llenara el corazon de sida y gonorrea para que puedas disfrutar tus ultimos dias como parajaro azul en el viento verde de este mundo negro.</p>
+								<button type="button"><span>4,99€</span> Alquilar</button>
+							</div>
+						</div>
+						<div class="pelicula">
+							<img src="assets/pelicula1.jpg"/>
+							<p class="nombre">Harry Pajoter</p>
+							<p class="caducidad">caduca en 5 días</p>
+						</div>
+						<div class="pelicula">
+							<img src="assets/pelicula2.jpg"/>
+							<p class="nombre">Harry Pajoter</p>
+							<p class="caducidad">caduca en 5 días</p>
+						</div>
+					</div>
 					<div class="sub-menu series"></div>
 				</div>
 				<!--<video src="assets/Peliculas/HP7.2010.BRRip.720p.Bluray.YIFY.mkv" type='video/x-matroska; codecs="theora, vorbis"' autoplay style="width: 100%;
@@ -472,9 +483,9 @@
 	</main>
 	<div id="menuPrincipal">
 		<img onclick="mostrarMenu(0);" src="assets/home.svg">
-		<img onclick="mostrarMenu(1);" src="assets/location_on.svg">
+		<img onclick="mostrarMenu(1);electrodomesticoActual=document.querySelector('#servicios .netlis .sub-menu.biblioteca');" src="assets/location_on.svg">
 		<img onclick="mostrarMenu(2);electrodomesticoActual=telefono;" src="assets/phone.svg">
-		<img onclick="mostrarMenu(3);" src="assets/emergencias.png">
+		<img onclick="mostrarMenu(3);" src="assets/112.svg" style="padding: .5em;">
 		<img onclick="mostrarMenu(4)" src="assets/power_settings_new.svg">
 	</div>
 	<script type="text/javascript" src="eventos.js"></script>

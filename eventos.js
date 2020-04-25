@@ -234,3 +234,11 @@ function retrocederVentana()
 	   pantallaActual.interfaz.style.display="none";
   mostrarCarpeta();
 }
+
+function cambiarVentanaPeliculas(numero)
+{
+  var menus = document.querySelectorAll("#servicios .netlis .sub-menu");
+  electrodomesticoActual.style.display="none";
+  electrodomesticoActual=menus[numero];
+  electrodomesticoActual.style.display="grid";
+}
