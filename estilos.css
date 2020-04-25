@@ -479,8 +479,7 @@ main>div {
 .contenedor-nevera .contenedor-mensaje,
 .contenedor-termostato .contenedor-mensaje,
 .contenedor-tv .contenedor-mensaje{
-  align-self: baseline;
-  padding-top: 1.5em;
+  height:100%;
 }
 .contenedor-nevera .contenedor-mensaje .mensaje,
 .contenedor-termostato .contenedor-mensaje .mensaje,
