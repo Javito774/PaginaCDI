@@ -20,7 +20,7 @@ class TV extends Electrodomestico{
 	}
 	bajarCanal()
 	{
-		if(this.canal>0 && this.estado == "encendida"){
+		if(this.canal>1 && this.estado == "encendida"){
 			this.canal--;
 
 			this.interfaz.querySelector(".canal").innerHTML="CH "+ this.canal + " | "+this.canales[this.canal-1];}
