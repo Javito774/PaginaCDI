@@ -1,12 +1,11 @@
 var habitaciones = [];
 var metodosDePago = [];
 var agendaContactos = [];
-var restaurantesFavoritos = Array(3);
 var electrodomesticoActual=null;
 var telefono;
 var programa;
 var netlis;
-
+var restaurantesFavoritos;
 //FUNCIONES QUE INICIAN TODAS LAS ESTANCIAS DE LA CASA.
 function inicio()
 {
@@ -131,6 +130,7 @@ function inicio()
 	mostrarMenuTelefono();
 
 	netlis = new Netlis();
+	restaurantesFavoritos = new Restaurantes();
 
 }
 

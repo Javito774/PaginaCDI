@@ -24,6 +24,8 @@
 
 	<script type="text/javascript" src="clases/Netlis.js"></script>
 
+	<script type="text/javascript" src="clases/Restaurantes.js"></script>
+
 	<script type="text/javascript" src="clases/Silla.js"></script>
 
 	<script type="text/javascript" src="scripts.js"></script>
@@ -300,9 +302,9 @@
 			</div>
 			<div class="categoria-menu" id="servicios">
 				<div class="botones">
-					<button onclick=""><img src="assets/fastfood.svg"/>Restaurantes</button>
+					<button onclick="restaurantesFavoritos.interfaz.style.display='grid';pantallas.push(restaurantesFavoritos);mostrarCarpeta();"><img src="assets/fastfood.svg"/>Restaurantes</button>
 					<button onclick=""><img src="assets/taxi.svg"/>Taxi</button>
-					<button onclick="netlis.interfaz.style.display='grid';pantallas.push(netlis);"><img src="assets/theaters.svg"/>Netlis</button>
+					<button onclick="netlis.interfaz.style.display='grid';pantallas.push(netlis);mostrarCarpeta();electrodomesticoActual=netlis.interfaz.querySelector('.sub-menu.biblioteca');"><img src="assets/theaters.svg"/>Netlis</button>
 				</div>
 				<div class="netlis">
 					<div class="menu-peliculas">
@@ -394,6 +396,11 @@
 						</div>
 					</div>
 					<div class="sub-menu series"></div>
+				</div>
+				<div class="restaurantes">
+					<div class='contenedor-contactos'>
+
+					</div>
 				</div>
 				<!--<video src="assets/Peliculas/HP7.2010.BRRip.720p.Bluray.YIFY.mkv" type='video/x-matroska; codecs="theora, vorbis"' autoplay style="width: 100%;
 			    height: auto;
@@ -536,7 +543,7 @@
 	</main>
 	<div id="menuPrincipal">
 		<img onclick="mostrarMenu(0);" src="assets/home.svg">
-		<img onclick="mostrarMenu(1);electrodomesticoActual=document.querySelector('#servicios .netlis .sub-menu.biblioteca');" src="assets/location_on.svg">
+		<img onclick="mostrarMenu(1);" src="assets/location_on.svg">
 		<img onclick="mostrarMenu(2);electrodomesticoActual=telefono;" src="assets/phone.svg">
 		<img onclick="mostrarMenu(3);" src="assets/112.svg" style="padding: .5em;">
 		<img onclick="mostrarMenu(4)" src="assets/power_settings_new.svg">

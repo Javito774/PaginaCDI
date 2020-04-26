@@ -346,7 +346,8 @@ main>div {
   padding: .5em 1em;
   font-weight: bold;
 }
-#contactos .nombre-contacto{
+#contactos .nombre-contacto
+#servicios .restaurantes .nombre-contacto{
   font-size: .9rem;
 }
 #contactos .contenedor-letra{
@@ -356,12 +357,18 @@ main>div {
   margin-bottom: 1em;
 }
 
-#contactos .contenedor-contactos{
+#contactos .contenedor-contactos,
+#servicios .restaurantes .contenedor-contactos{
   border: 0.05rem solid #d9d9d9;
   border-radius: 0.7rem;
 }
-
-#contactos .contacto {
+#servicios .restaurantes .contenedor-contactos{
+  width: 17rem;
+  height: max-content;
+  margin: 0 auto;
+}
+#contactos .contacto,
+#servicios .restaurantes .contacto {
   display: flex;
   padding: .5rem 1em;
   align-items: center;
@@ -417,7 +424,8 @@ main>div {
   padding: .5em;
 }
 
-#contactos .foto-contacto {
+#contactos .foto-contacto,
+#servicios .restaurantes .foto-contacto{
   width: 2rem;
   line-height: 2rem;
   text-align: center;
@@ -1029,15 +1037,18 @@ p.display-temperatura {
 }
 /* PELICULAS */
 
-#servicios .netlis {
+#servicios .netlis,
+#servicios .restaurantes {
   display: none;
-  grid-template-rows: auto 1fr;
   height: 100%;
   position: absolute;
   width: 100%;
   background: #fff;
 }
-
+#servicios .netlis
+{
+  grid-template-rows: auto 1fr;
+}
 #servicios .netlis .sub-menu.biblioteca,
 #servicios .netlis .sub-menu.peliculas,
 #servicios .netlis .sub-menu.series

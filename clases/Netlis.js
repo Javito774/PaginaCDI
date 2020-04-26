@@ -1,5 +1,6 @@
 class Netlis {
   constructor() {
+    this.nombre = "Netlis";
     this.biblioteca = new BibliotecaMultimedia("Biblioteca");
   	this.peliculas = new BibliotecaMultimedia("Peliculas");
   	this.peliculas = new BibliotecaMultimedia("Series");
