@@ -40,7 +40,7 @@ class Telefono{
       mensaje+="<div class='contacto' onclick='telefono.llamar(\""+agendaContactos[i].nombre+"\");'>";
       mensaje+=agendaContactos[i].imagen;
       mensaje+="<p class='nombre-contacto'>"+agendaContactos[i].nombre+"</p>";
-      mensaje+="</div>"
+      mensaje+="</div>";
     }
     mensaje+="</div></div>";
     contenedor.innerHTML = mensaje;

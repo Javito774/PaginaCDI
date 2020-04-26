@@ -4,7 +4,6 @@
 <head>
 	<title>Silla de Ruedas</title>
 	<link rel="stylesheet" type="text/css" href="estilos.css">
-
 	<script type="text/javascript" src="clases/Estancia.js"></script>
 	<script type="text/javascript" src="clases/Electrodomestico.js"></script>
 	<script type="text/javascript" src="clases/Combi.js"></script>
@@ -23,8 +22,9 @@
 	<script type="text/javascript" src="clases/Telefono.js"></script>
 	<script type="text/javascript" src="clases/Contacto.js"></script>
 
-	<script type="text/javascript" src="clases/Pelicula.js"></script>
-	<script type="text/javascript" src="clases/BibliotecaMultimedia.js"></script>
+	<script type="text/javascript" src="clases/Netlis.js"></script>
+
+	<script type="text/javascript" src="clases/Restaurantes.js"></script>
 
 	<script type="text/javascript" src="clases/Silla.js"></script>
 
@@ -164,54 +164,27 @@
 							<path d="M13 3h-2v10h2V3zm4.83 2.17l-1.42 1.42C17.99 7.86 19 9.81 19 12c0 3.87-3.13 7-7 7s-7-3.13-7-7c0-2.19 1.01-4.14 2.58-5.42L6.17 5.17C4.23 6.82 3 9.26 3 12c0 4.97 4.03 9 9 9s9-4.03 9-9c0-2.74-1.23-5.18-3.17-6.83z" /></svg>
 					</div>
 					<div class="contenedor-mensaje">
-						<p class="canal">CH: 1 | RTV</p>
-						<div class="volumen">
-							<p>VOL<p>
-									<div>
-										<div></div>
-									</div>
-						</div>
+						<p class="canal">APAGADA</p>
+						<div class="volumen"><p>VOL<p><div><div></div></div></div>
 					</div>
 					<div class="contenedor-numeros">
 
 					</div>
 					<div class="mando">
-						<div class="boton boton_arriba"><img src="assets/keyboard_arrow_up-24px.svg"></div>
-						<div>
-							<p>1</p>
-						</div>
-						<div>
-							<p>2</p>
-						</div>
-						<div>
-							<p>3</p>
-						</div>
+						<div class="boton boton_arriba" onclick="electrodomesticoActual.subirCanal();"><img src="assets/keyboard_arrow_up-24px.svg"></div>
+						<div><p>1</p></div>
+						<div><p>2</p></div>
+						<div><p>3</p></div>
 						<div class="boton boton_arriba" onclick="electrodomesticoActual.subirVolumen();"><img src="assets/add.svg"></div>
-						<div class="boton">
-							<p>CH</p>
-						</div>
-						<div>
-							<p>4</p>
-						</div>
-						<div>
-							<p>5</p>
-						</div>
-						<div>
-							<p>6</p>
-						</div>
-						<div class="boton">
-							<p>VOL</p>
-						</div>
-						<div class="boton boton_abajo"><img src="assets/expand_more-24px.svg"></div>
-						<div>
-							<p>7</p>
-						</div>
-						<div>
-							<p>8</p>
-						</div>
-						<div>
-							<p>9</p>
-						</div>
+						<div class="boton"><p>CH</p></div>
+						<div><p>4</p></div>
+						<div><p>5</p></div>
+						<div><p>6</p></div>
+						<div class="boton"><p>VOL</p></div>
+						<div class="boton boton_abajo" onclick="electrodomesticoActual.bajarCanal();"><img src="assets/expand_more-24px.svg"></div>
+						<div><p>7</p></div>
+						<div><p>8</p></div>
+						<div><p>9</p></div>
 						<div class="boton boton_abajo" onclick="electrodomesticoActual.bajarVolumen();"><img src="assets/remove.svg"></div>
 						<div></div>
 						<div></div>
@@ -340,9 +313,9 @@
 			</div>
 			<div class="categoria-menu" id="servicios">
 				<div class="botones">
-					<button>Restaurantes</button>
-					<button>Taxi</button>
-					<button>Netlis</button>
+					<button onclick="restaurantesFavoritos.interfaz.style.display='grid';pantallas.push(restaurantesFavoritos);mostrarCarpeta();"><img src="assets/fastfood.svg"/>Restaurantes</button>
+					<button onclick=""><img src="assets/taxi.svg"/>Taxi</button>
+					<button onclick="netlis.interfaz.style.display='grid';pantallas.push(netlis);mostrarCarpeta();electrodomesticoActual=netlis.interfaz.querySelector('.sub-menu.biblioteca');"><img src="assets/theaters.svg"/>Netlis</button>
 				</div>
 				<div class="netlis">
 					<div class="menu-peliculas">
@@ -434,6 +407,11 @@
 						</div>
 					</div>
 					<div class="sub-menu series"></div>
+				</div>
+				<div class="restaurantes">
+					<div class='contenedor-contactos'>
+
+					</div>
 				</div>
 				<!--<video src="assets/Peliculas/HP7.2010.BRRip.720p.Bluray.YIFY.mkv" type='video/x-matroska; codecs="theora, vorbis"' autoplay style="width: 100%;
 			    height: auto;
@@ -577,7 +555,7 @@
 	</main>
 	<div id="menuPrincipal">
 		<img onclick="mostrarMenu(0);" src="assets/home.svg">
-		<img onclick="mostrarMenu(1);electrodomesticoActual=document.querySelector('#servicios .netlis .sub-menu.biblioteca');" src="assets/location_on.svg">
+		<img onclick="mostrarMenu(1);" src="assets/location_on.svg">
 		<img onclick="mostrarMenu(2);electrodomesticoActual=telefono;" src="assets/phone.svg">
 		<img onclick="mostrarMenu(3);" src="assets/112.svg" style="padding: .5em;">
 		<img onclick="mostrarMenu(4)" src="assets/power_settings_new.svg">

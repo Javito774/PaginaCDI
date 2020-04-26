@@ -1,11 +1,11 @@
 var habitaciones = [];
 var metodosDePago = [];
 var agendaContactos = [];
-var restaurantesFavoritos = Array(3);
 var electrodomesticoActual=null;
 var telefono;
 var programa;
-
+var netlis;
+var restaurantesFavoritos;
 //FUNCIONES QUE INICIAN TODAS LAS ESTANCIAS DE LA CASA.
 function inicio()
 {
@@ -19,6 +19,9 @@ function inicio()
 	var pasillo = new Estancia(2,"pasillo");
 	var recibidor = new Estancia(0,"recibidor");
 	var puertas = [];
+
+	programa = new Programa();
+	programa.interfaz.querySelector(".display-temperatura").innerHTML=programa.temperatura+'ºC';
 
 	puertas.push(new Puerta(0,recibidor,cocina));
 	puertas.push(new Puerta(1,recibidor,pasillo));
@@ -126,8 +129,9 @@ function inicio()
 	telefono = new Telefono();
 	mostrarMenuTelefono();
 
-	programa = new Programa();
-	programa.interfaz.querySelector(".display-temperatura").innerHTML=programa.temperatura+'ºC';
+	netlis = new Netlis();
+	restaurantesFavoritos = new Restaurantes();
+
 }
 
 document.addEventListener("DOMContentLoaded", inicio);
