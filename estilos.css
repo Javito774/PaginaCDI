@@ -331,12 +331,18 @@ main>div {
 }
 
 /* ESTILOS BOCINA  */
-
+.bocina:active
+{
+  box-shadow: 0 0 1rem green;
+}
 .bocina {
-  width: 4%;
-  margin-top: 1rem;
-  margin-right: 2rem;
-  float: right;
+  width: 3rem;
+  position: absolute;
+  right: 2rem;
+  top: 1rem;
+  padding: .5rem;
+  box-shadow: 0 0 0.2rem;
+  border-radius: 3rem;
 }
 
 
