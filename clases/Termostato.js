@@ -7,6 +7,13 @@ class Termostato extends Electrodomestico
 		this.temperaturaDeseada = null;
 		this.programas = [];
 		this.interfaz=document.querySelector(".contenedor-termostato");
+		programa.activo = false;
+		programa.fecha = "2020-05-02";
+		programa.temperatura = 20;
+		programa.horaInicio = "8:30";
+		programa.horaFin = "10:00";
+		this.programas.push(programa);
+		programa = new Programa();
 	}
 	switchTermostato()
 	{
@@ -57,7 +64,10 @@ class Termostato extends Electrodomestico
 		{
 			mensaje += "<div class='programa'>";
 			mensaje += '<p class="display-temperatura">'+this.programas[i].temperatura+'ºC</p>';
-			mensaje += '<p>'+this.programas[i].fecha+'</p>';
+			mensaje += '<div style="text-align: center;width: 8rem;">';
+				mensaje += '<p class="hora">'+this.programas[i].horaInicio+' - '+this.programas[i].horaFin+'</p>';
+			mensaje += '<p class="fecha">'+this.programas[i].fecha+'</p>';
+			mensaje += '</div>';
 			mensaje += '<div class="toggle"';
 			if(this.programas[i].activo)
 				mensaje+=' activo ';
@@ -117,6 +127,7 @@ class Programa
 	}
 	validar()
 	{
+		console.log("Tía que se ejecuta");
 		var resul = true;
 		var suma = 0;
 		for(var i=0; i<this.repeticion.length;i++)

@@ -698,8 +698,16 @@ input#programa-menu:checked ~ .contenedor-mensaje {
     margin-top: 0.2em;
 }
 .programa p {
-    font-size: .8rem;
     padding-right: 2em;
+}
+.programa .hora{
+    font-size: .9rem;
+    font-weight: bold;
+}
+.programa .fecha
+{
+  font-size: .7rem;
+  color: #aaa;
 }
 p.display-temperatura {
     font-size: 2rem;
@@ -996,14 +1004,38 @@ p.display-temperatura {
 /* SELECCION DE SERVICIO*/
 #servicios .botones
 {
-  display: none;
+  display: grid;
+  grid-auto-rows: max-content;
+  justify-content: center;
+}
+#servicios .botones button
+{
+  margin: 1rem;
+  font-size: .6rem;
+  padding: .2rem 1rem;
+  border-radius: .5rem;
+  box-shadow: 0 0 0.5rem;
+  border: none;
+  background: transparent;
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 3;
+}
+#servicios .botones button img
+{
+  display: table;
+  margin: 0 auto;
+  width: 3rem;
 }
 /* PELICULAS */
 
 #servicios .netlis {
-  display: grid;
+  display: none;
   grid-template-rows: auto 1fr;
   height: 100%;
+  position: absolute;
+  width: 100%;
+  background: #fff;
 }
 
 #servicios .netlis .sub-menu.biblioteca,

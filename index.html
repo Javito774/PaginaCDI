@@ -4,7 +4,6 @@
 <head>
 	<title>Silla de Ruedas</title>
 	<link rel="stylesheet" type="text/css" href="estilos.css">
-
 	<script type="text/javascript" src="clases/Estancia.js"></script>
 	<script type="text/javascript" src="clases/Electrodomestico.js"></script>
 	<script type="text/javascript" src="clases/Combi.js"></script>
@@ -23,8 +22,7 @@
 	<script type="text/javascript" src="clases/Telefono.js"></script>
 	<script type="text/javascript" src="clases/Contacto.js"></script>
 
-	<script type="text/javascript" src="clases/Pelicula.js"></script>
-	<script type="text/javascript" src="clases/BibliotecaMultimedia.js"></script>
+	<script type="text/javascript" src="clases/Netlis.js"></script>
 
 	<script type="text/javascript" src="clases/Silla.js"></script>
 
@@ -302,9 +300,9 @@
 			</div>
 			<div class="categoria-menu" id="servicios">
 				<div class="botones">
-					<button>Restaurantes</button>
-					<button>Taxi</button>
-					<button>Netlis</button>
+					<button onclick=""><img src="assets/fastfood.svg"/>Restaurantes</button>
+					<button onclick=""><img src="assets/taxi.svg"/>Taxi</button>
+					<button onclick="netlis.interfaz.style.display='grid';pantallas.push(netlis);"><img src="assets/theaters.svg"/>Netlis</button>
 				</div>
 				<div class="netlis">
 					<div class="menu-peliculas">
