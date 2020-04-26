@@ -330,6 +330,17 @@ main>div {
   overflow: hidden;
 }
 
+/* ESTILOS BOCINA  */
+
+.bocina {
+  width: 4%;
+  margin-top: 1rem;
+  margin-right: 2rem;
+  float: right;
+}
+
+
+
 /* ESTILOS LISTA DE CONTACTOS */
 .pantallas {
   height: 100%;

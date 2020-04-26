@@ -101,7 +101,8 @@
 						    fill: yellow;
 						    opacity: .4;
 								"></path>
-							<path class="borde" d="m 437.17015,526.04412 h 85.05038 v 111.9891 l 66.37264,-0.4867 v 196.8499 H 201.77618 l -0.68829,-261.5488 159.68246,0.6883 0.68829,-48.86837 h 31.66118" id="path76" style="stroke-dasharray: 1348.85; stroke-dashoffset: 0;"></path>
+							<path class="borde" d="m 437.17015,526.04412 h 85.05038 v 111.9891 l 66.37264,-0.4867 v 196.8499 H 201.77618 l -0.68829,-261.5488 159.68246,0.6883 0.68829,-48.86837 h 31.66118" id="path76"
+								style="stroke-dasharray: 1348.85; stroke-dashoffset: 0;"></path>
 						</g>
 						<g id="habitacion1" transform="translate(-9.185704,-8.582418)" class="relleno">
 							<path class="divrelleno" d="M 197.64647,12.582418 H 13.185704 V 320.93472 l 118.041116,1.2554 0.18002,54.1517 66.92015,-0.1289 z" id="path4736" onclick="mostrarHabitacion(5)" style="
@@ -136,54 +137,87 @@
 				</div>
 				<div id="ventanaEstancia">
 
+
+
 				</div>
 				<div class="contenedor-persiana contenedor-electrodomestico">
-          <div class="contenedor-barra">
-          </div>
-          <div class="mando-persiana">
-            <div class="abierta">
+					<div class="contenedor-barra">
+					</div>
+					<div class="mando-persiana">
+						<div class="abierta">
 							<div>
 								<div>
 								</div>
 							</div>
 						</div>
 					</div>
-          <div class="botones-persiana">
-            <img  src="assets/keyboard_arrow_up-24px.svg"  onclick="electrodomesticoActual.bajarPersiana();">
-          	<img src="assets/expand_more-24px.svg" onclick="electrodomesticoActual.subirPersiana()">
-        </div>
+					<div class="botones-persiana">
+						<img src="assets/keyboard_arrow_up-24px.svg" onclick="electrodomesticoActual.bajarPersiana();">
+						<img src="assets/expand_more-24px.svg" onclick="electrodomesticoActual.subirPersiana()">
+					</div>
 
-        </div>
+				</div>
 				<div class="contenedor-tv contenedor-electrodomestico">
 					<div class="boton-apagado" onclick="electrodomesticoActual.switchTV();">
-						<svg viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M13 3h-2v10h2V3zm4.83 2.17l-1.42 1.42C17.99 7.86 19 9.81 19 12c0 3.87-3.13 7-7 7s-7-3.13-7-7c0-2.19 1.01-4.14 2.58-5.42L6.17 5.17C4.23 6.82 3 9.26 3 12c0 4.97 4.03 9 9 9s9-4.03 9-9c0-2.74-1.23-5.18-3.17-6.83z"/></svg>
+						<svg viewBox="0 0 24 24">
+							<path d="M0 0h24v24H0z" fill="none" />
+							<path d="M13 3h-2v10h2V3zm4.83 2.17l-1.42 1.42C17.99 7.86 19 9.81 19 12c0 3.87-3.13 7-7 7s-7-3.13-7-7c0-2.19 1.01-4.14 2.58-5.42L6.17 5.17C4.23 6.82 3 9.26 3 12c0 4.97 4.03 9 9 9s9-4.03 9-9c0-2.74-1.23-5.18-3.17-6.83z" /></svg>
 					</div>
 					<div class="contenedor-mensaje">
 						<p class="canal">CH: 1 | RTV</p>
-						<div class="volumen"><p>VOL<p><div><div></div></div></div>
+						<div class="volumen">
+							<p>VOL<p>
+									<div>
+										<div></div>
+									</div>
+						</div>
 					</div>
 					<div class="contenedor-numeros">
 
 					</div>
 					<div class="mando">
 						<div class="boton boton_arriba"><img src="assets/keyboard_arrow_up-24px.svg"></div>
-						<div><p>1</p></div>
-						<div><p>2</p></div>
-						<div><p>3</p></div>
+						<div>
+							<p>1</p>
+						</div>
+						<div>
+							<p>2</p>
+						</div>
+						<div>
+							<p>3</p>
+						</div>
 						<div class="boton boton_arriba" onclick="electrodomesticoActual.subirVolumen();"><img src="assets/add.svg"></div>
-						<div class="boton"><p>CH</p></div>
-						<div><p>4</p></div>
-						<div><p>5</p></div>
-						<div><p>6</p></div>
-						<div class="boton"><p>VOL</p></div>
+						<div class="boton">
+							<p>CH</p>
+						</div>
+						<div>
+							<p>4</p>
+						</div>
+						<div>
+							<p>5</p>
+						</div>
+						<div>
+							<p>6</p>
+						</div>
+						<div class="boton">
+							<p>VOL</p>
+						</div>
 						<div class="boton boton_abajo"><img src="assets/expand_more-24px.svg"></div>
-						<div><p>7</p></div>
-						<div><p>8</p></div>
-						<div><p>9</p></div>
+						<div>
+							<p>7</p>
+						</div>
+						<div>
+							<p>8</p>
+						</div>
+						<div>
+							<p>9</p>
+						</div>
 						<div class="boton boton_abajo" onclick="electrodomesticoActual.bajarVolumen();"><img src="assets/remove.svg"></div>
 						<div></div>
 						<div></div>
-						<div><p>0</p></div>
+						<div>
+							<p>0</p>
+						</div>
 						<div>
 							<div>
 								<img src="assets/volume_off.svg">
@@ -194,40 +228,40 @@
 				</div>
 				<div class="contenedor-microondas contenedor-electrodomestico">
 					<div class="tiempo">
-						<img style="display: none;" class="bajar" src="assets/remove.svg" onclick="electrodomesticoActual.bajarTiempo();"/>
+						<img style="display: none;" class="bajar" src="assets/remove.svg" onclick="electrodomesticoActual.bajarTiempo();" />
 						<div class="display-tiempo">
 							<p class="minutos">00</p>
 							<p>:</p>
 							<p class="segundos">00</p>
 						</div>
-						<img class="subir" src="assets/add.svg" onclick="electrodomesticoActual.subirTiempo();"/>
+						<img class="subir" src="assets/add.svg" onclick="electrodomesticoActual.subirTiempo();" />
 					</div>
 					<div class="acciones">
-						<img class="stop" onclick="electrodomesticoActual.stopTemporizador();" src="assets/stop.svg"/>
-						<img class="pause" onclick="electrodomesticoActual.pausarTemporizador();" src="assets/pause.svg"/>
-						<img class="play" onclick="electrodomesticoActual.iniciarTemporizador();" src="assets/play_arrow.svg"/>
+						<img class="stop" onclick="electrodomesticoActual.stopTemporizador();" src="assets/stop.svg" />
+						<img class="pause" onclick="electrodomesticoActual.pausarTemporizador();" src="assets/pause.svg" />
+						<img class="play" onclick="electrodomesticoActual.iniciarTemporizador();" src="assets/play_arrow.svg" />
 					</div>
 					<div class="controles">
 						<p>Modo</p>
 						<div class="modo">
-							<input id="modo1" type="radio" name="opcion-microondas" checked/>
+							<input id="modo1" type="radio" name="opcion-microondas" checked />
 							<label for="modo1">1</label>
-							<input id="modo2" type="radio" name="opcion-microondas"/>
+							<input id="modo2" type="radio" name="opcion-microondas" />
 							<label for="modo2">1</label>
-							<input id="modo3" type="radio" name="opcion-microondas"/>
+							<input id="modo3" type="radio" name="opcion-microondas" />
 							<label for="modo3">1</label>
-							<input id="modo4" type="radio" name="opcion-microondas"/>
+							<input id="modo4" type="radio" name="opcion-microondas" />
 							<label for="modo4">1</label>
 						</div>
 						<p>Potencia</p>
 						<div class="potencia">
-							<input id="potencia1" type="radio" name="opcion-microondas"/>
+							<input id="potencia1" type="radio" name="opcion-microondas" />
 							<label for="potencia1">700W</label>
-							<input id="potencia2" type="radio" name="opcion-microondas"/>
+							<input id="potencia2" type="radio" name="opcion-microondas" />
 							<label for="potencia2">800W</label>
-							<input id="potencia3" type="radio" name="opcion-microondas"/>
+							<input id="potencia3" type="radio" name="opcion-microondas" />
 							<label for="potencia3">900W</label>
-							<input id="potencia4" type="radio" name="opcion-microondas"/>
+							<input id="potencia4" type="radio" name="opcion-microondas" />
 							<label for="potencia4">1000W</label>
 						</div>
 					</div>
@@ -241,7 +275,9 @@
 						<label for="congelador-menu" onclick="electrodomesticoActual.mostrarInterfazCongelador();">Congelador</label>
 					</div>
 					<div class="boton-apagado">
-						<svg viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M13 3h-2v10h2V3zm4.83 2.17l-1.42 1.42C17.99 7.86 19 9.81 19 12c0 3.87-3.13 7-7 7s-7-3.13-7-7c0-2.19 1.01-4.14 2.58-5.42L6.17 5.17C4.23 6.82 3 9.26 3 12c0 4.97 4.03 9 9 9s9-4.03 9-9c0-2.74-1.23-5.18-3.17-6.83z"/></svg>
+						<svg viewBox="0 0 24 24">
+							<path d="M0 0h24v24H0z" fill="none" />
+							<path d="M13 3h-2v10h2V3zm4.83 2.17l-1.42 1.42C17.99 7.86 19 9.81 19 12c0 3.87-3.13 7-7 7s-7-3.13-7-7c0-2.19 1.01-4.14 2.58-5.42L6.17 5.17C4.23 6.82 3 9.26 3 12c0 4.97 4.03 9 9 9s9-4.03 9-9c0-2.74-1.23-5.18-3.17-6.83z" /></svg>
 					</div>
 					<div class="contenedor-mensaje">
 					</div>
@@ -250,24 +286,24 @@
 					<div class="nuevo-programa">
 						<h2>Nuevo Programa</h2>
 						<div>
-							<img src="assets/remove.svg" onclick="programa.temperatura--;document.querySelector('.nuevo-programa .display-temperatura').innerHTML=programa.temperatura+'ºC';"/>
+							<img src="assets/remove.svg" onclick="programa.temperatura--;document.querySelector('.nuevo-programa .display-temperatura').innerHTML=programa.temperatura+'ºC';" />
 							<p class="display-temperatura"></p>
-							<img src="assets/add.svg" onclick="programa.temperatura++;document.querySelector('.nuevo-programa .display-temperatura').innerHTML=programa.temperatura+'ºC';"/>
+							<img src="assets/add.svg" onclick="programa.temperatura++;document.querySelector('.nuevo-programa .display-temperatura').innerHTML=programa.temperatura+'ºC';" />
 						</div>
 						<div>
 							<div>
 								<label>Hora de inicio</label>
-								<input type="time" onblur="programa.horaInicio = this.value"/>
+								<input type="time" onblur="programa.horaInicio = this.value" />
 							</div>
 							<div>
 								<label>Hora de fin</label>
-								<input type="time" onblur="programa.horaFin = this.value"/>
+								<input type="time" onblur="programa.horaFin = this.value" />
 							</div>
 						</div>
 						<div>
 							<div>
 								<label>Fecha</label>
-								<input type="date" onblur="programa.fecha = this.value"/>
+								<input type="date" onblur="programa.fecha = this.value" />
 							</div>
 						</div>
 
@@ -292,7 +328,9 @@
 						<label for="programa-menu" onclick="electrodomesticoActual.mostrarInterfaz();">Programa</label>
 					</div>
 					<div class="boton-apagado">
-						<svg viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M13 3h-2v10h2V3zm4.83 2.17l-1.42 1.42C17.99 7.86 19 9.81 19 12c0 3.87-3.13 7-7 7s-7-3.13-7-7c0-2.19 1.01-4.14 2.58-5.42L6.17 5.17C4.23 6.82 3 9.26 3 12c0 4.97 4.03 9 9 9s9-4.03 9-9c0-2.74-1.23-5.18-3.17-6.83z"/></svg>
+						<svg viewBox="0 0 24 24">
+							<path d="M0 0h24v24H0z" fill="none" />
+							<path d="M13 3h-2v10h2V3zm4.83 2.17l-1.42 1.42C17.99 7.86 19 9.81 19 12c0 3.87-3.13 7-7 7s-7-3.13-7-7c0-2.19 1.01-4.14 2.58-5.42L6.17 5.17C4.23 6.82 3 9.26 3 12c0 4.97 4.03 9 9 9s9-4.03 9-9c0-2.74-1.23-5.18-3.17-6.83z" /></svg>
 					</div>
 					<div class="contenedor-mensaje">
 						<p class="mensaje">El termostato está apagado, pulse el botón de encendido para iniciar el sistema.</p>
@@ -317,57 +355,57 @@
 					</div>
 					<div class="sub-menu biblioteca">
 						<div class="pelicula">
-							<img src="assets/pelicula1.jpg"/>
+							<img src="assets/pelicula1.jpg" />
 							<p class="nombre">Harry Pajoter</p>
 							<p class="caducidad">caduca en 5 días</p>
 						</div>
 						<div class="pelicula">
-							<img src="assets/pelicula2.jpg"/>
+							<img src="assets/pelicula2.jpg" />
 							<p class="nombre">Harry Pajoter</p>
 							<p class="caducidad">caduca en 5 días</p>
 						</div>
 						<div class="pelicula">
-							<img src="assets/pelicula3.jpg"/>
+							<img src="assets/pelicula3.jpg" />
 							<p class="nombre">Harry Pajoter</p>
 							<p class="caducidad">caduca en 5 días</p>
 						</div>
 						<div class="pelicula">
-							<img src="assets/pelicula4.jpg"/>
+							<img src="assets/pelicula4.jpg" />
 							<p class="nombre">Harry Pajoter</p>
 							<p class="caducidad">caduca en 5 días</p>
 						</div>
 						<div class="pelicula">
-							<img src="assets/pelicula5.jpg"/>
+							<img src="assets/pelicula5.jpg" />
 							<p class="nombre">Harry Pajoter</p>
 							<p class="caducidad">caduca en 5 días</p>
 						</div>
 						<div class="pelicula">
-							<img src="assets/pelicula6.jpg"/>
+							<img src="assets/pelicula6.jpg" />
 							<p class="nombre">Harry Pajoter</p>
 							<p class="caducidad">caduca en 5 días</p>
 						</div>
 						<div class="pelicula">
-							<img src="assets/pelicula7.jpg"/>
+							<img src="assets/pelicula7.jpg" />
 							<p class="nombre">Harry Pajoter</p>
 							<p class="caducidad">caduca en 5 días</p>
 						</div>
 						<div class="pelicula">
-							<img src="assets/pelicula8.jpg"/>
+							<img src="assets/pelicula8.jpg" />
 							<p class="nombre">Harry Pajoter</p>
 							<p class="caducidad">caduca en 5 días</p>
 						</div>
 						<div class="pelicula">
-							<img src="assets/pelicula9.jpg"/>
+							<img src="assets/pelicula9.jpg" />
 							<p class="nombre">Harry Pajoter</p>
 							<p class="caducidad">caduca en 5 días</p>
 						</div>
 						<div class="pelicula">
-							<img src="assets/pelicula10.jpg"/>
+							<img src="assets/pelicula10.jpg" />
 							<p class="nombre">Harry Pajoter</p>
 							<p class="caducidad">caduca en 5 días</p>
 						</div>
 						<div class="pelicula">
-							<img src="assets/pelicula11.jpg"/>
+							<img src="assets/pelicula11.jpg" />
 							<p class="nombre">Harry Pajoter</p>
 							<p class="caducidad">caduca en 5 días</p>
 						</div>
@@ -375,7 +413,7 @@
 					<div class="sub-menu peliculas">
 						<div class="pantalla-pelicula">
 							<div class="cartel">
-								<img src="assets/pelicula1.jpg"/>
+								<img src="assets/pelicula1.jpg" />
 							</div>
 							<div class="datos">
 								<p class="titulo">Harry Pajoter</p>
@@ -385,12 +423,12 @@
 							</div>
 						</div>
 						<div class="pelicula">
-							<img src="assets/pelicula1.jpg"/>
+							<img src="assets/pelicula1.jpg" />
 							<p class="nombre">Harry Pajoter</p>
 							<p class="caducidad">caduca en 5 días</p>
 						</div>
 						<div class="pelicula">
-							<img src="assets/pelicula2.jpg"/>
+							<img src="assets/pelicula2.jpg" />
 							<p class="nombre">Harry Pajoter</p>
 							<p class="caducidad">caduca en 5 días</p>
 						</div>
@@ -413,7 +451,7 @@
 					<label for="contactos-menu" onclick="electrodomesticoActual.mostrarMenu(2)">Contactos</label>
 				</div>
 				<div class="pantallas">
-					<div class="pantalla-menu" id="llamada" >
+					<div class="pantalla-menu" id="llamada">
 						<h2>Aa Mama</h2>
 						<p>0034992 | SPRINGFIELD</p>
 						<div class="imagen-contacto">
@@ -514,6 +552,7 @@
 			</div>
 		</div>
 		<div id="controlesSilla" style="width:100%;position: relative;">
+			<img src="assets/trumpet.svg" alt="bocina" class="bocina">
 			<div style="
     		padding: 0 2em;
     		margin: 1em 0;
@@ -522,7 +561,7 @@
     		align-items: center;
     		overflow: hidden;
 				">
-					<h3 style="
+				<h3 style="
 	    			text-transform: capitalize;
 	    		font-size: 1rem;
 					">Controles silla</h3>
