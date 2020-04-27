@@ -1000,6 +1000,8 @@ p.display-temperatura {
 }
 
 .menu-telefono,
+.menu-pedir-viaje,
+.menu-elegir-usuario
 .menu-nevera,
 .menu-termostato,
 .menu-peliculas,
@@ -1013,6 +1015,8 @@ p.display-temperatura {
 }
 
 .menu-telefono input[type="radio"],
+.menu-pedir-viaje input[type="radio"],
+.menu-elegir-usuario input[type="radio"],
 .menu-nevera input[type="radio"],
 .menu-termostato input[type="radio"],
 .menu-peliculas input[type="radio"],
@@ -1022,6 +1026,8 @@ p.display-temperatura {
 }
 
 .menu-telefono label,
+.menu-pedir-viaje label,
+.menu-elegir-usuario label,
 .menu-nevera label,
 .menu-termostato label,
 .menu-peliculas label,
@@ -1034,6 +1040,8 @@ p.display-temperatura {
 }
 
 .menu-telefono input[type="radio"]:checked+label,
+.menu-pedir-viaje input[type="radio"]:checked+label,
+.menu-elegir-usuario input[type="radio"]:checked+label,
 .menu-nevera input[type="radio"]:checked+label,
 .menu-termostato input[type="radio"]:checked+label,
 .menu-peliculas input[type="radio"]:checked+label,
