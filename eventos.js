@@ -248,7 +248,8 @@ function mostrarHabitacion(numeroHabitacion)
 			}
       else if(estancia.electrodomesticos[i] instanceof Grifo ||
               estancia.electrodomesticos[i] instanceof Persiana ||
-              estancia.electrodomesticos[i] instanceof Termostato)
+              estancia.electrodomesticos[i] instanceof Termostato ||
+              estancia.electrodomesticos[i] instanceof Vitroceramica)
       {
         mensaje+='electrodomesticoActual.mostrarInterfaz();';
       }

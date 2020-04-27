@@ -286,8 +286,8 @@
 						<div class="fuego" onclick="electrodomesticoActual.seleccionarFuego(2);"></div>
 					</div>
 					<div class="controles">
-						<div><img src="assets/remove.svg"/><p>0</p><img src="assets/add.svg"/></div>
-						<div><img src="assets/remove.svg"/><p class="tiempo"><span>00</span>:<span>00</span></p><img src="assets/add.svg"/></div>
+						<div><img src="assets/remove.svg" onclick="electrodomesticoActual.fuego[electrodomesticoActual.fuegoSeleccionado].bajarEstado();"/><p class="potencia">0</p><img src="assets/add.svg" onclick="electrodomesticoActual.fuego[electrodomesticoActual.fuegoSeleccionado].subirEstado();"/></div>
+						<div><img src="assets/remove.svg" onclick="electrodomesticoActual.fuego[electrodomesticoActual.fuegoSeleccionado].bajarTiempo();"/><p class="tiempo"><span class="minutos">00</span>:<span class="segundos">00</span></p><img src="assets/add.svg" onclick="electrodomesticoActual.fuego[electrodomesticoActual.fuegoSeleccionado].subirTiempo();"/></div>
 					</div>
 				</div>
 				<div class="contenedor-nevera contenedor-electrodomestico">

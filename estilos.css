@@ -579,7 +579,8 @@ main>div {
   background: radial-gradient(black, black 28%,white 32%,white 34%, black 36%, black 62%, white 67%);
 }
 .fuego[seleccionado] {
-    background: radial-gradient(black, black 28%,lightgreen 32%,lightgreen 34%, black 36%, black 62%, lightgreen 67%);
+  box-shadow: 0 0 1rem lightgreen;
+  border: 2px solid lightgreen;
 }
 .contenedor-vitro .fuego:nth-child(1)
 {
