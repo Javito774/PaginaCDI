@@ -722,7 +722,7 @@ main>div {
 }
 
 .contenedor-tv{
-  grid-template-rows: auto 1fr 1fr;
+  grid-template-rows: auto 1fr 1fr 1fr;
 }
 .contenedor-nevera .boton-apagado,
 .contenedor-termostato .boton-apagado,
@@ -748,7 +748,7 @@ main>div {
 }
 .contenedor-nevera .boton-apagado[encendido],
 .contenedor-termostato .boton-apagado[encendido],
-.contenedor-tv .boton-apagado[encendido],
+.contenedor-tv .boton-apagado[encendido]
 {
     box-shadow: 0 0 0.5em green;
     fill: green;
@@ -778,6 +778,12 @@ main>div {
   font-size: 1rem;
   color: #9d9d9d;
   line-height: 1.5;
+}
+
+.contenedor-tv .contenedor-numeros p{
+  font-size: 1rem;
+  font-weight: bolder;
+  text-align: center;
 }
 .contenedor-tv .contenedor-mensaje .mensaje{
   padding-bottom: 3em;
