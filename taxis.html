@@ -3,6 +3,7 @@
     <head>
         <title>Taxis App</title>
         <link rel="stylesheet" type="text/css" href="estilos.css">
+        <link rel="stylesheet" type="text/css" href="estilos_jony.css">
     
         <script type="text/javascript" src="clases/Estancia.js"></script>
         <script type="text/javascript" src="clases/Electrodomestico.js"></script>
@@ -37,46 +38,48 @@
                 <img  src="imagenes/bartD.png" class="img-form-taxis" width="150px" height="150px"></img>
                 <p>Bart Simpson</p>
 
-                <div id="lateral-menu-taxis-buttons-container">
-                    <input id="pedir-viaje-menu" type="radio" name="pedir-viaje" checked="true">
-                    <label for="pedir-viaje-menu">Pedir viaje</label> <br>
-                    <input id="mis-viajes-menu" type="radio" name="mis-viajes-menu">
-                    <label for="mis-viajes-menu">Mis viajes</label>
-                </div>
+                <div class="menu-pedir-viaje" style="transform: none;">
+					<input id="pedir-viaje" type="radio" name="select-viaje" checked="true">
+					<label for="pedir-viaje" >Pedir viaje</label>
+					<input id="mis-viajes" type="radio" name="select-viaje">
+					<label for="mis-viajes">Mis viajes</label>
+				</div>
             </div>
             <div id="taxis-central-container">
-                <div id="taxis-upper-buttons">
-                    <input id="taxi-menu" type="radio" name="select-taxi" checked="true">
-                    <label for="taxi-menu">Para mi</label>
-                    <input id="invitado-menu" type="radio" name="select-invitado">
-                    <label for="invitado-menu">Para un invitado</label>
+                <div id="taxis-upper-buttons" style="transform: none;">
+                    <div class="menu-elegir-usuario" style="transform: none;">
+                        <input id="para-mi" type="radio" name="select-usuario" checked="true">
+                        <label for="para-mi" >Para mí</label>
+                        <input id="select-invitado" type="radio" name="select-usuario">
+                        <label for="select-invitado">Para un invitado</label>
+                    </div>
                 </div>
                 <div id="taxis-form-container">
                     <form id="taxis-form">
                         <img  src="assets/location_on.svg" class="img-form-taxis" width="25px" height="25px"></img>
-                        <input type="text" id="taxi-origen" name="taxi-origen" placeholder="¿Dónde vamos a buscarte?"><br>
+                        <input class="form-taxi" type="text" id="taxi-origen" name="taxi-origen" placeholder="¿Dónde vamos a buscarte?"><br>
 
                         <img  src="assets/location_on.svg" class="img-form-taxis" width="25px" height="25px">
-                        <input type="text" id="taxi-destino" name="taxi-destino" placeholder="¿A dónde te llevamos?"><br>
+                        <input type="text" class="form-taxi" id="taxi-destino" name="taxi-destino" placeholder="¿A dónde te llevamos?"><br>
 
                         <img  src="assets/car.svg" width="25px" class="img-form-taxis" height="25px"></img>
-                        <input type="text" id="taxi-cuando" name="taxi-cuando" placeholder="¿Cuándo?"><br>
+                        <input type="text" id="taxi-cuando"  class="form-taxi" name="taxi-cuando" placeholder="¿Cuándo?"><br>
 
                         <img  src="assets/car.svg" width="25px" class="img-form-taxis" height="25px">
-                        <input type="text" id="taxi-tipo-coche" name="taxi-tipo-coche" placeholder="¿Qué tipo de coche quieres?"><br>
+                        <input type="text" id="taxi-tipo-coche" class="form-taxi" name="taxi-tipo-coche" placeholder="¿Qué tipo de coche quieres?"><br>
 
                         <img  src="assets/fridge.png" width="25px" class="img-form-taxis" height="25px"></img>
-                        <input type="text" id="taxi-invitado-nombre" name="taxi-invitado-nombre" placeholder="Nombre del invitado"><br>
+                        <input type="text" id="taxi-invitado-nombre" class="form-taxi" name="taxi-invitado-nombre" placeholder="Nombre del invitado"><br>
 
                         <img  src="assets/fridge.png" width="25px" class="img-form-taxis" height="25px">
-                        <input type="text" id="taxi-invitado-telefono" name="taxi-invitado-telefono" placeholder="Número móvil del invitado"><br>
+                        <input type="text" id="taxi-invitado-telefono" class="form-taxi" name="taxi-invitado-telefono" placeholder="Número móvil del invitado"><br>
                     </form>
 
                 </div>
-                <div id="taxis-lower-buttons">
+                <div id="taxis-lower-buttons" style="display: flex; justify-content: end;">
                     <div id="taxis-cost">
-                        <p>Coste: </p> <p id="precio-taxi">16.75€</p> <br>
-                        <input type="submit" value="PEDIR VIAJE">
+                        <p>Coste:  16.75€ </p><br>
+                        <input class="boton-pedir-viaje" type="submit" value="PEDIR VIAJE">
                     </div>
                     
                 </div>
