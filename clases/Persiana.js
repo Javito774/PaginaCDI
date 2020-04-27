@@ -1,18 +1,20 @@
 class Persiana extends Electrodomestico
 {
-	constructor(idAux,nombre)
-	{
-		super(idAux,nombre,"subida","assets/persiana.png",false);
-		this.icono2 = "assets/persianaC.png";
-	}
-	cambiarEstado()
-	{
-		var aux = this.icono;
-		this.icono = this.icono2;
-		this.icono2 = aux;
-		if(this.estado == "subida")
-			this.estado = "bajada";
-		else
-			this.estado = "subida";
-	}
+    constructor(idAux,nombre)
+    {
+        super(idAux,nombre,"subida","assets/persiana.png",true);
+        this.interfaz= document.querySelector(".contenedor-persiana");
+        this.estado=0;
+    }
+    subirPersiana()
+    {
+        if(this.estado<5)
+            this.estado++;
+        this.interfaz.querySelector(".abierta>div>div").style.height=this.estado*20+"%";
+    }
+    bajarPersiana()
+    {
+        if(this.estado>0)
+            this.estado--;
+        this.interfaz.querySelector(".abierta>div>div").style.height=this.estado*20+"%";}
 }

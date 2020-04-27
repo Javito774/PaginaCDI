@@ -7,6 +7,13 @@ class Termostato extends Electrodomestico
 		this.temperaturaDeseada = null;
 		this.programas = [];
 		this.interfaz=document.querySelector(".contenedor-termostato");
+		programa.activo = false;
+		programa.fecha = "2020-05-02";
+		programa.temperatura = 20;
+		programa.horaInicio = "8:30";
+		programa.horaFin = "10:00";
+		this.programas.push(programa);
+		programa = new Programa();
 	}
 	switchTermostato()
 	{
@@ -50,6 +57,25 @@ class Termostato extends Electrodomestico
 		else
 			this.estado = this.temperaturaActual + "->"+ this.temperaturaDeseada;
 	}
+	imprimirProgramas()
+	{
+		var mensaje = "";
+		for(var i=0;i<this.programas.length;i++)
+		{
+			mensaje += "<div class='programa'>";
+			mensaje += '<p class="display-temperatura">'+this.programas[i].temperatura+'ºC</p>';
+			mensaje += '<div style="text-align: center;width: 8rem;">';
+				mensaje += '<p class="hora">'+this.programas[i].horaInicio+' - '+this.programas[i].horaFin+'</p>';
+			mensaje += '<p class="fecha">'+this.programas[i].fecha+'</p>';
+			mensaje += '</div>';
+			mensaje += '<div class="toggle"';
+			if(this.programas[i].activo)
+				mensaje+=' activo ';
+			mensaje += 'onclick="this.hasAttribute(\'activo\') ? (this.removeAttribute(\'activo\')) : (this.setAttribute(\'activo\',\'\'));"><div></div></div>';
+			mensaje += '</div>';
+		}
+		this.interfaz.querySelector(".contenedor-programas").innerHTML=mensaje;
+	}
 	mostrarInterfaz()
 	{
 		var contenedor = this.interfaz.querySelector(".contenedor-mensaje");
@@ -74,25 +100,11 @@ class Termostato extends Electrodomestico
 					this.interfaz.querySelector(".temperatura p").innerHTML=this.temperaturaDeseada+"ºC";
 				}
 				else {
-					mensaje += "<div class='contenedor-botones'><img src='assets/more_vert.svg'/><img src='assets/add.svg'/></div>";
-					mensaje += "<div class='contenedor-programas'><div class='programa'>";
-          mensaje +=  '<p class="display-temperatura">22ºC</p>';
-          mensaje +=  '<p>22 abr 2020</p>';
-        	mensaje += '</div>';
-    			mensaje +='<div class="programa">';
-          mensaje +=  '<p class="display-temperatura">22ºC</p>';
-          mensaje += '<p>22 abr 2020</p>';
-        	mensaje +='</div><div class="programa">';
-          mensaje +=  '<p class="display-temperatura">22ºC</p>';
-          mensaje +=  '<p>22 abr 2020</p>';
-        	mensaje += '</div><div class="programa">';
-          mensaje += '<p class="display-temperatura">22ºC</p>';
-          mensaje +=  '<p>22 abr 2020</p>'
-        	mensaje += '</div><div class="programa">';
-          mensaje +=  '<p class="display-temperatura">22ºC</p>';
-          mensaje +=  '<p>22 abr 2020</p>';
-        	mensaje += "</div></div>";
+					mensaje += "<div class='contenedor-botones'><img src='assets/add.svg' onclick='esconderFlechaAtras();programa.interfaz.style.display=\"block\";'/></div>";
+					mensaje += "<div class='contenedor-programas'>";
+        	mensaje += "</div>";
 					contenedor.innerHTML=mensaje;
+					this.imprimirProgramas();
 				}
 			},10);
 		}
@@ -105,19 +117,39 @@ class Programa
 	constructor()
 	{
 		this.activo = true;
-		this.fecha = null;
-		this.repeticion = Array(7);
-		for(var i = 0;i<this.repeticion.length;i++)
-			this.repeticion[i] = Array(3);
+		this.temperatura = 22;
+		this.fecha = "";
+		this.horaInicio = null;
+		this.horaFin = null;
+		this.repeticion = [0,0,0,0,0,0,0];
+		this.interfaz = document.querySelector(".nuevo-programa");
+		this.vaciarCampos();
 	}
-	establecerFecha(fecha)
+	validar()
 	{
-		this.fecha = fecha;
-		for(var i = 0;i<this.repeticion.length;i++)
-			this.repeticion[i][0] = false;
+		console.log("Tía que se ejecuta");
+		var resul = true;
+		var suma = 0;
+		for(var i=0; i<this.repeticion.length;i++)
+		{
+			suma+=this.repeticion[i];
+		}
+		if(this.horaInicio>this.horaFin)
+			resul=false;
+		if(suma==0 && this.fecha=="")
+			resul=false;
+		else if (this.fecha!="" && suma!=0)
+		{
+			this.fecha="";
+		}
+		return resul;
 	}
-	establecerRepeticion(repeticion)
+	vaciarCampos()
 	{
-		this.repeticion = repeticion;
+		var elementos = document.querySelectorAll(".nuevo-programa input");
+		for(var i=0;i<elementos.length;i++)
+		{
+			elementos[i].value="";
+		}
 	}
 }

@@ -40,7 +40,7 @@ class Telefono{
       mensaje+="<div class='contacto' onclick='telefono.llamar(\""+agendaContactos[i].nombre+"\");'>";
       mensaje+=agendaContactos[i].imagen;
       mensaje+="<p class='nombre-contacto'>"+agendaContactos[i].nombre+"</p>";
-      mensaje+="</div>"
+      mensaje+="</div>";
     }
     mensaje+="</div></div>";
     contenedor.innerHTML = mensaje;
@@ -51,6 +51,7 @@ class Telefono{
     this.interfaz.querySelector("#llamada h2").innerHTML=nombre;
     this.interfaz.querySelector(".menu-telefono").style.transform="translateY(-100%)";
     document.querySelector("#menuPrincipal").style.top="100%";
+    esconderFlechaAtras();
     if(imagen!=null)
       this.interfaz.querySelector("#llamada .imagen-contacto").innerHTML=imagen;
     else
@@ -63,6 +64,7 @@ class Telefono{
     this.interfaz.querySelectorAll(".menu-telefono input")[0].checked=true;
     mostrarMenu(menuNum);
     this.mostrarMenu(1);
+    mostrarFlechaAtras();
     vaciarNumeroTelefono();
     mostrarMenuTelefono();
   }
