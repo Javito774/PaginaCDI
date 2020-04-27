@@ -83,7 +83,7 @@ class Termostato extends Electrodomestico
 		var mensaje="";
 		if(this.temperaturaDeseada==null)
 		{
-			mensaje+="<p class='mensaje'>La nevera está apagada, pulse el botón de encendido para iniciar el sistema.</p>"
+			mensaje+="<p class='mensaje'>El termostato está apagado, pulse el botón de encendido para iniciar el sistema.</p>"
 			contenedor.innerHTML=mensaje;
 		}
 		else

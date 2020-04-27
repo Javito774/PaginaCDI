@@ -8,6 +8,7 @@ class TV extends Electrodomestico{
 		this.interfaz = document.querySelector(".contenedor-tv");
 		this.intervalo=null;
 		this.numeroMarcado="";
+		this.mute=false;
 	}
 	cambiarCanal(canal)
 	{
@@ -28,6 +29,15 @@ class TV extends Electrodomestico{
 			},2000);
 		}
 	}
+	aCallar(elemento)
+	{
+			this.mute=!this.mute;
+			if(this.mute)
+				elemento.style.boxShadow = "0 0 .5rem green";
+			else
+				elemento.style.boxShadow = "none";
+			this.mostrarBarraVol();
+	}
 	subirCanal()
 	{
 		if(this.canal<this.canales.length && this.estado == "encendida"){
@@ -44,15 +54,29 @@ class TV extends Electrodomestico{
 	}
 	subirVolumen()
 	{
-		if(this.vol<25 && this.estado == "encendida"){
+		if(this.vol<25 && this.estado == "encendida" && !this.mute){
 			this.vol++;
-			this.interfaz.querySelector(".volumen>div>div").style.width=this.vol*4+"%";}
+			this.mostrarBarraVol();
+		}
 	}
 	bajarVolumen()
 	{
-		if(this.vol>0 && this.estado == "encendida")
-		{	this.vol--;
-			this.interfaz.querySelector(".volumen>div>div").style.width=this.vol*4+"%";}
+		if(this.vol>0 && this.estado == "encendida" && !this.mute)
+		{
+			this.vol--;
+			this.mostrarBarraVol();
+		}
+	}
+	mostrarBarraVol()
+	{
+		if(this.mute || this.estado=="apagada")
+		{
+			this.interfaz.querySelector(".volumen>div>div").style.width="0%";
+		}
+		else {
+			this.interfaz.querySelector(".volumen>div>div").style.width=this.vol*4+"%";
+		}
+
 	}
 	switchTV()
 	{
@@ -68,5 +92,6 @@ class TV extends Electrodomestico{
 			this.canal=1;
 			this.interfaz.querySelector(".canal").innerHTML="CH "+ this.canal + " | "+this.canales[this.canal-1];;
 		}
+		this.mostrarBarraVol();
 	}
 }

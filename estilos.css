@@ -1016,6 +1016,7 @@ p.display-temperatura {
 .contenedor-tv .mando>div>div
 {
   height: 100%;
+  border-radius: 1rem;
 }
 .contenedor-tv .mando>div>div>img{
   height: 50%;
@@ -1386,7 +1387,7 @@ p.display-temperatura {
   height: 55vh;
   justify-content: center;
   grid-gap: 1em;
-  padding-top: 1em;
+  padding: 2em;
 }
 #servicios .netlis .sub-menu.peliculas,
 #servicios .netlis .sub-menu.series
