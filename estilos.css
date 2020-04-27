@@ -196,10 +196,6 @@ main>div {
   border: 4px solid #333
 }
 
-.contenedor-joystick>div>div:hover {
-  transform: translateY(-30px);
-}
-
 .contenedor-joystick h1 {
   font-size: 4.5rem;
   text-align: center;
@@ -1113,10 +1109,18 @@ p.display-temperatura {
 .contenedor-microondas .controles label {
     line-height: 2.8rem;
     width: 3.5rem;
+    height: 3.5rem;
     border-radius: 20em;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
+.contenedor-microondas .controles label img{
+  width: 3em;
+  height: 3em;
+  padding: .3rem;
+}
 .contenedor-microondas .controles>div {
     padding: .5em 0;
 }

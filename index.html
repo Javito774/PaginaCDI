@@ -257,13 +257,13 @@
 						<p>Modo</p>
 						<div class="modo">
 							<input id="modo1" type="radio" name="opcion-microondas" checked />
-							<label for="modo1">1</label>
+							<label for="modo1"><img src="assets/potencia1.png"/></label>
 							<input id="modo2" type="radio" name="opcion-microondas" />
-							<label for="modo2">1</label>
+							<label for="modo2"><img src="assets/potencia2.png"/></label>
 							<input id="modo3" type="radio" name="opcion-microondas" />
-							<label for="modo3">1</label>
+							<label for="modo3"><img src="assets/potencia3.png"/></label>
 							<input id="modo4" type="radio" name="opcion-microondas" />
-							<label for="modo4">1</label>
+							<label for="modo4"><img src="assets/ac_unit.svg"/></label>
 						</div>
 						<p>Potencia</p>
 						<div class="potencia">
@@ -666,8 +666,9 @@
 		</div>
 		<div id="controlesSilla" style="width:100%;position: relative;">
 			<img src="assets/trumpet.svg" class="bocina" onmousedown="document.querySelector('#audio-bocina').play();document.querySelector('body').style.background='linear-gradient(red,red 30%,yellow 30%,yellow 60%,red 60%)';" onmouseup="document.querySelector('#audio-bocina').pause();document.querySelector('body').style.background='#fff';">
+			<img src="assets/speed.svg" class="bocina" style="top: 5rem;"/>
 			<audio src="assets/Himno-Espana.mp3" id="audio-bocina" loop onload="this.currentTime=1;"></audio>
-			<div style="
+			<div class="displayControlSilla" style="
     		padding: 0 2em;
     		margin: 1em 0;
     		color: #333;
@@ -676,13 +677,20 @@
     		overflow: hidden;
 				">
 				<h3 style="
-	    			text-transform: capitalize;
+	    		text-transform: capitalize;
 	    		font-size: 1rem;
 					">Controles silla</h3>
 			</div>
 			<div class="contenedor-joystick">
 				<div>
 					<div>
+						<div style="
+					    position: absolute;
+					    width: 100%;
+					    height: 100%;
+							background: transparent;
+							z-index: 2;
+						"></div>
 						<h1>2.7<span>Km/h</span></h1>
 					</div>
 				</div>

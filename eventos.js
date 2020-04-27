@@ -2,6 +2,35 @@ var pantallas = [];
 
 //@TODO organizar distintos temporizadores para que no tengan el mismo nombre.
 
+document.querySelector(".contenedor-joystick>div>div").addEventListener('mousedown',()=>
+{
+  document.querySelector(".contenedor-joystick").addEventListener('mousemove',rotacionJoystick);
+  document.querySelector(".contenedor-joystick").addEventListener('mouseup',()=>{
+    document.querySelector(".contenedor-joystick").removeEventListener('mousemove',rotacionJoystick);
+    document.querySelector(".contenedor-joystick>div>div").style.transform="translate(0px,0px)";
+  });
+  document.querySelector(".contenedor-joystick").addEventListener('mouseleave',()=>{
+    document.querySelector(".contenedor-joystick").removeEventListener('mousemove',rotacionJoystick);
+    document.querySelector(".contenedor-joystick>div>div").style.transform="translate(0px,0px)";
+  });
+});
+function rotacionJoystick(e)
+{
+  var posY = document.querySelector(".contenedor-joystick").offsetTop+document.querySelector(".contenedor-joystick").offsetParent.offsetTop;
+  var posX = document.querySelector(".contenedor-joystick").offsetLeft+document.querySelector(".contenedor-joystick").offsetParent.offsetLeft;
+  var inicioY = posY-(document.querySelector(".contenedor-joystick").offsetHeight/2);
+  var inicioX = posX-(document.querySelector(".contenedor-joystick").offsetWidth/2);
+  var finY = posY+(document.querySelector(".contenedor-joystick").offsetHeight/2);
+  var finX = posX+(document.querySelector(".contenedor-joystick").offsetWidth/2);
+  var transformacionX = ((e.clientX-posX)*50)/(finX-posX);
+  var transformacionY = Math.sqrt(2500-(transformacionX*transformacionX));
+  console.log(transformacionX);
+  document.querySelector(".contenedor-joystick>div>div").style.transform="translate("+transformacionX+"px,0px)";
+  if(e.clientY<posY)
+    document.querySelector(".contenedor-joystick>div>div").style.transform="translate("+transformacionX+"px,-"+transformacionY+"px)";
+  else
+    document.querySelector(".contenedor-joystick>div>div").style.transform="translate("+transformacionX+"px,"+transformacionY+"px)";
+}
 //CONTROL DEL RELOJ
 function addZero(i) {
   if (i < 10) {
@@ -217,11 +246,9 @@ function mostrarHabitacion(numeroHabitacion)
 			{
 				mensaje+='electrodomesticoActual.mostrarInterfazNevera();';
 			}
-      else if(estancia.electrodomesticos[i] instanceof Termostato)
-      {
-        mensaje+='electrodomesticoActual.mostrarInterfaz();';
-      }
-      else if(estancia.electrodomesticos[i] instanceof Grifo)
+      else if(estancia.electrodomesticos[i] instanceof Grifo ||
+              estancia.electrodomesticos[i] instanceof Persiana ||
+              estancia.electrodomesticos[i] instanceof Termostato)
       {
         mensaje+='electrodomesticoActual.mostrarInterfaz();';
       }

@@ -8,13 +8,22 @@ class Persiana extends Electrodomestico
     }
     subirPersiana()
     {
-        if(this.estado<5)
-            this.estado++;
-        this.interfaz.querySelector(".abierta>div>div").style.height=this.estado*20+"%";
+      if(this.estado<5)
+      {
+        this.estado++;
+        this.mostrarInterfaz();
+      }
     }
     bajarPersiana()
     {
-        if(this.estado>0)
-            this.estado--;
-        this.interfaz.querySelector(".abierta>div>div").style.height=this.estado*20+"%";}
+      if(this.estado>0)
+      {
+        this.estado--;
+        this.mostrarInterfaz();
+      }
+    }
+    mostrarInterfaz()
+    {
+      this.interfaz.querySelector(".abierta>div>div").style.height=this.estado*20+"%";
+    }
 }
