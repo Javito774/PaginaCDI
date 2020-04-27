@@ -6,6 +6,8 @@ var telefono;
 var programa;
 var netlis;
 var restaurantesFavoritos;
+var telefonillo;
+var codigoAcceso;
 //FUNCIONES QUE INICIAN TODAS LAS ESTANCIAS DE LA CASA.
 function inicio()
 {
@@ -132,6 +134,8 @@ function inicio()
 	netlis = new Netlis();
 	restaurantesFavoritos = new Restaurantes();
 
+	telefonillo = new Telefonillo();
+	codigoAcceso = new CodigoAcceso();
 }
 
 document.addEventListener("DOMContentLoaded", inicio);

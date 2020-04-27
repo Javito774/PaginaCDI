@@ -1,4 +1,4 @@
-var pantallas = []
+var pantallas = [];
 
 //@TODO organizar distintos temporizadores para que no tengan el mismo nombre.
 

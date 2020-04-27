@@ -28,6 +28,8 @@
 
 	<script type="text/javascript" src="clases/Silla.js"></script>
 
+	<script type="text/javascript" src="clases/Telefonillo.js"></script>
+
 	<script type="text/javascript" src="scripts.js"></script>
 	<meta charset="utf-8">
 </head>
@@ -133,12 +135,49 @@
 							<path class="borde" d="m 190.78327,439.96962 h 20.68441" id="path119" style="stroke-dasharray: 20.6844; stroke-dashoffset: 0;"></path>
 						</g>
 					</svg>
-					<img id="sistemaEntrada" src="assets/telefonillo icono.png">
+					<img id="sistemaEntrada" src="assets/telefonillo icono.png" onclick="electrodomesticoActual=telefonillo;pantallas.push(telefonillo);mostrarCarpeta();telefonillo.interfaz.style.display='grid';">
 				</div>
-				<div id="ventanaEstancia">
-
-
-
+				<div id="ventanaEstancia"></div>
+				<div class="contenedor-telefonillo contenedor-electrodomestico">
+					<div class="codigo">
+						<div>
+							<img src="assets/puertaCerradaR.png"/>
+							<div class="puntitos">
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+							</div>
+						</div>
+						<div class="teclado">
+							<p onclick="codigoAcceso.añadirNumero(1)">1</p>
+							<p onclick="codigoAcceso.añadirNumero(2)">2</p>
+							<p onclick="codigoAcceso.añadirNumero(3)">3</p>
+							<p onclick="codigoAcceso.añadirNumero(4)">4</p>
+							<p onclick="codigoAcceso.añadirNumero(5)">5</p>
+							<p onclick="codigoAcceso.añadirNumero(6)">6</p>
+							<p onclick="codigoAcceso.añadirNumero(7)">7</p>
+							<p onclick="codigoAcceso.añadirNumero(8)">8</p>
+							<p onclick="codigoAcceso.añadirNumero(9)">9</p>
+							<p></p>
+							<p onclick="codigoAcceso.añadirNumero(0)">0</p>
+							<p></p>
+						</div>
+					</div>
+					<div class="camara">
+						<h2>Cámara</h2>
+						<img src="assets/telefonillo-600x337.jpg">
+					</div>
+					<div class="puertas">
+						<div onclick="electrodomesticoActual=codigoAcceso;pantallas.push(codigoAcceso);mostrarCarpeta();codigoAcceso.interfaz.style.display='grid'">
+							<img class="puertaportal" src="assets/puertaCerradaR.png">
+							<p>Portal</p>
+						</div>
+						<div onclick="electrodomesticoActual=codigoAcceso;pantallas.push(codigoAcceso);mostrarCarpeta();codigoAcceso.interfaz.style.display='grid';">
+							<img class="puertaportal" src="assets/puertaCerradaR.png">
+							<p>Entrada</p>
+						</div>
+					</div>
 				</div>
 				<div class="contenedor-persiana contenedor-electrodomestico">
 					<div class="contenedor-barra">
@@ -239,7 +278,17 @@
 						</div>
 					</div>
 				</div>
-				<div class="contenedor-vitro contenedor-electrodomestico"></div>
+				<div class="contenedor-vitro contenedor-electrodomestico">
+					<div class="cristal">
+						<div class="fuego"></div>
+						<div class="fuego"></div>
+						<div class="fuego"></div>
+					</div>
+					<div class="controles">
+						<div><img src="assets/remove.svg"/><p>0</p><img src="assets/add.svg"/></div>
+						<div><img src="assets/remove.svg"/><p class="tiempo"><span>00</span>:<span>00</span></p><img src="assets/add.svg"/></div>
+					</div>
+				</div>
 				<div class="contenedor-nevera contenedor-electrodomestico">
 					<div class="menu-nevera">
 						<input id="nevera-menu" type="radio" name="select-nevera" checked="true">
@@ -531,7 +580,7 @@
 		</div>
 		<div id="controlesSilla" style="width:100%;position: relative;">
 			<img src="assets/trumpet.svg" class="bocina" onmousedown="document.querySelector('#audio-bocina').play();document.querySelector('body').style.background='linear-gradient(red,red 30%,yellow 30%,yellow 60%,red 60%)';" onmouseup="document.querySelector('#audio-bocina').pause();document.querySelector('body').style.background='#fff';">
-			<audio src="assets/Himno-Espana.mp3" id="audio-bocina" loop onload="this.currentTime=1;"></audio>
+			<audio src="assets/bocina.mp3" id="audio-bocina" loop onload="this.currentTime=1;"></audio>
 			<div style="
     		padding: 0 2em;
     		margin: 1em 0;

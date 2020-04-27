@@ -64,6 +64,7 @@ class Vitroceramica extends Electrodomestico
 	constructor(idAux,nFuegos,potencia)
 	{
 		super(idAux,"vitroceramica","_ | _ | _","assets/vitrp.png",true);
+		this.interfaz= document.querySelector('.contenedor-vitro');
 		this.fuego=new Array(nFuegos);
 		for(var i=0;i<this.fuego.length;i++)
 			this.fuego[i] = new Fuego(potencia);
@@ -80,7 +81,7 @@ class Vitroceramica extends Electrodomestico
 			if(this.fuego[i].getEstado()==0)
 				this.estado += "_ |";
 			else
-				this.estado +=this.fuego[i].getEstado()+" |"; 
+				this.estado +=this.fuego[i].getEstado()+" |";
 		}
 	}
 }

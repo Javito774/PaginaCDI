@@ -463,11 +463,71 @@ main>div {
   align-items: center;
   z-index: 300;
 }
+.contenedor-vitro .cristal{
+  width: 15rem;
+  height: 11rem;
+  margin: 0 auto;
+  background: #333;
+  position: relative;
+  border-radius: 1.5em;
+}
+.contenedor-vitro .fuego
+{
+  position: absolute;
+  background: #fff;
+  border-radius: 7rem;
+  background: radial-gradient(black, black 28%,white 32%,white 34%, black 36%, black 62%, white 67%);
+}
+.fuego[active] {
+    background: radial-gradient(black, black 28%,lightgreen 32%,lightgreen 34%, black 36%, black 62%, lightgreen 67%);
+}
+.contenedor-vitro .fuego:nth-child(1)
+{
+  width: 5rem;
+  height: 5rem;
+  top: 10%;
+  left: 10%;
+}
+.contenedor-vitro .fuego:nth-child(2)
+{
+  width: 4rem;
+  height: 4rem;
+  bottom: 6%;
+  left: 33%;
+}
+.contenedor-vitro .fuego:nth-child(3)
+{
+  width: 5rem;
+  height: 5rem;
+  right: 10%;
+  top: 16%;
+}
+.contenedor-vitro .controles>div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: .5em;
+}
+.contenedor-vitro .controles>div p{
+  font-size: 3rem;
+  font-weight: bolder;
+  margin: 0 2rem;
+  width: 7rem;
+  text-align: center;
+}
+.contenedor-vitro .controles>div p.tiempo{
+  font-size: 2rem;
+}
+.contenedor-vitro .controles>div img{
+  width: 3rem;
+  padding: .5rem;
+  border-radius: 3rem;
+  box-shadow: 0 0 .3rem;
+}
 /*ESTILOS PERSIANA*/
 .contenedor-persiana .abierta {
     display: flex;
     align-items: center;
-
 }
 .contenedor-persiana .abierta>p
 {
@@ -1024,6 +1084,80 @@ p.display-temperatura {
   font-size: 0.7rem;
 }
 
+#domótica .contenedor-telefonillo .camara{
+  width: 50%;
+  margin: 0 auto;
+}
+#domótica .contenedor-telefonillo .camara h2{
+  padding-left: 1em;
+  font-size: 1.2rem;
+  color: #666;
+  line-height: 2;
+}
+#domótica .contenedor-telefonillo .camara img{
+  width: 100%;
+  border-radius: 1rem;
+}
+#domótica .contenedor-telefonillo .puertas
+{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+#domótica .contenedor-telefonillo .puertas>div
+{
+  padding: 0 2rem;
+}
+#domótica .contenedor-telefonillo .puertas img
+{
+  width: 3.5rem;
+}
+#domótica .contenedor-telefonillo .codigo
+{
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  z-index: 500;
+  grid-template-rows: auto 1fr;
+}
+#domótica .contenedor-telefonillo .codigo .puntitos{
+  display: flex;
+  justify-content: center;
+  padding: .5rem 0;
+}
+#domótica .contenedor-telefonillo .codigo .puntitos>div {
+  width: 1rem;
+  height: 1rem;
+  border: 4px solid;
+  border-radius: 1rem;
+  margin: 0.5rem;
+}
+#domótica .contenedor-telefonillo .codigo .puntitos>div[activo] {
+  background: #333;
+}
+#domótica .contenedor-telefonillo .codigo>div{
+  text-align: center;
+  padding: 1rem 0;
+}
+#domótica .contenedor-telefonillo .codigo>div>img{
+  width: 5rem;
+}
+#domótica .contenedor-telefonillo .codigo .teclado
+{
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    justify-content: center;
+    grid-auto-rows: max-content;
+    grid-gap: 5px;
+}
+#domótica .contenedor-telefonillo .codigo .teclado p
+{
+  padding: 0 1rem;
+  line-height: 2.5rem;
+  font-size: 1.5rem;
+}
 /*ESTILOS DE LOS SERVICIOS*/
 
 /* SELECCION DE SERVICIO*/
