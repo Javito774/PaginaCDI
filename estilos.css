@@ -535,6 +535,50 @@ main>div {
   border-radius: 3rem;
   box-shadow: 0 0 .3rem;
 }
+
+.contenedor-grifo input[type="radio"] {
+  display: none;
+}
+
+.contenedor-grifo .clasificacion {
+  direction: rtl;
+  unicode-bidi: bidi-override;
+}
+.contenedor-grifo label:hover svg path,
+.contenedor-grifo label:hover ~ label svg path,
+.contenedor-grifo input[type="radio"]:checked ~ label svg path {
+  fill: #19b6fd;
+}
+.contenedor-grifo svg{
+  width: 2.5rem;
+}
+.contenedor-grifo .gotas,.clasificacion
+{
+  display: table;
+}
+.contenedor-grifo .gotas{
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+.contenedor-grifo .barra{
+  width: 60%;
+  height: 10px;
+  background: linear-gradient(90deg,#19b6fd, #EA4335);
+  border-radius: 10px;
+  margin: 0 auto;
+}
+.contenedor-grifo .punto
+{
+  width: 2rem;
+  height: 2rem;
+  background: #fff;
+  border: 2px solid #9d9d9d;
+  position: relative;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 1.5rem;
+}
 /*ESTILOS PERSIANA*/
 .contenedor-persiana .abierta {
     display: flex;
@@ -587,7 +631,8 @@ main>div {
 }
 .contenedor-nevera .boton-apagado,
 .contenedor-termostato .boton-apagado,
-.contenedor-tv .boton-apagado{
+.contenedor-tv .boton-apagado,
+.contenedor-grifo .boton-apagado{
   display: flex;
   margin: 0 auto;
   box-shadow: 0 0 0.5em #888;
@@ -597,15 +642,26 @@ main>div {
   width: 2.5em;
   justify-content: center;
 }
+.contenedor-grifo .boton-apagado{
+  margin: 0;
+  margin-right: 3rem;
+}
+.contenedor-grifo .boton-apagado[encendido]
+{
+  box-shadow: 0 0 0.5em #19b6fd;
+  fill: #19b6fd;
+}
 .contenedor-nevera .boton-apagado[encendido],
 .contenedor-termostato .boton-apagado[encendido],
-.contenedor-tv .boton-apagado[encendido] {
+.contenedor-tv .boton-apagado[encendido],
+{
     box-shadow: 0 0 0.5em green;
     fill: green;
 }
 .contenedor-nevera .boton-apagado svg,
 .contenedor-termostato .boton-apagado svg,
-.contenedor-tv .boton-apagado svg{
+.contenedor-tv .boton-apagado svg,
+.contenedor-grifo .boton-apagado svg{
   width: 1.5em;
 }
 .contenedor-nevera .boton-apagado p,

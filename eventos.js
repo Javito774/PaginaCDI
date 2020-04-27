@@ -221,6 +221,10 @@ function mostrarHabitacion(numeroHabitacion)
       {
         mensaje+='electrodomesticoActual.mostrarInterfaz();';
       }
+      else if(estancia.electrodomesticos[i] instanceof Grifo)
+      {
+        mensaje+='electrodomesticoActual.mostrarInterfaz();';
+      }
 			mensaje+='">';
 		}
 		else
