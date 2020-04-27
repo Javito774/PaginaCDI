@@ -484,7 +484,7 @@ main>div {
   border-radius: 7rem;
   background: radial-gradient(black, black 28%,white 32%,white 34%, black 36%, black 62%, white 67%);
 }
-.fuego[active] {
+.fuego[seleccionado] {
     background: radial-gradient(black, black 28%,lightgreen 32%,lightgreen 34%, black 36%, black 62%, lightgreen 67%);
 }
 .contenedor-vitro .fuego:nth-child(1)
@@ -507,6 +507,11 @@ main>div {
   height: 5rem;
   right: 10%;
   top: 16%;
+}
+.contenedor-vitro .controles{
+  height: 0%;
+  overflow: hidden;
+  transition: height .2s ease-in-out;
 }
 .contenedor-vitro .controles>div{
   display: flex;
