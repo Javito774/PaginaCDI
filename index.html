@@ -52,15 +52,16 @@
 			</div>
 			<div class="categoria-menu" id="domótica">
 				<div id="mapa">
-					<p style="top: 9em;left: 3em;opacity: 1;font-size: 10pt;">Habitación 1</p>
-					<p style="top: 28em;left: 3em;opacity: 1;font-size: 10pt;">Habitación 2</p>
-					<p style="top: 20.5em;left: 9.5em;opacity: 1;font-size: 10pt;">Baño 1</p>
-					<p style="top: 17em;left: 2em;opacity: 1;font-size: 10pt;">Baño 2</p>
-					<p style="transform: none;top: 14.4em;left: 7em;opacity: 1;font-size: 10pt;">Pasillo</p>
-					<p style="top: 9em;left: 9.3em;opacity: 1;font-size: 10pt;">Estudio</p>
-					<p style="top: 28em;left: 13em;opacity: 1;font-size: 10pt;">Salón</p>
-					<p style="top: 9em;left: 15em;opacity: 1;font-size: 10pt;">Cocina</p>
-					<p style="top: 19em;left: 15em;opacity: 1;font-size: 10pt;">Entrada</p>
+
+					<p class="habitacion1"><img src="assets/king_bed.svg" class="img-habitacion">Habitación 1</p>
+					<p class="habitacion2"><img src="assets/king_bed.svg" class="img-habitacion">Habitación 2</p>
+					<p class="baño1"><img src="assets/wc.svg" class="img-baño">Baño 1</p>
+					<p class="baño2"><img src="assets/wc.svg" class="img-baño">Baño 2</p>
+					<p class="pasillo">Pasillo</p>
+					<p class="estudio"><img src="assets/estudio.jpg" class="img-estudio">Estudio</p>
+					<p class="salon"><img src="assets/salon.jpg" class="img-salon">Salón</p>
+					<p class="cocina"><img src="assets/cocinaR.jpg" class="img-cocina">Cocina</p>
+					<p class="entrada">Entrada</p>
 					<svg id="svg64" width="583.40747" height="829.81403" viewBox="0 0 583.40747 829.81403">
 						<g id="habitacion2" style="display:inline" transform="translate(-9.185704,-8.582418)" class="relleno">
 							<path class="divrelleno" d="m 131.16349,439.96962 0.0633,65.21671 H 13.627374 V 834.39642 H 201.77618 l -0.52903,-394.3881 z" id="path4748" onclick="mostrarHabitacion(6)" style="
@@ -207,28 +208,28 @@
 						<div class="volumen"><p>VOL<p><div><div></div></div></div>
 					</div>
 					<div class="contenedor-numeros">
-
+						<p></p>
 					</div>
 					<div class="mando">
 						<div class="boton boton_arriba" onclick="electrodomesticoActual.subirCanal();"><img src="assets/keyboard_arrow_up-24px.svg"></div>
-						<div><p>1</p></div>
-						<div><p>2</p></div>
-						<div><p>3</p></div>
+						<div><p onclick="electrodomesticoActual.aniadirNumero(1)">1</p></div>
+						<div><p onclick="electrodomesticoActual.aniadirNumero(2)">2</p></div>
+						<div><p onclick="electrodomesticoActual.aniadirNumero(3)">3</p></div>
 						<div class="boton boton_arriba" onclick="electrodomesticoActual.subirVolumen();"><img src="assets/add.svg"></div>
 						<div class="boton"><p>CH</p></div>
-						<div><p>4</p></div>
-						<div><p>5</p></div>
-						<div><p>6</p></div>
+						<div><p onclick="electrodomesticoActual.aniadirNumero(4)">4</p></div>
+						<div><p onclick="electrodomesticoActual.aniadirNumero(5)">5</p></div>
+						<div><p onclick="electrodomesticoActual.aniadirNumero(6)">6</p></div>
 						<div class="boton"><p>VOL</p></div>
 						<div class="boton boton_abajo" onclick="electrodomesticoActual.bajarCanal();"><img src="assets/expand_more-24px.svg"></div>
-						<div><p>7</p></div>
-						<div><p>8</p></div>
-						<div><p>9</p></div>
+						<div><p onclick="electrodomesticoActual.aniadirNumero(7)">7</p></div>
+						<div><p onclick="electrodomesticoActual.aniadirNumero(8)">8</p></div>
+						<div><p onclick="electrodomesticoActual.aniadirNumero(9)">9</p></div>
 						<div class="boton boton_abajo" onclick="electrodomesticoActual.bajarVolumen();"><img src="assets/remove.svg"></div>
 						<div></div>
 						<div></div>
 						<div>
-							<p>0</p>
+							<p onclick="electrodomesticoActual.aniadirNumero(0)">0</p>
 						</div>
 						<div>
 							<div>
@@ -257,13 +258,13 @@
 						<p>Modo</p>
 						<div class="modo">
 							<input id="modo1" type="radio" name="opcion-microondas" checked />
-							<label for="modo1">1</label>
+							<label for="modo1"><img src="assets/potencia1.png"/></label>
 							<input id="modo2" type="radio" name="opcion-microondas" />
-							<label for="modo2">1</label>
+							<label for="modo2"><img src="assets/potencia2.png"/></label>
 							<input id="modo3" type="radio" name="opcion-microondas" />
-							<label for="modo3">1</label>
+							<label for="modo3"><img src="assets/potencia3.png"/></label>
 							<input id="modo4" type="radio" name="opcion-microondas" />
-							<label for="modo4">1</label>
+							<label for="modo4"><img src="assets/ac_unit.svg"/></label>
 						</div>
 						<p>Potencia</p>
 						<div class="potencia">
@@ -285,8 +286,8 @@
 						<div class="fuego" onclick="electrodomesticoActual.seleccionarFuego(2);"></div>
 					</div>
 					<div class="controles">
-						<div><img src="assets/remove.svg"/><p>0</p><img src="assets/add.svg"/></div>
-						<div><img src="assets/remove.svg"/><p class="tiempo"><span>00</span>:<span>00</span></p><img src="assets/add.svg"/></div>
+						<div><img src="assets/remove.svg" onclick="electrodomesticoActual.fuego[electrodomesticoActual.fuegoSeleccionado].bajarEstado();"/><p class="potencia">0</p><img src="assets/add.svg" onclick="electrodomesticoActual.fuego[electrodomesticoActual.fuegoSeleccionado].subirEstado();"/></div>
+						<div><img src="assets/remove.svg" onclick="electrodomesticoActual.fuego[electrodomesticoActual.fuegoSeleccionado].bajarTiempo();"/><p class="tiempo"><span class="minutos">00</span>:<span class="segundos">00</span></p><img src="assets/add.svg" onclick="electrodomesticoActual.fuego[electrodomesticoActual.fuegoSeleccionado].subirTiempo();"/></div>
 					</div>
 				</div>
 				<div class="contenedor-nevera contenedor-electrodomestico">
@@ -358,7 +359,93 @@
 						<p class="mensaje">El termostato está apagado, pulse el botón de encendido para iniciar el sistema.</p>
 					</div>
 				</div>
-				<div class="contenedor-grifo contenedor-electrodomestico"></div>
+				<div class="contenedor-grifo contenedor-electrodomestico" estado=0>
+					<form class="gotas">
+						<div class="boton-apagado" onclick="electrodomesticoActual.presion=-1;electrodomesticoActual.mostrarInterfaz();">
+							<svg viewBox="0 0 24 24">
+								<path d="M0 0h24v24H0z" fill="none" />
+								<path d="M13 3h-2v10h2V3zm4.83 2.17l-1.42 1.42C17.99 7.86 19 9.81 19 12c0 3.87-3.13 7-7 7s-7-3.13-7-7c0-2.19 1.01-4.14 2.58-5.42L6.17 5.17C4.23 6.82 3 9.26 3 12c0 4.97 4.03 9 9 9s9-4.03 9-9c0-2.74-1.23-5.18-3.17-6.83z" /></svg>
+						</div>
+			      <p class="clasificacion">
+			        <input id="radio1" type="radio" name="estrellas" value="5">
+			        <label for="radio1" onclick="electrodomesticoActual.presion=0;electrodomesticoActual.mostrarInterfaz();">
+			          <svg id="Capa_1" x="0px" y="0px" viewBox="0 0 294.465 294.465" style="enable-background:new 0 0 294.465 294.465;">
+			          		<path d="M174.432,32.465c-6.8-10-12.8-19.2-18.4-27.6c-0.8-1.2-2-2.4-3.2-3.2c-4.8-3.2-11.2-1.6-14.4,3.2
+			          			c-5.2,8.4-11.2,17.2-18.4,27.6c-31.6,46.4-78.8,116.4-78.8,156.4c0,29.2,12,55.6,31.2,74.8c19.2,18.8,45.6,30.8,74.8,30.8
+			          			s55.6-12,74.8-31.2c19.2-19.2,31.2-45.6,31.2-74.8C253.232,148.465,206.032,78.865,174.432,32.465z M207.632,248.865
+			          			c-15.6,15.6-36.8,24.8-60.4,24.8c-23.6,0-44.8-9.6-60.4-24.8c-15.6-15.6-24.8-36.8-24.8-60.4c0-33.6,45.2-100.4,75.2-144.8
+			          			c3.6-5.2,6.8-10.4,10-14.8c3.2,4.4,6.4,9.6,10,14.8c30,44.8,75.2,111.2,75.2,144.8
+			          			C232.432,212.065,222.832,233.265,207.632,248.865z"/>
+			          		<path d="M209.232,181.265c-5.6-0.4-10.4,4-10.8,9.6c-0.4,8.8-3.2,17.2-7.6,24.4c-4.4,7.2-10.8,13.6-18.4,17.6
+			          			c-4.8,2.8-6.8,9.2-4,14c3.2,5.6,9.6,7.2,14.4,4.4c10.8-6,19.6-14.8,25.6-24.8c6.4-10,10-22,10.4-34.4
+			          			C219.232,186.465,214.832,181.665,209.232,181.265z"/>
+			          </svg>
+			        </label>
+			        <input id="radio2" type="radio" name="estrellas" value="4">
+			        <label for="radio2" onclick="electrodomesticoActual.presion=1;electrodomesticoActual.mostrarInterfaz();">
+			          <svg id="Capa_1" x="0px" y="0px" viewBox="0 0 294.465 294.465" style="enable-background:new 0 0 294.465 294.465;">
+			          		<path d="M174.432,32.465c-6.8-10-12.8-19.2-18.4-27.6c-0.8-1.2-2-2.4-3.2-3.2c-4.8-3.2-11.2-1.6-14.4,3.2
+			          			c-5.2,8.4-11.2,17.2-18.4,27.6c-31.6,46.4-78.8,116.4-78.8,156.4c0,29.2,12,55.6,31.2,74.8c19.2,18.8,45.6,30.8,74.8,30.8
+			          			s55.6-12,74.8-31.2c19.2-19.2,31.2-45.6,31.2-74.8C253.232,148.465,206.032,78.865,174.432,32.465z M207.632,248.865
+			          			c-15.6,15.6-36.8,24.8-60.4,24.8c-23.6,0-44.8-9.6-60.4-24.8c-15.6-15.6-24.8-36.8-24.8-60.4c0-33.6,45.2-100.4,75.2-144.8
+			          			c3.6-5.2,6.8-10.4,10-14.8c3.2,4.4,6.4,9.6,10,14.8c30,44.8,75.2,111.2,75.2,144.8
+			          			C232.432,212.065,222.832,233.265,207.632,248.865z"/>
+			          		<path d="M209.232,181.265c-5.6-0.4-10.4,4-10.8,9.6c-0.4,8.8-3.2,17.2-7.6,24.4c-4.4,7.2-10.8,13.6-18.4,17.6
+			          			c-4.8,2.8-6.8,9.2-4,14c3.2,5.6,9.6,7.2,14.4,4.4c10.8-6,19.6-14.8,25.6-24.8c6.4-10,10-22,10.4-34.4
+			          			C219.232,186.465,214.832,181.665,209.232,181.265z"/>
+			          </svg>
+			        </label>
+			        <input id="radio3" type="radio" name="estrellas" value="3">
+			        <label for="radio3" onclick="electrodomesticoActual.presion=2;electrodomesticoActual.mostrarInterfaz();">
+			          <svg id="Capa_1" x="0px" y="0px" viewBox="0 0 294.465 294.465" style="enable-background:new 0 0 294.465 294.465;">
+			          		<path d="M174.432,32.465c-6.8-10-12.8-19.2-18.4-27.6c-0.8-1.2-2-2.4-3.2-3.2c-4.8-3.2-11.2-1.6-14.4,3.2
+			          			c-5.2,8.4-11.2,17.2-18.4,27.6c-31.6,46.4-78.8,116.4-78.8,156.4c0,29.2,12,55.6,31.2,74.8c19.2,18.8,45.6,30.8,74.8,30.8
+			          			s55.6-12,74.8-31.2c19.2-19.2,31.2-45.6,31.2-74.8C253.232,148.465,206.032,78.865,174.432,32.465z M207.632,248.865
+			          			c-15.6,15.6-36.8,24.8-60.4,24.8c-23.6,0-44.8-9.6-60.4-24.8c-15.6-15.6-24.8-36.8-24.8-60.4c0-33.6,45.2-100.4,75.2-144.8
+			          			c3.6-5.2,6.8-10.4,10-14.8c3.2,4.4,6.4,9.6,10,14.8c30,44.8,75.2,111.2,75.2,144.8
+			          			C232.432,212.065,222.832,233.265,207.632,248.865z"/>
+			          		<path d="M209.232,181.265c-5.6-0.4-10.4,4-10.8,9.6c-0.4,8.8-3.2,17.2-7.6,24.4c-4.4,7.2-10.8,13.6-18.4,17.6
+			          			c-4.8,2.8-6.8,9.2-4,14c3.2,5.6,9.6,7.2,14.4,4.4c10.8-6,19.6-14.8,25.6-24.8c6.4-10,10-22,10.4-34.4
+			          			C219.232,186.465,214.832,181.665,209.232,181.265z"/>
+			          </svg>
+			        </label>
+			        <input id="radio4" type="radio" name="estrellas" value="2">
+			        <label for="radio4" onclick="electrodomesticoActual.presion=3;electrodomesticoActual.mostrarInterfaz();">
+			          <svg id="Capa_1" x="0px" y="0px" viewBox="0 0 294.465 294.465" style="enable-background:new 0 0 294.465 294.465;">
+			          		<path d="M174.432,32.465c-6.8-10-12.8-19.2-18.4-27.6c-0.8-1.2-2-2.4-3.2-3.2c-4.8-3.2-11.2-1.6-14.4,3.2
+			          			c-5.2,8.4-11.2,17.2-18.4,27.6c-31.6,46.4-78.8,116.4-78.8,156.4c0,29.2,12,55.6,31.2,74.8c19.2,18.8,45.6,30.8,74.8,30.8
+			          			s55.6-12,74.8-31.2c19.2-19.2,31.2-45.6,31.2-74.8C253.232,148.465,206.032,78.865,174.432,32.465z M207.632,248.865
+			          			c-15.6,15.6-36.8,24.8-60.4,24.8c-23.6,0-44.8-9.6-60.4-24.8c-15.6-15.6-24.8-36.8-24.8-60.4c0-33.6,45.2-100.4,75.2-144.8
+			          			c3.6-5.2,6.8-10.4,10-14.8c3.2,4.4,6.4,9.6,10,14.8c30,44.8,75.2,111.2,75.2,144.8
+			          			C232.432,212.065,222.832,233.265,207.632,248.865z"/>
+			          		<path d="M209.232,181.265c-5.6-0.4-10.4,4-10.8,9.6c-0.4,8.8-3.2,17.2-7.6,24.4c-4.4,7.2-10.8,13.6-18.4,17.6
+			          			c-4.8,2.8-6.8,9.2-4,14c3.2,5.6,9.6,7.2,14.4,4.4c10.8-6,19.6-14.8,25.6-24.8c6.4-10,10-22,10.4-34.4
+			          			C219.232,186.465,214.832,181.665,209.232,181.265z"/>
+			          </svg>
+			        </label>
+			        <input id="radio5" type="radio" name="estrellas" value="1">
+			        <label for="radio5" onclick="electrodomesticoActual.presion=4;electrodomesticoActual.mostrarInterfaz();">
+			          <svg id="Capa_1" x="0px" y="0px" viewBox="0 0 294.465 294.465" style="enable-background:new 0 0 294.465 294.465;">
+			          		<path d="M174.432,32.465c-6.8-10-12.8-19.2-18.4-27.6c-0.8-1.2-2-2.4-3.2-3.2c-4.8-3.2-11.2-1.6-14.4,3.2
+			          			c-5.2,8.4-11.2,17.2-18.4,27.6c-31.6,46.4-78.8,116.4-78.8,156.4c0,29.2,12,55.6,31.2,74.8c19.2,18.8,45.6,30.8,74.8,30.8
+			          			s55.6-12,74.8-31.2c19.2-19.2,31.2-45.6,31.2-74.8C253.232,148.465,206.032,78.865,174.432,32.465z M207.632,248.865
+			          			c-15.6,15.6-36.8,24.8-60.4,24.8c-23.6,0-44.8-9.6-60.4-24.8c-15.6-15.6-24.8-36.8-24.8-60.4c0-33.6,45.2-100.4,75.2-144.8
+			          			c3.6-5.2,6.8-10.4,10-14.8c3.2,4.4,6.4,9.6,10,14.8c30,44.8,75.2,111.2,75.2,144.8
+			          			C232.432,212.065,222.832,233.265,207.632,248.865z"/>
+			          		<path d="M209.232,181.265c-5.6-0.4-10.4,4-10.8,9.6c-0.4,8.8-3.2,17.2-7.6,24.4c-4.4,7.2-10.8,13.6-18.4,17.6
+			          			c-4.8,2.8-6.8,9.2-4,14c3.2,5.6,9.6,7.2,14.4,4.4c10.8-6,19.6-14.8,25.6-24.8c6.4-10,10-22,10.4-34.4
+			          			C219.232,186.465,214.832,181.665,209.232,181.265z"/>
+
+			          </svg>
+			        </label>
+			      </p>
+			    </form>
+			    <div class="temperatura">
+			      <div class="barra">
+			        <div class="punto"></div>
+			      </div>
+			    </div>
+				</div>
 			</div>
 			<div class="categoria-menu" id="servicios">
 				<div class="botones">
@@ -580,8 +667,9 @@
 		</div>
 		<div id="controlesSilla" style="width:100%;position: relative;">
 			<img src="assets/trumpet.svg" class="bocina" onmousedown="document.querySelector('#audio-bocina').play();document.querySelector('body').style.background='linear-gradient(red,red 30%,yellow 30%,yellow 60%,red 60%)';" onmouseup="document.querySelector('#audio-bocina').pause();document.querySelector('body').style.background='#fff';">
-			<audio src="assets/Himno-Espana.mp3" id="audio-bocina" loop onload="this.currentTime=1;"></audio>
-			<div style="
+			<img src="assets/speed.svg" class="bocina" style="top: 5rem;"/>
+			<audio src="assets/bocina.mp3" id="audio-bocina" loop onload="this.currentTime=1;"></audio>
+			<div class="displayControlSilla" style="
     		padding: 0 2em;
     		margin: 1em 0;
     		color: #333;
@@ -590,13 +678,20 @@
     		overflow: hidden;
 				">
 				<h3 style="
-	    			text-transform: capitalize;
+	    		text-transform: capitalize;
 	    		font-size: 1rem;
 					">Controles silla</h3>
 			</div>
 			<div class="contenedor-joystick">
 				<div>
 					<div>
+						<div style="
+					    position: absolute;
+					    width: 100%;
+					    height: 100%;
+							background: transparent;
+							z-index: 2;
+						"></div>
 						<h1>2.7<span>Km/h</span></h1>
 					</div>
 				</div>

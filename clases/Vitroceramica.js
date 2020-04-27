@@ -1,10 +1,12 @@
 class Fuego
 {
-	constructor(potenciasAux)
+	constructor(potenciasAux,interfaz)
 	{
 		this.potencias=potenciasAux;
 		this.estado = 0;
 		this.temporizador=0;
+		this.colores = ['#000','#690404','#a40000','#bc0202','#e30404','#ff0000'];
+		this.interfaz = interfaz;
 	}
 	iniciarTemporizador()
 	{
@@ -14,6 +16,7 @@ class Fuego
 				this.temporizador--;
 				this.actualizarEstado();
 				console.log(this.estado);
+				this.mostrarTemporizador();
 			}
 			else
 				clearInterval(this.intervalo);
@@ -29,17 +32,62 @@ class Fuego
 		this.temporizador=0;
 		this.actualizarEstado();
 	}
+	mostrarTemporizador()
+	{
+		if(this.temporizador != 0)
+		{
+			var minutos = parseInt(this.temporizador/60);
+			var segundos = this.temporizador%60;
+			var aux;
+			if(minutos<10)
+			{
+				aux = minutos;
+				minutos = 0+''+aux;
+			}
+			if(segundos<10)
+			{
+				aux = segundos;
+				segundos = 0+''+aux;
+			}
+			document.querySelector(".contenedor-vitro .minutos").innerHTML = minutos;
+			document.querySelector(".contenedor-vitro .segundos").innerHTML = segundos;
+		}
+		else
+		{
+			document.querySelector(".contenedor-vitro .minutos").innerHTML="00";
+			document.querySelector(".contenedor-vitro .segundos").innerHTML ="00";
+		}
+	}
+	subirTiempo()
+	{
+		this.temporizador+=15;
+		this.mostrarTemporizador();
+	}
+	bajarTiempo()
+	{
+		if(this.temporizador>15)
+			this.temporizador-=15;
+		else
+			this.temporizador=0;
+		this.mostrarTemporizador();
+	}
 	subirEstado()
 	{
 		if(this.estado<this.potencias)
 			this.estado++;
+		this.mostrarInterfaz();
 	}
 	bajarEstado()
 	{
 		if(this.estado>0)
 			this.estado--;
-		if(this.estado==0)
-			clearInterval(this.intervalo);
+		this.mostrarInterfaz();
+	}
+	mostrarInterfaz()
+	{
+		document.querySelector('.contenedor-vitro .potencia').innerHTML = this.estado;
+		this.interfaz.style.background="radial-gradient(black, black 28%,white 32%,white 34%, "+this.colores[this.estado]+" 36%, "+this.colores[this.estado]+" 62%, white 67%)";
+		this.mostrarTemporizador();
 	}
 }
 
@@ -53,18 +101,25 @@ class Vitroceramica extends Electrodomestico
 		this.fuegoSeleccionado = -1;
 		this.fuego=new Array(nFuegos);
 		for(var i=0;i<this.fuego.length;i++)
-			this.fuego[i] = new Fuego(potencia);
+			this.fuego[i] = new Fuego(potencia,this.interfazfuegos[i]);
 	}
 	actualizarEstado()
 	{
 		this.estado="| ";
 		for(var i=0;i<this.fuego.length;i++)
 		{
-			if(this.fuego[i].getEstado()==0)
+			if(this.fuego[i].estado==0)
 				this.estado += "_ |";
 			else
-				this.estado +=this.fuego[i].getEstado()+" |";
+				this.estado +=this.fuego[i].estado+" |";
 		}
+	}
+	mostrarInterfaz()
+	{
+		this.fuego.forEach(fuegu => {
+			fuegu.mostrarInterfaz();
+		});
+
 	}
 	seleccionarFuego(numero)
 	{
@@ -84,6 +139,7 @@ class Vitroceramica extends Electrodomestico
 		{
 			this.interfazfuegos[numero].setAttribute('seleccionado','');
 			this.fuegoSeleccionado=numero;
+			this.fuego[numero].mostrarInterfaz();
 		}
 	}
 }

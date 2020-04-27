@@ -196,10 +196,6 @@ main>div {
   border: 4px solid #333
 }
 
-.contenedor-joystick>div>div:hover {
-  transform: translateY(-30px);
-}
-
 .contenedor-joystick h1 {
   font-size: 4.5rem;
   text-align: center;
@@ -345,11 +341,109 @@ main>div {
   border-radius: 3rem;
 }
 
+/* ESTILOS MAPA */
+
+#mapa .habitacion1 {
+  top: 9em;
+  left: 3em;
+  opacity: 1;
+  font-size: 10pt;
+  display: grid;
+}
+
+#mapa .habitacion2 {
+  top: 28em;
+  left: 3em;
+  opacity: 1;
+  font-size: 10pt;
+  display: grid;
+}
+
+#mapa .baño1 {
+  top: 20.5em;
+  left: 8.8em;
+  opacity: 1;
+  font-size: 10pt;
+  display: grid;
+}
+
+#mapa .baño2 {
+  top: 17em;
+  left: 1em;
+  opacity: 1;
+  font-size: 10pt;
+  display: grid;
+}
+
+#mapa .pasillo {
+  transform: none;
+  top: 14.4em;
+  left: 7em;
+  opacity: 1;
+  font-size: 10pt;
+}
+
+#mapa .estudio {
+  top: 10em;
+  left: 8.5em;
+  opacity: 1;
+  font-size: 10pt;
+  display: flex;
+  align-items: center;
+}
+
+#mapa .salon {
+  top: 28em;
+  left: 13em;
+  opacity: 1;
+  font-size: 10pt;
+  display: block;
+  align-items: center;
+}
+
+#mapa .cocina {
+  top: 10em;
+  left: 14.4em;
+  opacity: 1;
+  font-size: 10pt;
+  display: flex;
+  align-items: center;
+}
+
+#mapa .entrada {
+  top: 19em;
+  left: 15em;
+  opacity: 1;
+  font-size: 10pt;
+}
+
+.img-habitacion {
+  margin-left: 2rem;
+}
+
+.img-estudio{
+  width: 18%;
+  margin-right: 0.5rem;
+}
+
+.img-cocina {
+  width: 24%;
+  margin-right: 0.5rem;
+}
+
+.img-salon {
+  width: 20%;
+  margin-right: 0.7rem;
+}
 /* ESTILOS ICONO SERVICIOS */
 
 .servicios-imagen {
   width: 100%;
   padding: 0;
+}
+
+.img-baño {
+  margin-left: 0.8rem;
 }
 
 
@@ -485,7 +579,8 @@ main>div {
   background: radial-gradient(black, black 28%,white 32%,white 34%, black 36%, black 62%, white 67%);
 }
 .fuego[seleccionado] {
-    background: radial-gradient(black, black 28%,lightgreen 32%,lightgreen 34%, black 36%, black 62%, lightgreen 67%);
+  box-shadow: 0 0 1rem lightgreen;
+  border: 2px solid lightgreen;
 }
 .contenedor-vitro .fuego:nth-child(1)
 {
@@ -535,6 +630,50 @@ main>div {
   border-radius: 3rem;
   box-shadow: 0 0 .3rem;
 }
+
+.contenedor-grifo input[type="radio"] {
+  display: none;
+}
+
+.contenedor-grifo .clasificacion {
+  direction: rtl;
+  unicode-bidi: bidi-override;
+}
+.contenedor-grifo label:hover svg path,
+.contenedor-grifo label:hover ~ label svg path,
+.contenedor-grifo input[type="radio"]:checked ~ label svg path {
+  fill: #19b6fd;
+}
+.contenedor-grifo svg{
+  width: 2.5rem;
+}
+.contenedor-grifo .gotas,.clasificacion
+{
+  display: table;
+}
+.contenedor-grifo .gotas{
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+.contenedor-grifo .barra{
+  width: 60%;
+  height: 10px;
+  background: linear-gradient(90deg,#19b6fd, #EA4335);
+  border-radius: 10px;
+  margin: 0 auto;
+}
+.contenedor-grifo .punto
+{
+  width: 2rem;
+  height: 2rem;
+  background: #fff;
+  border: 2px solid #9d9d9d;
+  position: relative;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 1.5rem;
+}
 /*ESTILOS PERSIANA*/
 .contenedor-persiana .abierta {
     display: flex;
@@ -583,11 +722,12 @@ main>div {
 }
 
 .contenedor-tv{
-  grid-template-rows: auto 1fr 1fr;
+  grid-template-rows: auto 1fr 1fr 1fr;
 }
 .contenedor-nevera .boton-apagado,
 .contenedor-termostato .boton-apagado,
-.contenedor-tv .boton-apagado{
+.contenedor-tv .boton-apagado,
+.contenedor-grifo .boton-apagado{
   display: flex;
   margin: 0 auto;
   box-shadow: 0 0 0.5em #888;
@@ -597,15 +737,26 @@ main>div {
   width: 2.5em;
   justify-content: center;
 }
+.contenedor-grifo .boton-apagado{
+  margin: 0;
+  margin-right: 3rem;
+}
+.contenedor-grifo .boton-apagado[encendido]
+{
+  box-shadow: 0 0 0.5em #19b6fd;
+  fill: #19b6fd;
+}
 .contenedor-nevera .boton-apagado[encendido],
 .contenedor-termostato .boton-apagado[encendido],
-.contenedor-tv .boton-apagado[encendido] {
+.contenedor-tv .boton-apagado[encendido]
+{
     box-shadow: 0 0 0.5em green;
     fill: green;
 }
 .contenedor-nevera .boton-apagado svg,
 .contenedor-termostato .boton-apagado svg,
-.contenedor-tv .boton-apagado svg{
+.contenedor-tv .boton-apagado svg,
+.contenedor-grifo .boton-apagado svg{
   width: 1.5em;
 }
 .contenedor-nevera .boton-apagado p,
@@ -627,6 +778,12 @@ main>div {
   font-size: 1rem;
   color: #9d9d9d;
   line-height: 1.5;
+}
+
+.contenedor-tv .contenedor-numeros p{
+  font-size: 2rem;
+  font-weight: bolder;
+  text-align: center;
 }
 .contenedor-tv .contenedor-mensaje .mensaje{
   padding-bottom: 3em;
@@ -1065,10 +1222,18 @@ p.display-temperatura {
 .contenedor-microondas .controles label {
     line-height: 2.8rem;
     width: 3.5rem;
+    height: 3.5rem;
     border-radius: 20em;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
+.contenedor-microondas .controles label img{
+  width: 3em;
+  height: 3em;
+  padding: .3rem;
+}
 .contenedor-microondas .controles>div {
     padding: .5em 0;
 }

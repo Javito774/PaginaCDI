@@ -3,9 +3,9 @@ class Restaurantes {
     this.nombre = "Restaurantes";
     this.interfaz = document.querySelector("#servicios .restaurantes");
     this.restaurantes = new Array(3);
-    this.restaurantes[0] = new Contacto("Rest1",123456);
-    this.restaurantes[1] = new Contacto("Rest2",123656);
-    this.restaurantes[2] = new Contacto("Rest3",143456);
+    this.restaurantes[0] = new Contacto("GastroVía 61",123456);
+    this.restaurantes[1] = new Contacto("El Tormo",123656);
+    this.restaurantes[2] = new Contacto("Abastos 2.0",143456);
     this.imprimirRestaurantes();
   }
   imprimirRestaurantes()
