@@ -28,19 +28,19 @@ class Grifo extends Electrodomestico
 	}
 	mostrarInterfaz()
 	{
+		console.log(this.presion);
 		this.interfaz.querySelector(".punto").style.left=this.temperatura+"%";
 		var gotas=this.interfaz.querySelectorAll(".gotas input");
+		var i=0;
+		gotas.forEach(gota => {
+			if(i!=this.presion)
+				gota.checked=false;
+			i++;
+		});
 		if(this.presion!=-1)
 		{
-			gotas[this.presion].checked=true;
-			this.interfaz.querySelector('.boton-apagado').setAttribute('encendido','');
-		}
-		else
-		{
-			this.interfaz.querySelector('.boton-apagado').removeAttribute('encendido');
-			gotas.forEach(gota => {
-				gota.checked=false;
-			});
+			console.log("esto lo hago");
+			//gotas[this.presion].checked=true;
 		}
 
 	}

@@ -100,7 +100,7 @@ class Termostato extends Electrodomestico
 					this.interfaz.querySelector(".temperatura p").innerHTML=this.temperaturaDeseada+"ºC";
 				}
 				else {
-					mensaje += "<div class='contenedor-botones'><img src='assets/add.svg' onclick='esconderFlechaAtras();programa.interfaz.style.display=\"block\";'/></div>";
+					mensaje += "<div class='contenedor-botones'><button onclick='esconderFlechaAtras();programa.interfaz.style.display=\"block\";'>Añadir</button></div>";
 					mensaje += "<div class='contenedor-programas'>";
         	mensaje += "</div>";
 					contenedor.innerHTML=mensaje;

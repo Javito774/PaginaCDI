@@ -180,7 +180,9 @@
 					</div>
 				</div>
 				<div class="contenedor-persiana contenedor-electrodomestico">
-					<div class="contenedor-barra">
+					<div class="botones-persiana">
+						<img src="assets/keyboard_arrow_up-24px.svg" onclick="electrodomesticoActual.bajarPersiana();">
+						<img src="assets/expand_more-24px.svg" onclick="electrodomesticoActual.subirPersiana()">
 					</div>
 					<div class="mando-persiana">
 						<div class="abierta">
@@ -190,11 +192,6 @@
 							</div>
 						</div>
 					</div>
-					<div class="botones-persiana">
-						<img src="assets/keyboard_arrow_up-24px.svg" onclick="electrodomesticoActual.bajarPersiana();">
-						<img src="assets/expand_more-24px.svg" onclick="electrodomesticoActual.subirPersiana()">
-					</div>
-
 				</div>
 				<div class="contenedor-tv contenedor-electrodomestico" apagada>
 					<div class="boton-apagado" onclick="electrodomesticoActual.switchTV();">
@@ -360,14 +357,19 @@
 				</div>
 				<div class="contenedor-grifo contenedor-electrodomestico" estado=0>
 					<form class="gotas">
-						<div class="boton-apagado" onclick="electrodomesticoActual.presion=-1;electrodomesticoActual.mostrarInterfaz();">
-							<svg viewBox="0 0 24 24">
-								<path d="M0 0h24v24H0z" fill="none" />
-								<path d="M13 3h-2v10h2V3zm4.83 2.17l-1.42 1.42C17.99 7.86 19 9.81 19 12c0 3.87-3.13 7-7 7s-7-3.13-7-7c0-2.19 1.01-4.14 2.58-5.42L6.17 5.17C4.23 6.82 3 9.26 3 12c0 4.97 4.03 9 9 9s9-4.03 9-9c0-2.74-1.23-5.18-3.17-6.83z" /></svg>
-						</div>
+						<p>Pulse en las gotas para seleccionar el caudal</p>
+						<img src="assets/tap2.png" style="
+							position: absolute;
+							width: 5rem;
+							height: auto;
+							top: 2rem;
+							left: 50%;
+							transform: translateX(-85%);
+							z-index: 100;
+						">
 			      <p class="clasificacion">
-			        <input id="radio1" type="radio" name="estrellas" value="5">
-			        <label for="radio1" onclick="electrodomesticoActual.presion=0;electrodomesticoActual.mostrarInterfaz();">
+			        <input id="presion1" type="checkbox" name="estrellas" value="5">
+			        <label for="presion1" onclick="electrodomesticoActual.presion=0;electrodomesticoActual.mostrarInterfaz();">
 			          <svg id="Capa_1" x="0px" y="0px" viewBox="0 0 294.465 294.465" style="enable-background:new 0 0 294.465 294.465;">
 			          		<path d="M174.432,32.465c-6.8-10-12.8-19.2-18.4-27.6c-0.8-1.2-2-2.4-3.2-3.2c-4.8-3.2-11.2-1.6-14.4,3.2
 			          			c-5.2,8.4-11.2,17.2-18.4,27.6c-31.6,46.4-78.8,116.4-78.8,156.4c0,29.2,12,55.6,31.2,74.8c19.2,18.8,45.6,30.8,74.8,30.8
@@ -380,8 +382,8 @@
 			          			C219.232,186.465,214.832,181.665,209.232,181.265z"/>
 			          </svg>
 			        </label>
-			        <input id="radio2" type="radio" name="estrellas" value="4">
-			        <label for="radio2" onclick="electrodomesticoActual.presion=1;electrodomesticoActual.mostrarInterfaz();">
+			        <input id="presion2" type="checkbox" name="estrellas" value="4">
+			        <label for="presion2" onclick="electrodomesticoActual.presion=1;electrodomesticoActual.mostrarInterfaz();">
 			          <svg id="Capa_1" x="0px" y="0px" viewBox="0 0 294.465 294.465" style="enable-background:new 0 0 294.465 294.465;">
 			          		<path d="M174.432,32.465c-6.8-10-12.8-19.2-18.4-27.6c-0.8-1.2-2-2.4-3.2-3.2c-4.8-3.2-11.2-1.6-14.4,3.2
 			          			c-5.2,8.4-11.2,17.2-18.4,27.6c-31.6,46.4-78.8,116.4-78.8,156.4c0,29.2,12,55.6,31.2,74.8c19.2,18.8,45.6,30.8,74.8,30.8
@@ -394,8 +396,8 @@
 			          			C219.232,186.465,214.832,181.665,209.232,181.265z"/>
 			          </svg>
 			        </label>
-			        <input id="radio3" type="radio" name="estrellas" value="3">
-			        <label for="radio3" onclick="electrodomesticoActual.presion=2;electrodomesticoActual.mostrarInterfaz();">
+			        <input id="presion3" type="checkbox" name="estrellas" value="3">
+			        <label for="presion3" onclick="electrodomesticoActual.presion=2;electrodomesticoActual.mostrarInterfaz();">
 			          <svg id="Capa_1" x="0px" y="0px" viewBox="0 0 294.465 294.465" style="enable-background:new 0 0 294.465 294.465;">
 			          		<path d="M174.432,32.465c-6.8-10-12.8-19.2-18.4-27.6c-0.8-1.2-2-2.4-3.2-3.2c-4.8-3.2-11.2-1.6-14.4,3.2
 			          			c-5.2,8.4-11.2,17.2-18.4,27.6c-31.6,46.4-78.8,116.4-78.8,156.4c0,29.2,12,55.6,31.2,74.8c19.2,18.8,45.6,30.8,74.8,30.8
@@ -408,8 +410,8 @@
 			          			C219.232,186.465,214.832,181.665,209.232,181.265z"/>
 			          </svg>
 			        </label>
-			        <input id="radio4" type="radio" name="estrellas" value="2">
-			        <label for="radio4" onclick="electrodomesticoActual.presion=3;electrodomesticoActual.mostrarInterfaz();">
+			        <input id="presion4" type="checkbox" name="estrellas" value="2">
+			        <label for="presion4" onclick="electrodomesticoActual.presion=3;electrodomesticoActual.mostrarInterfaz();">
 			          <svg id="Capa_1" x="0px" y="0px" viewBox="0 0 294.465 294.465" style="enable-background:new 0 0 294.465 294.465;">
 			          		<path d="M174.432,32.465c-6.8-10-12.8-19.2-18.4-27.6c-0.8-1.2-2-2.4-3.2-3.2c-4.8-3.2-11.2-1.6-14.4,3.2
 			          			c-5.2,8.4-11.2,17.2-18.4,27.6c-31.6,46.4-78.8,116.4-78.8,156.4c0,29.2,12,55.6,31.2,74.8c19.2,18.8,45.6,30.8,74.8,30.8
@@ -422,8 +424,8 @@
 			          			C219.232,186.465,214.832,181.665,209.232,181.265z"/>
 			          </svg>
 			        </label>
-			        <input id="radio5" type="radio" name="estrellas" value="1">
-			        <label for="radio5" onclick="electrodomesticoActual.presion=4;electrodomesticoActual.mostrarInterfaz();">
+			        <input id="presion5" type="checkbox" name="estrellas" value="1">
+			        <label for="presion5" onclick="electrodomesticoActual.presion=4;electrodomesticoActual.mostrarInterfaz();">
 			          <svg id="Capa_1" x="0px" y="0px" viewBox="0 0 294.465 294.465" style="enable-background:new 0 0 294.465 294.465;">
 			          		<path d="M174.432,32.465c-6.8-10-12.8-19.2-18.4-27.6c-0.8-1.2-2-2.4-3.2-3.2c-4.8-3.2-11.2-1.6-14.4,3.2
 			          			c-5.2,8.4-11.2,17.2-18.4,27.6c-31.6,46.4-78.8,116.4-78.8,156.4c0,29.2,12,55.6,31.2,74.8c19.2,18.8,45.6,30.8,74.8,30.8
@@ -440,6 +442,19 @@
 			      </p>
 			    </form>
 			    <div class="temperatura">
+						<div style="
+					    display: flex;
+					    justify-content: space-between;
+					    line-height: 4;
+					    align-items: center;
+					    font-size: .9rem;
+					    width: 60%;
+					    margin: 0 auto;
+						">
+        			<p>Frio</p>
+    					<h1 style="font-size: .9rem;">TEMPERATURA</h1>
+        			<p>Caliente</p>
+    				</div>
 			      <div class="barra">
 			        <div class="punto"></div>
 			      </div>
@@ -547,6 +562,137 @@
 					<div class='contenedor-contactos'>
 
 					</div>
+				</div>
+				<div class="taxis">
+					<div id="confirmacion-taxi" style="display: none;" onclick="aceptarViaje()">
+	            <div id="confirmacion-viaje-container" style="
+	            height: 203px;
+	            width: 32%;
+	            margin: 10%;
+	            padding: 11px;
+	            border-radius: 20px 20px 20px 20px;
+	           -moz-border-radius: 20px 20px 20px 20px;
+	           -webkit-border-radius: 20px 20px 20px 20px;
+	           border: 1px solid #000000; text-align:center;">
+	               <p id="texto-confirmacion" style="font-size: x-large; font-weight: 700;">Su viaje ha quedado reservado</p>
+	               <img src="assets/check.png" width="150px" height="150px">
+	            </div>
+	        </div>
+	        <div id="taxis-container" style="display: flex;" style="flex-direction: row;">
+	            <div id="taxis-lateral-container">
+	                <img  src="imagenes/bartD.png" class="img-form-taxis" width="150px" height="150px"></img>
+	                <p>Bart Simpson</p>
+
+	                <div class="menu-pedir-viaje" style="transform: none;">
+						<input id="pedir-viaje" onclick="cerrarHistorial()" type="radio" name="select-viaje" checked="true">
+						<label for="pedir-viaje" >Pedir viaje</label>
+						<input id="mis-viajes" onclick="abrirHistorial()" type="radio" name="select-viaje">
+						<label for="mis-viajes">Mis viajes</label>
+					</div>
+	            </div>
+	            <div id="taxis-central-container">
+	                <div id="taxis-upper-buttons" style="transform: none;">
+	                    <div class="menu-elegir-usuario" style="transform: none;">
+	                        <input id="para-mi" type="radio" name="select-usuario" onclick="pedirParaMi()" checked="true">
+	                        <label for="para-mi" >Para mí</label>
+	                        <input id="select-invitado" type="radio" onclick="pedirParaInvitado()" name="select-usuario">
+	                        <label for="select-invitado">Para un invitado</label>
+	                    </div>
+	                </div>
+
+	                <div id="historial-viajes" style="margin-top: 25px; display: none;">
+	                    <div>
+	                        <h1 style="margin-left: 20px;">Historial de Viajes</h1> <br>
+	                        <h2 style="margin-left: 20px;">2020</h2>
+	                    </div>
+	                    <div id="historial-viajes-container" style="overflow: auto; width: 100%;">
+	                        <div id="2020-historial" style="
+	                        margin:20px;
+	                        padding: 5px;
+	                        border-radius: 25px 25px 25px 25px;
+	                        -moz-border-radius: 25px 25px 25px 25px;
+	                        -webkit-border-radius: 25px 25px 25px 25px;
+	                        border: 1px solid #000000;">
+
+	                            <div class="viaje" style="display: flex; flex-direction: row; margin-left: 20px;margin-top: 20px;
+	                            justify-content: space-around;">
+	                                <div class="viaje-izq">
+	                                    <p class="fecha">1 ene - 9:15</p> <br>
+	                                    <p class="tipo-coche">LITE</p>
+	                                </div>
+	                                <p class="estado-viaje" style="margin: 40px;">RESERVADO</p><br>
+	                                <p class="precio" style="margin-top: 40px;">15,24€</p>
+	                            </div>
+	                            <hr>
+	                            <div class="viaje" style="display: flex; flex-direction: row; margin-left: 20px;margin-top: 20px;
+	                            justify-content: space-around;">
+	                                <div class="viaje-izq">
+	                                    <p class="fecha">1 ene - 9:15</p> <br>
+	                                    <p class="tipo-coche">LITE</p>
+	                                </div>
+	                                <p class="estado-viaje" style="margin: 40px;">RESERVADO</p><br>
+	                                <p class="precio" style="margin-top: 40px;">15,24€</p>
+	                            </div>
+	                            <hr>
+	                            <div class="viaje" style="display: flex; flex-direction: row; margin-left: 20px;margin-top: 20px;
+	                            justify-content: space-around;">
+	                                <div class="viaje-izq">
+	                                    <p class="fecha">1 ene - 9:15</p> <br>
+	                                    <p class="tipo-coche">LITE</p>
+	                                </div>
+	                                <p class="estado-viaje" style="margin: 40px;">RESERVADO</p><br>
+	                                <p class="precio" style="margin-top: 40px;">15,24€</p>
+	                            </div>
+	                            <hr>
+	                            <div class="viaje" style="display: flex; flex-direction: row; margin-left: 20px;margin-top: 20px;
+	                            justify-content: space-around;">
+	                                <div class="viaje-izq" style="">
+	                                    <p class="fecha">1 ene - 9:15</p> <br>
+	                                    <p class="tipo-coche">LITE</p>
+	                                </div>
+	                                <p class="estado-viaje" style="margin: 40px;">RESERVADO</p><br>
+	                                <p class="precio" style="margin-top: 40px;">15,24€</p>
+	                            </div>
+
+	                        </div>
+
+
+	                        </div>
+	                    </div>
+
+	                <div id="taxis-form-container">
+	                    <form id="taxis-form">
+	                        <img  src="assets/location_on.svg" class="img-form-taxis" width="25px" height="25px"></img>
+	                        <input class="form-taxi" type="text" id="taxi-origen" name="taxi-origen" placeholder="¿Dónde vamos a buscarte?"><br>
+
+	                        <img  src="assets/location_on.svg" class="img-form-taxis" width="25px" height="25px">
+	                        <input type="text" class="form-taxi" id="taxi-destino" name="taxi-destino" placeholder="¿A dónde te llevamos?"><br>
+
+	                        <img  src="assets/calendario.png" width="25px" class="img-form-taxis" height="25px"></img>
+	                        <input type="text" id="taxi-cuando"  class="form-taxi" name="taxi-cuando" placeholder="¿Cuándo?"><br>
+
+	                        <img  src="assets/car.svg" width="25px" class="img-form-taxis" height="25px">
+	                        <input type="text" id="taxi-tipo-coche" class="form-taxi" name="taxi-tipo-coche" placeholder="¿Qué tipo de coche quieres?"><br>
+	                        <div id="invitados-form" style="display: none;">
+	                            <img  id="taxi-invitado-nombre-img" src="assets/user.png" width="25px" class="img-form-taxis" height="25px" ></img>
+	                            <input type="text" id="taxi-invitado-nombre" class="form-taxi"  name="taxi-invitado-nombre" placeholder="Nombre del invitado"><br>
+
+	                            <img id="taxi-invitado-telefono-img" src="assets/phone.svg" width="25px" class="img-form-taxis" height="25px" >
+	                            <input type="text" id="taxi-invitado-telefono" class="form-taxi" name="taxi-invitado-telefono"  placeholder="Número móvil del invitado"><br>
+	                        </div>
+
+	                    </form>
+
+	                </div>
+	                <div id="taxis-lower-buttons" style="display: flex; justify-content: end;" >
+	                    <div id="taxis-cost">
+	                        <p>Coste:  15,24€ </p><br>
+	                        <input class="boton-pedir-viaje" onclick="reservarViaje()" type="submit" value="PEDIR VIAJE">
+	                    </div>
+
+	                </div>
+	            </div>
+	        </div>
 				</div>
 				<!--<video src="assets/Peliculas/HP7.2010.BRRip.720p.Bluray.YIFY.mkv" type='video/x-matroska; codecs="theora, vorbis"' autoplay style="width: 100%;
 			    height: auto;
