@@ -5,9 +5,12 @@ var electrodomesticoActual=null;
 var telefono;
 var programa;
 var netlis;
+var netlisPagina=0;
 var restaurantesFavoritos;
 var telefonillo;
 var codigoAcceso;
+var pantallaPeliculas;
+
 //FUNCIONES QUE INICIAN TODAS LAS ESTANCIAS DE LA CASA.
 function inicio()
 {
@@ -136,6 +139,8 @@ function inicio()
 
 	telefonillo = new Telefonillo();
 	codigoAcceso = new CodigoAcceso();
+
+	pantallaPeliculas = new Pantalla('Pelicula',document.querySelector('#servicios .netlis .pantalla-pelicula'))
 }
 
 document.addEventListener("DOMContentLoaded", inicio);

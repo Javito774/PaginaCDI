@@ -197,13 +197,14 @@ main>div {
 }
 
 .contenedor-joystick h1 {
-  font-size: 4.5rem;
+  font-size: 1.4rem;
   text-align: center;
 }
 
 .contenedor-joystick h1 span {
   display: block;
-  font-size: 1.4rem;
+  font-size: 4.5rem;
+
 }
 
 #menuPrincipal {
@@ -339,6 +340,8 @@ main>div {
   padding: .5rem;
   box-shadow: 0 0 0.2rem;
   border-radius: 3rem;
+  background: #fff;
+  z-index: 200;
 }
 
 /* ESTILOS MAPA */
@@ -1457,7 +1460,7 @@ p.display-temperatura {
 .pantalla-pelicula .datos .titulo
 {
   font-size: 2rem;
-  line-height: 1.7;
+  margin-bottom: 1rem;
 }
 .pantalla-pelicula .datos .año
 {

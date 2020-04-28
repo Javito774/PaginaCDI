@@ -1,5 +1,30 @@
 var pantallas = [];
 
+
+document.querySelector('.display-velocidad .circulo').addEventListener('mousedown', ()=>{
+	document.querySelector('.display-velocidad').addEventListener('mousemove', modificarVelocidad);
+});
+document.querySelector('.display-velocidad').addEventListener('mouseleave',()=>
+{
+	document.querySelector('.display-velocidad').removeEventListener('mousemove',modificarVelocidad);
+});
+document.querySelector('.display-velocidad').addEventListener('mouseup',()=>
+{
+	document.querySelector('.display-velocidad').removeEventListener('mousemove',modificarVelocidad);
+});
+function modificarVelocidad(e)
+{
+	var posY = e.clientY;
+	var inicio = document.querySelector(".display-velocidad .barra").offsetTop+document.querySelector(".display-velocidad .barra").offsetParent.offsetTop+document.querySelector(".display-velocidad .barra").offsetParent.offsetParent.offsetTop;
+  console.log(posY+","+inicio);
+	var final = inicio + document.querySelector('.display-velocidad .barra').offsetHeight;
+	if(posY>=inicio && posY<=final)
+	{
+		var pos = (posY-inicio)*100/(final-inicio);
+		document.querySelector('.display-velocidad .circulo').style.top=pos+"%";
+    document.querySelector('.contenedor-joystick h1 span').innerHTML = (pos*5/100).toFixed(1);
+	}
+}
 //@TODO organizar distintos temporizadores para que no tengan el mismo nombre.
 
 document.querySelector(".contenedor-joystick>div>div").addEventListener('mousedown',()=>
@@ -214,7 +239,9 @@ function mostrarCarpeta()
 		for(var i=1;i<pantallas.length;i++)
 		{
 			pantalla.innerHTML+=" / ";
-			pantalla.innerHTML+=pantallas[i].nombre;
+			pantalla.innerHTML+=pantallas[i].nombre.substring(0,12);
+      if(pantallas[i].nombre.length>12)
+        pantalla.innerHTML+= " ...";
 		}
 	}
 }
@@ -265,7 +292,7 @@ function mostrarHabitacion(numeroHabitacion)
 
 function retrocederVentana()
 {
-	if(electrodomesticoActual!=null)
+	if(electrodomesticoActual!=null && electrodomesticoActual.nombre!="Netlis")
 		electrodomesticoActual=null;
   var pantallaActual = pantallas.pop();
   if(pantallas.length==0)
@@ -278,7 +305,7 @@ function retrocederVentana()
 function cambiarVentanaPeliculas(numero)
 {
   var menus = document.querySelectorAll("#servicios .netlis .sub-menu");
-  electrodomesticoActual.style.display="none";
-  electrodomesticoActual=menus[numero];
-  electrodomesticoActual.style.display="grid";
+  menus[netlisPagina].style.display="none";
+  netlisPagina=numero;
+  menus[netlisPagina].style.display="grid";
 }

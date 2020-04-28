@@ -3,7 +3,7 @@ class Silla
 	constructor()
 	{
 		this.estado = "encendida";
-		this.velocidad = 0.0;
+		this.velocidad = 2.7;
 	}
 	apagarSilla()
 	{
