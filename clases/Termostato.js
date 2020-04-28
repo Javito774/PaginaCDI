@@ -66,7 +66,7 @@ class Termostato extends Electrodomestico
 			mensaje += '<p class="display-temperatura">'+this.programas[i].temperatura+'ºC</p>';
 			mensaje += '<div style="text-align: center;width: 8rem;">';
 				mensaje += '<p class="hora">'+this.programas[i].horaInicio+' - '+this.programas[i].horaFin+'</p>';
-			mensaje += '<p class="fecha">'+this.programas[i].fecha+'</p>';
+			mensaje += '<input type="date" class="fecha" value="'+this.programas[i].fecha+'" readonly/>';
 			mensaje += '</div>';
 			mensaje += '<div class="toggle"';
 			if(this.programas[i].activo)

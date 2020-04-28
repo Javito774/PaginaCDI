@@ -353,3 +353,15 @@ function aceptarViaje(){
 	let div_btn = document.getElementById('confirmacion-taxi');
 	div_btn.style.display = 'none';
 }
+
+var pantallaPago = new Pantalla('pago',document.querySelector('.pantallaPago'))
+
+function abrirInterfazPago()
+{
+	if(menuNum!=1)
+	{
+		mostrarMenu(1);
+	}
+	pantallas.push(pantallaPago);
+	pantallaPago.interfaz.style.display="block";
+}

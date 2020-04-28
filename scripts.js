@@ -6,6 +6,7 @@ var telefono;
 var programa;
 var netlis;
 var netlisPagina=0;
+var peliculaSeleccionada=null;
 var restaurantesFavoritos;
 var telefonillo;
 var codigoAcceso;

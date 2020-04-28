@@ -31,6 +31,8 @@
 
 	<script type="text/javascript" src="clases/Pantalla.js"></script>
 
+	<script type="text/javascript" src="clases/Transaccion.js"></script>
+	
 	<script type="text/javascript" src="scripts.js"></script>
 	<meta charset="utf-8">
 </head>
@@ -538,10 +540,10 @@
 							<img src="assets/pelicula1.jpg" />
 						</div>
 						<div class="datos">
-							<p class="titulo">Harry Pajoter</p>
-							<p class="año">1998 · 121 minutos</p>
-							<p class="descripcion">Una historia apasionante que te llenara el corazon de sida y gonorrea para que puedas disfrutar tus ultimos dias como parajaro azul en el viento verde de este mundo negro.</p>
-							<button type="button"><span>4,99€</span> Alquilar</button>
+							<p class="titulo"></p>
+							<p class="año"></p>
+							<p class="descripcion"></p>
+							<button type="button" onclick="abrirInterfazPago();"><span>4,99€</span> Alquilar</button>
 						</div>
 					</div>
 					<div class="sub-menu peliculas">
@@ -614,6 +616,18 @@
 										<img/>
 										<input type="number" placeholder="Móvil de tu amigo" maxlength="9">
 									</div>
+									<p class="distancia" style="">Distancia: <span>5.73</span>Km</p>
+							    <p class="precio">Coste: <span>10.50</span>€</p>
+									<p style="padding-top: 1em;">
+										<button style="margin: 0 1em;
+									    box-shadow: 0 0 0.2em;
+									    padding: .5em;
+									    border-radius: 1em;
+									    font-size: .8rem;
+									    border: none;
+									    background: #fff;">Solicitar
+										</button>
+									</p>
 								</form>
 							</div>
 							<div class="pantalla viajes">
@@ -820,6 +834,69 @@
 	                </div>
 	            </div>
 	        </div>-->
+				</div>
+				<div class="pantallaPago" style="display:none;">
+					<div>
+						<div class="Tarjeta" style="
+					    display: table;
+					    margin: 1rem auto;
+					    background-image: url(&quot;assets/images/19.jpeg&quot;);
+					    background-size: cover;
+					    width: 19rem;
+					    padding: 1rem;
+					    border-radius: 15px;
+					    box-shadow: 0 0 .5rem;
+					">
+												<div style="
+					    display: flex;
+					    align-content: center;
+					    justify-content: flex-end;
+							">
+								<img src="assets/images/visa.png" style="
+							    width: 2.5rem;
+									">
+							</div>
+							<div>
+								<img src="assets/images/chip.png" style="
+    width: 2em;
+							">
+							</div>
+							<div style="
+    						margin-top: 1rem;
+							">
+								<p class="campito">Número de tarjeta</p>
+								<p style="
+    							font-size: 1.4rem;
+    							letter-spacing: .2rem;
+    							color: #333;
+								">4599 **** **** 5230</p>
+							</div>
+							<div style="
+    display: flex;
+    justify-content: space-between;
+    padding-top: 0.5rem;
+">
+								<div>
+									<p class="campito">Nombre del titular</p>
+									<p>Ramón Jimenez Fernadez</p>
+								</div>
+								<div>
+									<p class="campito">Expiración</p>
+									<p>05/25</p>
+								</div>
+							</div>
+						</div>
+						<img src="assets/fingerprint.svg" class="confirmacion-pago" style="
+					    display: table;
+					    margin: 0 auto;
+					    width: 4rem;
+					    padding: .5rem;
+					    border-radius: 3rem;
+					    box-shadow: 0 0 .5rem;
+					    margin-top: 3rem;
+						">
+					</div>
+					<div></div>
 				</div>
 				<!--<video src="assets/Peliculas/HP7.2010.BRRip.720p.Bluray.YIFY.mkv" type='video/x-matroska; codecs="theora, vorbis"' autoplay style="width: 100%;
 			    height: auto;
