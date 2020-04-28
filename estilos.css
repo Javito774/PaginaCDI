@@ -884,33 +884,18 @@ main>div {
     font-weight: bold;
 }
 .contenedor-termostato .toggle{
-  width: 2em;
-  height: 1em;
-  border: 1.2px solid #555;
-  border-radius: 1em;
+  width: 5em;
+  height: 2em;
   display: flex;
   align-items: center;
   margin-right: 1em;
-}
-
-.contenedor-termostato .toggle>div{
-  width: 1.2em;
-    height: 1.2em;
-    border: 1.2px solid #555;
-    border-radius: 1.2em;
-    position: relative;
-    left: 00%;
-    transform: translateX(-50%);
-    background: #fff;
-    transition: left .2s ease-in-out;
+  background-image: url("assets/interruptorOff.png");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 .contenedor-termostato .toggle[activo]
 {
-  background: lightgreen;
-}
-.contenedor-termostato .toggle[activo]>div
-{
-  left:100%;
+  background-image: url("assets/interruptorOn.png");
 }
 .contenedor-termostato .nuevo-programa
 {
@@ -1509,11 +1494,6 @@ p.display-temperatura {
   font-size: 1rem;
   margin-right: 1em;
 }
-.form-taxi:focus {
-  -webkit-box-shadow: -2px 2px 38px 4px rgba(84,77,84,1);
--moz-box-shadow: -2px 2px 38px 4px rgba(84,77,84,1);
-box-shadow: -2px 2px 38px 4px rgba(84,77,84,1);
-}
 
 .form-taxi{
 height: 30px;
@@ -1543,14 +1523,6 @@ box-shadow: 0 0 0.5em;
 border-radius: 4rem;
 text-transform: uppercase;
 font-weight: bold;
-}
-.boton-pedir-viaje:hover {
-background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
-background-color:#f6f6f6;
-}
-.boton-pedir-viaje:active {
-position:relative;
-top:1px;
 }
 #taxis-container {
 margin: 5%;
