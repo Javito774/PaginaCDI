@@ -349,7 +349,7 @@ main>div {
 
 #mapa .habitacion1 {
   top: 9em;
-  left: 3em;
+  left: 2em;
   opacity: 1;
   font-size: 10pt;
   display: grid;
@@ -357,7 +357,7 @@ main>div {
 
 #mapa .habitacion2 {
   top: 28em;
-  left: 3em;
+  left: 2em;
   opacity: 1;
   font-size: 10pt;
   display: grid;
@@ -415,11 +415,12 @@ main>div {
 }
 
 #mapa .entrada {
-  top: 19em;
-  left: 15em;
-  opacity: 1;
-  font-size: 10pt;
-}
+    display: grid;
+    top: 19em;
+    left: 14.4em;
+    opacity: 1;
+    font-size: 10pt;
+  }
 
 .img-habitacion {
   margin-left: 2rem;
@@ -450,7 +451,12 @@ main>div {
   margin-left: 0.8rem;
 }
 
-
+.img-portal{
+  width: 1.5em;
+  height: 1.5em;
+  margin-left: 1.6em;
+  margin-bottom: 0.2em;
+}
 /* ESTILOS LISTA DE CONTACTOS */
 .pantallas {
   height: 100%;
