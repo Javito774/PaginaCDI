@@ -309,3 +309,47 @@ function cambiarVentanaPeliculas(numero)
   netlisPagina=numero;
   menus[netlisPagina].style.display="grid";
 }
+
+/** Funciones Taxis */
+function pedirParaInvitado(){
+	let div = document.getElementById('invitados-form');
+	div.style.display = 'block';
+}
+
+function pedirParaMi(){
+	let div = document.getElementById('invitados-form');
+	div.style.display = 'none';
+}
+
+function abrirHistorial(){
+	let div_pedir = document.getElementById('taxis-form-container');
+	div_pedir.style.display = 'none';
+	let div_btn = document.getElementById('taxis-lower-buttons');
+	div_btn.style.display = 'none';
+	let div_historial = document.getElementById('historial-viajes');
+	div_historial.style.display = 'block';
+}
+
+function cerrarHistorial(){
+	let div_pedir = document.getElementById('taxis-form-container');
+	div_pedir.style.display = 'block';
+	let div_btn = document.getElementById('taxis-lower-buttons');
+	div_btn.style.display = 'flex';
+	let div_historial = document.getElementById('historial-viajes');
+	div_historial.style.display = 'none';
+}
+
+function reservarViaje(){
+
+	let div_historial = document.getElementById('taxis-container');
+	div_historial.style.display = 'none';
+	let div_btn = document.getElementById('confirmacion-taxi');
+	div_btn.style.display = 'block';
+}
+
+function aceptarViaje(){
+	let div_historial = document.getElementById('taxis-container');
+	div_historial.style.display = 'flex';
+	let div_btn = document.getElementById('confirmacion-taxi');
+	div_btn.style.display = 'none';
+}
