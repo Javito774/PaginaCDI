@@ -447,7 +447,9 @@ main>div {
 }
 
 .img-baño {
-  margin-left: 0.8rem;
+  width: 16%;
+  margin-left: 0.75rem;
+  margin-bottom: 0.2rem;
 }
 
 
