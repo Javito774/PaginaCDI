@@ -17,7 +17,7 @@ class Telefono{
     this.pantallaActual.style.display="grid";
   }
 
-  imprimirContactos()
+  imprimirRecientes()
   {
     var recientes = new Array(3);
     this.restaurantes[0] = new Contacto("Javi",123456);
