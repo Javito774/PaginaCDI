@@ -909,7 +909,7 @@
 					<input id="telefono-menu" type="radio" name="select-telefono" checked="true">
 					<label for="telefono-menu" onclick="electrodomesticoActual.mostrarMenu(1)">Teléfono</label>
 					<input id="recientes-menu" type="radio" name="select-telefono">
-					<label for="recientes-menu">Recientes</label>
+					<label for="recientes-menu" onclick="electrodomesticoActual.mostrarMenu(3);">Recientes</label>
 					<input id="contactos-menu" type="radio" name="select-telefono">
 					<label for="contactos-menu" onclick="electrodomesticoActual.mostrarMenu(2)">Contactos</label>
 				</div>
@@ -993,6 +993,11 @@
 						</div>
 					</div>
 					<div class="pantalla-menu" id="contactos"></div>
+					<div class="pantalla-menu" id="recientes">
+						<div class="contenedor-recientes">
+
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="categoria-menu" id="emergencias">

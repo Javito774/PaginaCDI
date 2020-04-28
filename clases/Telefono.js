@@ -16,6 +16,25 @@ class Telefono{
     this.pantallaActual=pants[numero];
     this.pantallaActual.style.display="grid";
   }
+
+  imprimirContactos()
+  {
+    var recientes = new Array(3);
+    this.restaurantes[0] = new Contacto("Javi",123456);
+    this.restaurantes[1] = new Contacto("Yijun",123656);
+    this.restaurantes[2] = new Contacto("Laura",143456);
+
+    var mensaje = "";
+    for(var i=0;i<this.recientes.length;i++)
+    {
+      mensaje+="<div class='pantalla-menu' onclick='mostrarMenu(2);telefono.llamar(\""+this.recientes[i].nombre+"\");'>";
+      mensaje+=this.recientes[i].imagen;
+      mensaje+="<p class='nombre-contacto'>"+this.recientes[i].nombre+"</p>";
+      mensaje+="</div>";
+    }
+    this.interfaz.querySelector(".contenedor-recientes").innerHTML=mensaje;
+  }
+
   imprimirContactos()
   {
     var contenedor = this.interfaz.querySelector(".pantallas #contactos");
