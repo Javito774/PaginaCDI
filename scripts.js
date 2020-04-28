@@ -48,7 +48,7 @@ function inicio()
 	cocina.electrodomesticos.push(puertas[0]);
 	cocina.electrodomesticos.push(new Iluminacion(cocina.electrodomesticos.length,"general"));
 	cocina.electrodomesticos.push(new Termostato(cocina.electrodomesticos.length));
-	cocina.electrodomesticos.push(new Grifo(cocina.electrodomesticos.length,"fregadeo"));
+	cocina.electrodomesticos.push(new Grifo(cocina.electrodomesticos.length,"fregadero"));
 	cocina.electrodomesticos.push(new Combi(cocina.electrodomesticos.length));
 	cocina.electrodomesticos.push(new Vitroceramica(cocina.electrodomesticos.length,3,6));
 	cocina.electrodomesticos.push(new Microondas(cocina.electrodomesticos.length));
