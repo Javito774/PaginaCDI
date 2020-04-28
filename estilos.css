@@ -1485,3 +1485,56 @@ p.display-temperatura {
   font-size: 1rem;
   margin-right: 1em;
 }
+
+.form-taxi:focus {
+  -webkit-box-shadow: -2px 2px 38px 4px rgba(84,77,84,1);
+-moz-box-shadow: -2px 2px 38px 4px rgba(84,77,84,1);
+box-shadow: -2px 2px 38px 4px rgba(84,77,84,1);
+}
+
+.form-taxi{
+height: 30px;
+width: 245px;
+border: 0px;
+margin-top: 20px;
+text-align:center;
+}
+
+#taxis-lower-buttons{
+width: 160%;
+margin-top: 40px;
+}
+
+#taxis-cost {
+margin-left: 60%;
+}
+
+.boton-pedir-viaje {
+margin-top: 2em;
+display: table;
+width: 9rem;
+padding: 1em 0;
+background: transparent;
+border: none;
+box-shadow: 0 0 0.5em;
+border-radius: 4rem;
+text-transform: uppercase;
+font-weight: bold;
+}
+.boton-pedir-viaje:hover {
+background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
+background-color:#f6f6f6;
+}
+.boton-pedir-viaje:active {
+position:relative;
+top:1px;
+}
+#taxis-container {
+margin: 5%;
+}
+#taxis-lateral-container {
+margin-right: 60px;
+}
+.menu-pedir-viaje {
+margin-left: -40px;
+}
