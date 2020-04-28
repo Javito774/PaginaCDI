@@ -464,7 +464,7 @@
 			<div class="categoria-menu" id="servicios">
 				<div class="botones">
 					<button onclick="restaurantesFavoritos.interfaz.style.display='grid';pantallas.push(restaurantesFavoritos);mostrarCarpeta();"><img src="assets/fastfood.svg"/>Restaurantes</button>
-					<button onclick="this.offsetParent.querySelector('.taxis').style.display='grid';"><img src="assets/taxi.svg"/>Taxi</button>
+					<button onclick="pantallaTaxis.interfaz.style.display='grid';pantallas.push(pantallaTaxis);mostrarCarpeta();"><img src="assets/taxi.svg"/>Taxi</button>
 					<button onclick="netlis.interfaz.style.display='grid';pantallas.push(netlis);mostrarCarpeta();electrodomesticoActual=netlis;"><img src="assets/theaters.svg"/>Netlis</button>
 				</div>
 				<div class="netlis">
@@ -578,7 +578,69 @@
 	               <img src="assets/check.png" width="150px" height="150px">
 	            </div>
 	        </div>
-	        <div id="taxis-container" style="display: flex;" style="flex-direction: row;">
+					<div class="taxis-container">
+						<div class="header">
+							<h2>Taxis</h2>
+							<img src="imagenes/bartD.png"></img>
+						</div>
+						<div class="nav">
+							<input type="radio" id="taxiseleccion1" name="taxiseleccion" checked/>
+							<label for="taxiseleccion1" onclick="document.querySelector('#servicios .taxis-container .main .viajes').style.display='none';">Pedir coche</label>
+							<input type="radio" id="taxiseleccion2" name="taxiseleccion"/>
+							<label for="taxiseleccion2" onclick="document.querySelector('#servicios .taxis-container .main .viajes').style.display='block';">Mis viajes</label>
+						</div>
+						<div class="main">
+							<div class="pantalla">
+								<div class="menu-trayecto">
+									<input type="radio" id="taxi1" name="taxi" checked/>
+									<label for="taxi1" onclick="this.offsetParent.offsetParent.querySelector('form').removeAttribute('amigo');">Para mi</label>
+									<input type="radio" id="taxi2" name="taxi"/>
+									<label for="taxi2" onclick="this.offsetParent.offsetParent.querySelector('form').setAttribute('amigo','');">Para un amigo</label>
+								</div>
+								<form>
+									<div>
+										<img src="assets/place.svg"/>
+										<input type="text" placeholder="¿Donde te recogemos?">
+									</div>
+									<div>
+										<img src="assets/place.svg"/>
+										<input type="text" placeholder="¿A donde te llevamos?">
+									</div>
+									<div class="amigo">
+										<img src="assets/person.svg"/>
+										<input type="text" placeholder="Nombre de tu amigo">
+									</div>
+									<div class="amigo">
+										<img/>
+										<input type="number" placeholder="Móvil de tu amigo" maxlength="9">
+									</div>
+								</form>
+							</div>
+							<div class="pantalla viajes">
+								<div>
+									<p>02-05-2020</p>
+									<p>5.5Km</p>
+									<p>7,15€</p>
+								</div>
+								<div>
+									<p>02-05-2020</p>
+									<p>5.5Km</p>
+									<p>7,15€</p>
+								</div>
+								<div>
+									<p>02-05-2020</p>
+									<p>5.5Km</p>
+									<p>7,15€</p>
+								</div>
+								<div>
+									<p>02-05-2020</p>
+									<p>5.5Km</p>
+									<p>7,15€</p>
+								</div>
+							</div>
+						</div>
+					</div>
+	        <!--<div id="taxis-container" style="display: flex;" style="flex-direction: row;">
 	            <div id="taxis-lateral-container">
 	                <img  src="imagenes/bartD.png" class="img-form-taxis" width="150px" height="150px"></img>
 	                <p>Bart Simpson</p>
@@ -692,7 +754,7 @@
 
 	                </div>
 	            </div>
-	        </div>
+	        </div>-->
 				</div>
 				<!--<video src="assets/Peliculas/HP7.2010.BRRip.720p.Bluray.YIFY.mkv" type='video/x-matroska; codecs="theora, vorbis"' autoplay style="width: 100%;
 			    height: auto;

@@ -10,6 +10,7 @@ var restaurantesFavoritos;
 var telefonillo;
 var codigoAcceso;
 var pantallaPeliculas;
+var pantallaTaxis;
 
 //FUNCIONES QUE INICIAN TODAS LAS ESTANCIAS DE LA CASA.
 function inicio()
@@ -140,7 +141,8 @@ function inicio()
 	telefonillo = new Telefonillo();
 	codigoAcceso = new CodigoAcceso();
 
-	pantallaPeliculas = new Pantalla('Pelicula',document.querySelector('#servicios .netlis .pantalla-pelicula'))
+	pantallaPeliculas = new Pantalla('Pelicula',document.querySelector('#servicios .netlis .pantalla-pelicula'));
+	pantallaTaxis = new Pantalla('Taxis',document.querySelector('#servicios .taxis'));
 }
 
 document.addEventListener("DOMContentLoaded", inicio);
