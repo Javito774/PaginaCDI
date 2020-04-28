@@ -196,7 +196,7 @@
 					</div>
 
 				</div>
-				<div class="contenedor-tv contenedor-electrodomestico">
+				<div class="contenedor-tv contenedor-electrodomestico" apagada>
 					<div class="boton-apagado" onclick="electrodomesticoActual.switchTV();">
 						<svg viewBox="0 0 24 24">
 							<path d="M0 0h24v24H0z" fill="none" />
@@ -649,7 +649,7 @@
 				<div id="emergencias_container">
 					<p class='mensaje-confirmacion'>¿Está seguro de que desea llamar a emergencias?</p>
 					<div id='emergencias_buttons'>
-						<button class='emergencias_button' style="background: #EA4335;opacity: .9;" onclick="mostrarMenu(3);">NO</button>
+						<button class='emergencias_button' style="background: #EA4335;opacity: .9;color: #fff;" onclick="mostrarMenu(3);">NO</button>
 						<button class='emergencias_button' onclick="mostrarMenu(2);telefono.llamar('Emergencias 112')">SI</button>
 					</div>
 				</div>
@@ -658,7 +658,7 @@
 				<div id="emergencias_container">
 					<p class='mensaje-confirmacion'>¿Está seguro de que desea apagar el sistema por completo?</p>
 					<div id='emergencias_buttons'>
-						<button class='emergencias_button' style="background: #EA4335;opacity: .9;" onclick="mostrarMenu(4);">NO</button>
+						<button class='emergencias_button' style="background: #EA4335;opacity: .9;color: #fff;" onclick="mostrarMenu(4);">NO</button>
 						<button class='emergencias_button' onclick="document.querySelector('#pantallaApagado').style.display='block';mostrarMenu(4);">SI</button>
 					</div>
 				</div>

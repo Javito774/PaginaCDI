@@ -4,7 +4,7 @@ class TV extends Electrodomestico{
 		super(idAux,'TV','apagada',"assets/tv.svg",true);
 		this.canal = 0;
 		this.canales = ['La 1','La 2','AtresMedia','Cuatro','Telecinco','La sexta'];
-		this.vol = 0;
+		this.vol = 8;
 		this.interfaz = document.querySelector(".contenedor-tv");
 		this.intervalo=null;
 		this.numeroMarcado="";
@@ -83,12 +83,14 @@ class TV extends Electrodomestico{
 		if(this.estado == "encendida"){
 			this.estado = "apagada";
 			this.interfaz.querySelector(".boton-apagado").removeAttribute('encendido');
+			this.interfaz.setAttribute('apagada','');
 			this.canal=0;
 			this.interfaz.querySelector(".canal").innerHTML="Apagada";
 		}
 		else {
 			this.estado = "encendida";
 			this.interfaz.querySelector(".boton-apagado").setAttribute('encendido','');
+			this.interfaz.removeAttribute('apagada');
 			this.canal=1;
 			this.interfaz.querySelector(".canal").innerHTML="CH "+ this.canal + " | "+this.canales[this.canal-1];;
 		}
