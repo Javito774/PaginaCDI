@@ -4,6 +4,9 @@ class Transaccion {
     {
       netlis.biblioteca.aniadirPelicula(elemento);
       netlis.biblioteca.imprimir(false);
+      retrocederVentana();
+      retrocederVentana();
+      cambiarVentanaPeliculas(0);
       this.mostrarSuccess();
     }
     else if(elemento instanceof Serie)
@@ -17,7 +20,6 @@ class Transaccion {
   mostrarSuccess()
   {
     console.log("Genial");
-    retrocederVentana();
     //document.querySelector(".pantalla-pago .mensaje p").innerHTML="La transaccion se ha realizado con exito";
   }
   mostrarError()

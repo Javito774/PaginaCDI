@@ -305,9 +305,11 @@ function retrocederVentana()
 function cambiarVentanaPeliculas(numero)
 {
   var menus = document.querySelectorAll("#servicios .netlis .sub-menu");
+	var label = document.querySelectorAll("#servicios .netlis .menu-peliculas input");
   menus[netlisPagina].style.display="none";
   netlisPagina=numero;
   menus[netlisPagina].style.display="grid";
+	label[netlisPagina].checked=true;
 }
 
 /** Funciones Taxis */
