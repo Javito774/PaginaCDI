@@ -91,6 +91,9 @@ class BibliotecaMultimedia
         mensaje+='onclick="electrodomesticoActual.mostrarInfoPelicula('+i+')"';
       else if(conPrecio && pelicula instanceof Serie)
         mensaje+='onclick="electrodomesticoActual.mostrarInfoSerie('+i+')"';
+      else{
+        mensaje+='onclick="pantallas.push(new Pantalla(\'reproductor\',document.querySelector(\'#servicios .netlis .sub-menu.reproductor\')));document.querySelector(\'#servicios .netlis .sub-menu.reproductor\').style.display=\'block\';"';
+      }
       mensaje+='>';
       mensaje+='<img src="'+pelicula.miniatura+'" />';
       mensaje+='<p class="nombre">'+pelicula.nombre+'</p>';
