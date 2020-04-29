@@ -136,6 +136,11 @@ function inicio()
 	telefono = new Telefono();
 	mostrarMenuTelefono();
 
+	telefono.recientes.push(agendaContactos[5]);
+	telefono.recientes.push(agendaContactos[2]);
+	telefono.recientes.push(agendaContactos[3]);
+	telefono.recientes.push(agendaContactos[4]);
+
 	netlis = new Netlis();
 	restaurantesFavoritos = new Restaurantes();
 

@@ -3,6 +3,7 @@ class Telefono{
   {
     this.interfaz = document.querySelector(".categoria-menu#teléfono");
     this.pantallaActual = null;
+    this.recientes = [];
     this.mostrarMenu(1);
     this.imprimirContactos();
   }
@@ -12,6 +13,10 @@ class Telefono{
     if(this.pantallaActual!=null)
     {
       this.pantallaActual.style.display="none";
+      if(numero==3)
+      {
+        this.imprimirRecientes();
+      }
     }
     this.pantallaActual=pants[numero];
     this.pantallaActual.style.display="grid";
@@ -19,19 +24,17 @@ class Telefono{
 
   imprimirRecientes()
   {
-    var recientes = new Array(3);
-    this.restaurantes[0] = new Contacto("Javi",123456);
-    this.restaurantes[1] = new Contacto("Yijun",123656);
-    this.restaurantes[2] = new Contacto("Laura",143456);
-
     var mensaje = "";
-    for(var i=0;i<this.recientes.length;i++)
+    for(var i=this.recientes.length-1;i>=0;i--)
     {
-      mensaje+="<div class='pantalla-menu' onclick='mostrarMenu(2);telefono.llamar(\""+this.recientes[i].nombre+"\");'>";
+      mensaje+="<div class='contacto' onclick='telefono.recientes.push(telefono.recientes["+i+"]);telefono.llamar(\""+this.recientes[i].nombre+"\");'>";
       mensaje+=this.recientes[i].imagen;
       mensaje+="<p class='nombre-contacto'>"+this.recientes[i].nombre+"</p>";
       mensaje+="</div>";
     }
+    this.recientes.forEach(contacto => {
+
+    });
     this.interfaz.querySelector(".contenedor-recientes").innerHTML=mensaje;
   }
 
@@ -56,7 +59,7 @@ class Telefono{
       else {
         mensaje+="<hr/>";
       }
-      mensaje+="<div class='contacto' onclick='telefono.llamar(\""+agendaContactos[i].nombre+"\");'>";
+      mensaje+="<div class='contacto' onclick='telefono.recientes.push(agendaContactos["+i+"]);telefono.llamar(\""+agendaContactos[i].nombre+"\");'>";
       mensaje+=agendaContactos[i].imagen;
       mensaje+="<p class='nombre-contacto'>"+agendaContactos[i].nombre+"</p>";
       mensaje+="</div>";
@@ -81,7 +84,6 @@ class Telefono{
     document.querySelector("#menuPrincipal").style.top="0%";
     this.interfaz.querySelector(".menu-telefono").style.transform="none";
     this.interfaz.querySelectorAll(".menu-telefono input")[0].checked=true;
-    mostrarMenu(menuNum);
     this.mostrarMenu(1);
     mostrarFlechaAtras();
     vaciarNumeroTelefono();

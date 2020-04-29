@@ -492,7 +492,8 @@ main>div {
   font-weight: bold;
 }
 #contactos .nombre-contacto
-#servicios .restaurantes .nombre-contacto{
+#servicios .restaurantes .nombre-contacto,
+#recientes .contacto .nombre-contacto{
   font-size: .9rem;
 }
 #contactos .contenedor-letra{
@@ -513,7 +514,8 @@ main>div {
   margin: 0 auto;
 }
 #contactos .contacto,
-#servicios .restaurantes .contacto {
+#servicios .restaurantes .contacto,
+#recientes .contacto {
   display: flex;
   padding: .5rem 1em;
   align-items: center;
@@ -570,7 +572,8 @@ main>div {
 }
 
 #contactos .foto-contacto,
-#servicios .restaurantes .foto-contacto{
+#servicios .restaurantes .foto-contacto,
+#recientes .contacto .foto-contacto {
   width: 2rem;
   line-height: 2rem;
   text-align: center;
