@@ -649,7 +649,7 @@ main>div {
   font-size: 3rem;
   font-weight: bolder;
   margin: 0 2rem;
-  width: 7rem;
+  width: 6rem;
   text-align: center;
 }
 .contenedor-vitro .controles>div p.tiempo{
@@ -660,6 +660,7 @@ main>div {
   padding: .5rem;
   border-radius: 3rem;
   box-shadow: 0 0 .3rem;
+  margin: 0 .4rem;
 }
 .contenedor-grifo{
   align-items: inherit;

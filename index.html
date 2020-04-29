@@ -279,13 +279,26 @@
 				</div>
 				<div class="contenedor-vitro contenedor-electrodomestico">
 					<div class="cristal">
-						<div class="fuego" onclick="electrodomesticoActual.seleccionarFuego(0);"></div>
-						<div class="fuego" onclick="electrodomesticoActual.seleccionarFuego(1);"></div>
-						<div class="fuego" onclick="electrodomesticoActual.seleccionarFuego(2);"></div>
+						<div class="fuego" onclick="pantallas[pantallas.length-1].seleccionarFuego(0);"></div>
+						<div class="fuego" onclick="pantallas[pantallas.length-1].seleccionarFuego(1);"></div>
+						<div class="fuego" onclick="pantallas[pantallas.length-1].seleccionarFuego(2);"></div>
 					</div>
 					<div class="controles">
-						<div><img src="assets/remove.svg" onclick="electrodomesticoActual.fuego[electrodomesticoActual.fuegoSeleccionado].bajarEstado();"/><p class="potencia">0</p><img src="assets/add.svg" onclick="electrodomesticoActual.fuego[electrodomesticoActual.fuegoSeleccionado].subirEstado();"/></div>
-						<div><img src="assets/remove.svg" onclick="electrodomesticoActual.fuego[electrodomesticoActual.fuegoSeleccionado].bajarTiempo();"/><p class="tiempo"><span class="minutos">00</span>:<span class="segundos">00</span></p><img src="assets/add.svg" onclick="electrodomesticoActual.fuego[electrodomesticoActual.fuegoSeleccionado].subirTiempo();"/></div>
+						<div>
+							<img src="assets/remove.svg" onclick="electrodomesticoActual.bajarEstado();"/>
+							<p class="potencia">0</p>
+							<img src="assets/add.svg" onclick="electrodomesticoActual.subirEstado();"/>
+						</div>
+						<div>
+							<img src="assets/remove.svg" onclick="electrodomesticoActual.bajarTiempo();"/>
+							<p class="tiempo"><span class="minutos">00</span>:<span class="segundos">00</span></p>
+							<img src="assets/add.svg" onclick="electrodomesticoActual.subirTiempo();"/>
+						</div>
+						<div>
+							<img class="stop" src="assets/stop.svg" onclick="electrodomesticoActual.stopTemporizador();"/>
+							<img class="play" src="assets/play_arrow.svg" onclick="electrodomesticoActual.iniciarTemporizador();"/>
+							<img class="pause" src="assets/pause.svg" onclick="electrodomesticoActual.pausarTemporizador();"/>
+						</div>
 					</div>
 				</div>
 				<div class="contenedor-nevera contenedor-electrodomestico">
@@ -1035,7 +1048,7 @@
 		    display: flex;
 		    align-items: center;
 		    justify-content: center;
-		">
+				">
 		    <div class="barra" style="
 		    width: 5px;
 		    height: 68%;
@@ -1044,7 +1057,7 @@
 		    top: 3%;
 		    display: flex;
 		    justify-content: center;
-		">
+				">
 		        <div class="circulo" style="
 		    position: absolute;
 		    width: 1.5rem;
@@ -1054,9 +1067,9 @@
 		    border: 2px solid #9d9d9d;
 		    background: #fff;
 				top:54%;
-		"></div>
+				"></div>
 		    </div>
-</div>
+			</div>
 			<audio src="assets/bocina.mp3" id="audio-bocina" loop onload="this.currentTime=1;"></audio>
 			<div class="displayControlSilla" style="
     		padding: 0 2em;
