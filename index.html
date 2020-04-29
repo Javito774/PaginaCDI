@@ -608,18 +608,18 @@
 							<div class="pantalla">
 								<div class="menu-trayecto">
 									<input type="radio" id="taxi1" name="taxi" checked/>
-									<label for="taxi1" onclick="this.offsetParent.offsetParent.querySelector('form').removeAttribute('amigo');">Para mi</label>
+									<label for="taxi1" onclick="this.offsetParent.offsetParent.querySelector('.form').removeAttribute('amigo');">Para mi</label>
 									<input type="radio" id="taxi2" name="taxi"/>
-									<label for="taxi2" onclick="this.offsetParent.offsetParent.querySelector('form').setAttribute('amigo','');">Para un amigo</label>
+									<label for="taxi2" onclick="this.offsetParent.offsetParent.querySelector('.form').setAttribute('amigo','');">Para un amigo</label>
 								</div>
-								<form>
+								<div class="form">
 									<div>
 										<img src="assets/place.svg"/>
-										<input type="text" placeholder="¿Donde te recogemos?">
+										<input type="text" placeholder="¿Donde te recogemos?" onblur="mostrarDistancia();">
 									</div>
 									<div>
 										<img src="assets/place.svg"/>
-										<input type="text" placeholder="¿A donde te llevamos?">
+										<input type="text" placeholder="¿A donde te llevamos?" onblur="mostrarDistancia();">
 									</div>
 									<div class="amigo">
 										<img src="assets/person.svg"/>
@@ -629,8 +629,8 @@
 										<img/>
 										<input type="number" placeholder="Móvil de tu amigo" maxlength="9">
 									</div>
-									<p class="distancia" style="">Distancia: <span>5.73</span>Km</p>
-							    <p class="precio">Coste: <span>10.50</span>€</p>
+									<p class="distancia" style="">Distancia: <span>0.00</span>Km</p>
+							    <p class="precio">Coste: <span>0.00</span>€</p>
 									<p style="padding-top: 1em;">
 										<button style="margin: 0 1em;
 									    box-shadow: 0 0 0.2em;
@@ -638,10 +638,10 @@
 									    border-radius: 1em;
 									    font-size: .8rem;
 									    border: none;
-									    background: #fff;">Solicitar
+									    background: #fff;" onclick="comprobarCamposPeticionTaxi();">Solicitar
 										</button>
 									</p>
-								</form>
+								</div>
 							</div>
 							<div class="pantalla viajes">
 								<div>
@@ -730,123 +730,21 @@
 									<p>7,15€</p>
 								</div>
 							</div>
+							<div class="pantalla mensaje" style="display: none;
+						    align-items: center;
+						    justify-content: center;
+						    height: 100%;
+						    border: 2px solid;
+						    border-radius: 0.6rem;
+								overflow:hidden;">
+								<p style="font-size: 1.6rem;
+								    font-weight: bold;
+								    color: #888;
+								    text-transform: uppercase;
+								">Tu coche está en camino</p>
+							</div>
 						</div>
 					</div>
-	        <!--<div id="taxis-container" style="display: flex;" style="flex-direction: row;">
-	            <div id="taxis-lateral-container">
-	                <img  src="imagenes/bartD.png" class="img-form-taxis" width="150px" height="150px"></img>
-	                <p>Bart Simpson</p>
-
-	                <div class="menu-pedir-viaje" style="transform: none;">
-						<input id="pedir-viaje" onclick="cerrarHistorial()" type="radio" name="select-viaje" checked="true">
-						<label for="pedir-viaje" >Pedir viaje</label>
-						<input id="mis-viajes" onclick="abrirHistorial()" type="radio" name="select-viaje">
-						<label for="mis-viajes">Mis viajes</label>
-					</div>
-	            </div>
-	            <div id="taxis-central-container">
-	                <div id="taxis-upper-buttons" style="transform: none;">
-	                    <div class="menu-elegir-usuario" style="transform: none;">
-	                        <input id="para-mi" type="radio" name="select-usuario" onclick="pedirParaMi()" checked="true">
-	                        <label for="para-mi" >Para mí</label>
-	                        <input id="select-invitado" type="radio" onclick="pedirParaInvitado()" name="select-usuario">
-	                        <label for="select-invitado">Para un invitado</label>
-	                    </div>
-	                </div>
-
-	                <div id="historial-viajes" style="margin-top: 25px; display: none;">
-	                    <div>
-	                        <h1 style="margin-left: 20px;">Historial de Viajes</h1> <br>
-	                        <h2 style="margin-left: 20px;">2020</h2>
-	                    </div>
-	                    <div id="historial-viajes-container" style="overflow: auto; width: 100%;">
-	                        <div id="2020-historial" style="
-	                        margin:20px;
-	                        padding: 5px;
-	                        border-radius: 25px 25px 25px 25px;
-	                        -moz-border-radius: 25px 25px 25px 25px;
-	                        -webkit-border-radius: 25px 25px 25px 25px;
-	                        border: 1px solid #000000;">
-
-	                            <div class="viaje" style="display: flex; flex-direction: row; margin-left: 20px;margin-top: 20px;
-	                            justify-content: space-around;">
-	                                <div class="viaje-izq">
-	                                    <p class="fecha">1 ene - 9:15</p> <br>
-	                                    <p class="tipo-coche">LITE</p>
-	                                </div>
-	                                <p class="estado-viaje" style="margin: 40px;">RESERVADO</p><br>
-	                                <p class="precio" style="margin-top: 40px;">15,24€</p>
-	                            </div>
-	                            <hr>
-	                            <div class="viaje" style="display: flex; flex-direction: row; margin-left: 20px;margin-top: 20px;
-	                            justify-content: space-around;">
-	                                <div class="viaje-izq">
-	                                    <p class="fecha">1 ene - 9:15</p> <br>
-	                                    <p class="tipo-coche">LITE</p>
-	                                </div>
-	                                <p class="estado-viaje" style="margin: 40px;">RESERVADO</p><br>
-	                                <p class="precio" style="margin-top: 40px;">15,24€</p>
-	                            </div>
-	                            <hr>
-	                            <div class="viaje" style="display: flex; flex-direction: row; margin-left: 20px;margin-top: 20px;
-	                            justify-content: space-around;">
-	                                <div class="viaje-izq">
-	                                    <p class="fecha">1 ene - 9:15</p> <br>
-	                                    <p class="tipo-coche">LITE</p>
-	                                </div>
-	                                <p class="estado-viaje" style="margin: 40px;">RESERVADO</p><br>
-	                                <p class="precio" style="margin-top: 40px;">15,24€</p>
-	                            </div>
-	                            <hr>
-	                            <div class="viaje" style="display: flex; flex-direction: row; margin-left: 20px;margin-top: 20px;
-	                            justify-content: space-around;">
-	                                <div class="viaje-izq" style="">
-	                                    <p class="fecha">1 ene - 9:15</p> <br>
-	                                    <p class="tipo-coche">LITE</p>
-	                                </div>
-	                                <p class="estado-viaje" style="margin: 40px;">RESERVADO</p><br>
-	                                <p class="precio" style="margin-top: 40px;">15,24€</p>
-	                            </div>
-
-	                        </div>
-
-
-	                        </div>
-	                    </div>
-
-	                <div id="taxis-form-container">
-	                    <form id="taxis-form">
-	                        <img  src="assets/location_on.svg" class="img-form-taxis" width="25px" height="25px"></img>
-	                        <input class="form-taxi" type="text" id="taxi-origen" name="taxi-origen" placeholder="¿Dónde vamos a buscarte?"><br>
-
-	                        <img  src="assets/location_on.svg" class="img-form-taxis" width="25px" height="25px">
-	                        <input type="text" class="form-taxi" id="taxi-destino" name="taxi-destino" placeholder="¿A dónde te llevamos?"><br>
-
-	                        <img  src="assets/calendario.png" width="25px" class="img-form-taxis" height="25px"></img>
-	                        <input type="text" id="taxi-cuando"  class="form-taxi" name="taxi-cuando" placeholder="¿Cuándo?"><br>
-
-	                        <img  src="assets/car.svg" width="25px" class="img-form-taxis" height="25px">
-	                        <input type="text" id="taxi-tipo-coche" class="form-taxi" name="taxi-tipo-coche" placeholder="¿Qué tipo de coche quieres?"><br>
-	                        <div id="invitados-form" style="display: none;">
-	                            <img  id="taxi-invitado-nombre-img" src="assets/user.png" width="25px" class="img-form-taxis" height="25px" ></img>
-	                            <input type="text" id="taxi-invitado-nombre" class="form-taxi"  name="taxi-invitado-nombre" placeholder="Nombre del invitado"><br>
-
-	                            <img id="taxi-invitado-telefono-img" src="assets/phone.svg" width="25px" class="img-form-taxis" height="25px" >
-	                            <input type="text" id="taxi-invitado-telefono" class="form-taxi" name="taxi-invitado-telefono"  placeholder="Número móvil del invitado"><br>
-	                        </div>
-
-	                    </form>
-
-	                </div>
-	                <div id="taxis-lower-buttons" style="display: flex; justify-content: end;" >
-	                    <div id="taxis-cost">
-	                        <p>Coste:  15,24€ </p><br>
-	                        <input class="boton-pedir-viaje" onclick="reservarViaje()" type="submit" value="PEDIR VIAJE">
-	                    </div>
-
-	                </div>
-	            </div>
-	        </div>-->
 				</div>
 				<div class="pantallaPago" style="display:none;">
 					<div>
@@ -899,15 +797,27 @@
 								</div>
 							</div>
 						</div>
-						<img src="assets/fingerprint.svg" class="confirmacion-pago" style="
-					    display: table;
-					    margin: 0 auto;
-					    width: 4rem;
-					    padding: .5rem;
-					    border-radius: 3rem;
-					    box-shadow: 0 0 .5rem;
-					    margin-top: 3rem;
-						">
+						<p class="precio" style="
+					    text-align: center;
+					    font-size: 2rem;
+					    font-weight: bold;
+					    margin-top: 1.5rem;
+						">10.00€</p>
+						<p class="mensaje-tarjeta" style="
+						 text-align: center;
+						 font-size: .7rem;
+						 padding-top: 0.5rem;
+						 color: red;
+						 opacity: 0;
+						 ">La transaccion ha fallado, la serie seleccionada no esta disponible.</p>
+					 <img src="assets/fingerprint.svg" class="confirmacion-pago" style="
+						 display: table;
+						 margin: 0 auto;
+						 width: 4rem;
+						 padding: .5rem;
+						 border-radius: 3rem;
+						 box-shadow: 0 0 .5rem;
+						 margin-top: 1rem;">
 					</div>
 					<div></div>
 				</div>

@@ -367,3 +367,68 @@ function abrirInterfazPago()
 	pantallas.push(pantallaPago);
 	pantallaPago.interfaz.style.display="block";
 }
+
+function mostrarDistancia()
+{
+	var inputs = document.querySelectorAll(".taxis-container .form>div");
+	var mostrar = true;
+	inputs.forEach(input => {
+		if(!input.classList.contains('amigo'))
+		{
+			if(input.querySelector('input[type="text"]').value=="")
+				mostrar=false
+		}
+	});
+	if(mostrar)
+	{
+		var distancia = (Math.random() * (10.00 - 5.00) + 5.00).toFixed(2);
+		document.querySelector(".taxis-container .form .distancia span").innerHTML=distancia;
+		document.querySelector(".taxis-container .form .precio span").innerHTML=(distancia*1.3).toFixed(2);
+	}
+	else
+	{
+		document.querySelector(".taxis-container .form .distancia span").innerHTML="0.00";
+		document.querySelector(".taxis-container .form .precio span").innerHTML="0.00";
+	}
+}
+
+function comprobarCamposPeticionTaxi()
+{
+	var formulario = document.querySelector(".taxis-container .form");
+	var inputs = formulario.querySelectorAll("input");
+	console.log(inputs);
+	var mostrar = true;
+	if(formulario.hasAttribute("amigo"))
+	{
+		inputs.forEach(input => {
+				if(input.value=="")
+					mostrar=false;
+		});
+	}
+	else {
+		console.log("Tia eers un circo");
+		inputs.forEach(input => {
+			console.log(input.offsetParent);
+			if((!input.offsetParent.classList.contains("amigo")) && input.value=="")
+				mostrar=false;
+		});
+	}
+	if(mostrar)
+	{
+		abrirInterfazPago();
+		mostrarPrecioEnTarjeta(formulario.querySelector(".precio span").innerHTML);
+		document.querySelector('.pantallaPago .confirmacion-pago').setAttribute('onclick','new Transaccion("taxis")');
+	}
+}
+function vaciarCamposTaxis()
+{
+	var formulario = document.querySelector(".taxis-container .form");
+	var inputs = formulario.querySelectorAll("input");
+	inputs.forEach(input => {
+		input.value="";
+	});
+}
+function mostrarPrecioEnTarjeta(precio)
+{
+	document.querySelector(".pantallaPago .precio").innerHTML=parseFloat(precio).toFixed(2)+"€";
+}

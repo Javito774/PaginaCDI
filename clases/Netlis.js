@@ -36,6 +36,7 @@ class Netlis {
   {
     var peli = this.series.peliculas[numero];
     document.querySelector('.pantallaPago .confirmacion-pago').setAttribute('onclick','new Transaccion(netlis.series.peliculas['+numero+'])');
+    mostrarPrecioEnTarjeta(peli.precio);
     pantallaPeliculas.nombre = peli.nombre;
     pantallas.push(pantallaPeliculas);
     mostrarCarpeta();
@@ -51,6 +52,7 @@ class Netlis {
     var peli = this.peliculas.peliculas[numero];
     peliculaSeleccionada=numero;
     document.querySelector('.pantallaPago .confirmacion-pago').setAttribute('onclick','new Transaccion(netlis.peliculas.peliculas['+numero+'])');
+    mostrarPrecioEnTarjeta(peli.precio);
     pantallaPeliculas.nombre = peli.nombre;
     pantallas.push(pantallaPeliculas);
     mostrarCarpeta();

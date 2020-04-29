@@ -1526,48 +1526,6 @@ p.display-temperatura {
   font-size: 1rem;
   margin-right: 1em;
 }
-
-.form-taxi{
-height: 30px;
-width: 245px;
-border: 0px;
-margin-top: 20px;
-text-align:center;
-}
-
-#taxis-lower-buttons{
-width: 160%;
-margin-top: 40px;
-}
-
-#taxis-cost {
-margin-left: 60%;
-}
-
-.boton-pedir-viaje {
-margin-top: 2em;
-display: table;
-width: 9rem;
-padding: 1em 0;
-background: transparent;
-border: none;
-box-shadow: 0 0 0.5em;
-border-radius: 4rem;
-text-transform: uppercase;
-font-weight: bold;
-}
-#taxis-container {
-margin: 5%;
-}
-#taxis-lateral-container {
-margin-right: 60px;
-}
-.menu-pedir-viaje {
-margin-left: -40px;
-}
-
-
-
 /*TAXIS JAVIER*/
 
 #servicios .taxis-container
@@ -1646,38 +1604,39 @@ margin-left: -40px;
 {
   box-shadow: 0 0 0.2rem green;
 }
-#servicios .taxis-container form>div {
+#servicios .taxis-container .form>div {
     display: flex;
     align-items: center;
     margin: .5rem 0;
     justify-content: center;
+    position: relative;
 }
 
-#servicios .taxis-container form>div>img {
+#servicios .taxis-container .form>div>img {
     width: 1.4rem;
     margin: 0 1rem;
 }
-#servicios .taxis-container form input[type="text"],
-#servicios .taxis-container form input[type="number"] {
+#servicios .taxis-container .form input[type="text"],
+#servicios .taxis-container .form input[type="number"] {
     padding: .2rem .9rem;
     font-size: .9rem;
     border-radius: 3rem;
 }
-#servicios .taxis-container form input[type="text"]:focus,
-#servicios .taxis-container form input[type="number"]:focus
+#servicios .taxis-container .form input[type="text"]:focus,
+#servicios .taxis-container .form input[type="number"]:focus
 {
   outline: none;
 }
-#servicios .taxis-container form .amigo
+#servicios .taxis-container .form .amigo
 {
   overflow: hidden;
   height: 0;
 }
-#servicios .taxis-container form[amigo] .amigo
+#servicios .taxis-container .form[amigo] .amigo
 {
   height: auto;
 }
-#servicios .taxis-container form{
+#servicios .taxis-container .form{
   margin-top: 2rem;
 }
 #servicios .taxis-container .pantalla.viajes
@@ -1692,7 +1651,7 @@ margin-left: -40px;
   border-radius: .6rem;
   margin: .2rem 1rem;
 }
-#servicios .taxis-container form p{
+#servicios .taxis-container .form p{
   text-align: end;
   padding: .2em 3em;
 }
