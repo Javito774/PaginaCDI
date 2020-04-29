@@ -13,7 +13,7 @@ class Restaurantes {
     var mensaje = "";
     for(var i=0;i<this.restaurantes.length;i++)
     {
-      mensaje+="<div class='contacto' onclick='mostrarMenu(2);telefono.llamar(\""+this.restaurantes[i].nombre+"\");'>";
+      mensaje+="<div class='contacto' onclick='mostrarMenu(2);telefono.llamar(\""+this.restaurantes[i].nombre+"\",true);'>";
       mensaje+=this.restaurantes[i].imagen;
       mensaje+="<p class='nombre-contacto'>"+this.restaurantes[i].nombre+"</p>";
       mensaje+="</div>";

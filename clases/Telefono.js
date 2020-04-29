@@ -67,23 +67,29 @@ class Telefono{
     mensaje+="</div></div>";
     contenedor.innerHTML = mensaje;
   }
-  llamar(nombre,imagen)
+  llamar(nombre,esRestaurante)
   {
     this.mostrarMenu(0);
     this.interfaz.querySelector("#llamada h2").innerHTML=nombre;
     this.interfaz.querySelector(".menu-telefono").style.transform="translateY(-100%)";
     document.querySelector("#menuPrincipal").style.top="100%";
     esconderFlechaAtras();
-    if(imagen!=null)
-      this.interfaz.querySelector("#llamada .imagen-contacto").innerHTML=imagen;
+    if(esRestaurante!=null)
+      this.interfaz.querySelector("#llamada .boton-colgar").setAttribute('onclick','telefono.colgar(true)');
     else
-      this.interfaz.querySelector("#llamada .imagen-contacto").innerHTML="<p>"+nombre[0]+"</p>";
+      this.interfaz.querySelector("#llamada .boton-colgar").setAttribute('onclick','telefono.colgar()');
+    this.interfaz.querySelector("#llamada .imagen-contacto").innerHTML="<p>"+nombre[0]+"</p>";
   }
-  colgar()
+  colgar(esRestaurante)
   {
     document.querySelector("#menuPrincipal").style.top="0%";
     this.interfaz.querySelector(".menu-telefono").style.transform="none";
     this.interfaz.querySelectorAll(".menu-telefono input")[0].checked=true;
+    if(esRestaurante)
+    {
+      mostrarMenu(1);
+      restaurantesFavoritos.interfaz.style.display='grid';pantallas.push(restaurantesFavoritos);mostrarCarpeta();
+    }
     this.mostrarMenu(1);
     mostrarFlechaAtras();
     vaciarNumeroTelefono();
