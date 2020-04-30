@@ -376,7 +376,7 @@ function mostrarDistancia()
 	inputs.forEach(input => {
 		if(!input.classList.contains('amigo'))
 		{
-			if(input.querySelector('input[type="text"]').value=="")
+			if(input.querySelector('input[type="text"]')!=null && input.querySelector('input[type="text"]').value=="")
 				mostrar=false
 		}
 	});

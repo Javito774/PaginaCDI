@@ -1647,6 +1647,8 @@ p.display-temperatura {
     padding: .2rem .9rem;
     font-size: .9rem;
     border-radius: 3rem;
+    width: 13rem;
+    height: 2rem;
 }
 #servicios .taxis-container .form input[type="text"]:focus,
 #servicios .taxis-container .form input[type="number"]:focus,
