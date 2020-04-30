@@ -65,8 +65,43 @@ class Termostato extends Electrodomestico
 			mensaje += "<div class='programa'>";
 			mensaje += '<p class="display-temperatura">'+this.programas[i].temperatura+'ºC</p>';
 			mensaje += '<div style="text-align: center;width: 8rem;">';
-				mensaje += '<p class="hora">'+this.programas[i].horaInicio+' - '+this.programas[i].horaFin+'</p>';
-			mensaje += '<input type="date" class="fecha" value="'+this.programas[i].fecha+'" readonly/>';
+			mensaje += '<p class="hora">'+this.programas[i].horaInicio+' - '+this.programas[i].horaFin+'</p>';
+			console.log(this.programas[i].seRepite);
+			if(this.programas[i].seRepite)
+			{
+				mensaje +="<div class='repeticion'>";
+				mensaje +="<p ";
+				if(this.programas[i].repeticion[0])
+					mensaje += "activado";
+				mensaje +=">L</p>";
+				mensaje +="<p ";
+				if(this.programas[i].repeticion[1])
+					mensaje += "activado";
+				mensaje +=">M</p>";
+				mensaje +="<p ";
+				if(this.programas[i].repeticion[2])
+					mensaje += "activado";
+				mensaje +=">X</p>";
+				mensaje +="<p ";
+				if(this.programas[i].repeticion[3])
+					mensaje += "activado";
+				mensaje +=">J</p>";
+				mensaje +="<p ";
+				if(this.programas[i].repeticion[4])
+					mensaje += "activado";
+				mensaje +=">V</p>";
+				mensaje +="<p ";
+				if(this.programas[i].repeticion[5])
+					mensaje += "activado";
+				mensaje +=">S</p>";
+				mensaje +="<p ";
+				if(this.programas[i].repeticion[6])
+					mensaje += "activado";
+				mensaje +=">D</p>";
+				mensaje +="</div>";
+			}
+			else
+				mensaje += '<input type="date" class="fecha" value="'+this.programas[i].fecha+'" readonly/>';
 			mensaje += '</div>';
 			mensaje += '<div class="toggle"';
 			if(this.programas[i].activo)
@@ -121,18 +156,23 @@ class Programa
 		this.fecha = "";
 		this.horaInicio = null;
 		this.horaFin = null;
-		this.repeticion = [0,0,0,0,0,0,0];
+		this.repeticion = [false,false,false,false,false,false,false];
 		this.interfaz = document.querySelector(".nuevo-programa");
+		this.seRepite=false;
 		this.vaciarCampos();
+	}
+	añadirRepeticion(numero)
+	{
+		this.repeticion[numero]=!this.repeticion[numero];
 	}
 	validar()
 	{
-		console.log("Tía que se ejecuta");
 		var resul = true;
 		var suma = 0;
 		for(var i=0; i<this.repeticion.length;i++)
 		{
-			suma+=this.repeticion[i];
+			if(this.repeticion[i])
+				suma+=1;
 		}
 		if(this.horaInicio>this.horaFin)
 			resul=false;
@@ -141,6 +181,10 @@ class Programa
 		else if (this.fecha!="" && suma!=0)
 		{
 			this.fecha="";
+			this.seRepite=true;
+		}
+		else if (this.fecha=="" && suma!=0){
+			this.seRepite=true;
 		}
 		return resul;
 	}

@@ -340,15 +340,21 @@
 								<input type="date" onblur="programa.fecha = this.value" />
 							</div>
 						</div>
-
-						<div>
-							<p>Lunes</p>
-							<p>Martes</p>
-							<p>Miercoles</p>
-							<p>Jueves</p>
-							<p>Viernes</p>
-							<p>Sábado</p>
-							<p>Domingo</p>
+						<div class="diasSemana">
+							<input id="diaSemana0" type="checkbox" value="0" onchange="programa.añadirRepeticion(0);">
+							<label for="diaSemana0">Lunes</label>
+							<input id="diaSemana1" type="checkbox" value="1" onchange="programa.añadirRepeticion(1);">
+							<label for="diaSemana1">Martes</label>
+							<input id="diaSemana2" type="checkbox" value="2" onchange="programa.añadirRepeticion(2);">
+							<label for="diaSemana2">Miercoles</label>
+							<input id="diaSemana3" type="checkbox" value="3" onchange="programa.añadirRepeticion(3);">
+							<label for="diaSemana3">Jueves</label>
+							<input id="diaSemana4" type="checkbox" value="4" onchange="programa.añadirRepeticion(4);">
+							<label for="diaSemana4">Viernes</label>
+							<input id="diaSemana5" type="checkbox" value="5" onchange="programa.añadirRepeticion(5);">
+							<label for="diaSemana5">Sábado</label>
+							<input id="diaSemana6" type="checkbox" value="6" onchange="programa.añadirRepeticion(6);">
+							<label for="diaSemana6">Domingo</label>
 						</div>
 						<div class="contenedor-botones">
 							<button onclick="programa.vaciarCampos(); programa.interfaz.style.display='none';mostrarFlechaAtras();">CANCELAR</button>

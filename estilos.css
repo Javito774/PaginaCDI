@@ -959,9 +959,34 @@ main>div {
 {
   padding: 1rem 2rem;
 }
-.contenedor-termostato .nuevo-programa>div>p
+.contenedor-termostato .nuevo-programa>div>label
 {
-  padding: .5rem;
+  padding: .2rem 1rem;
+  margin: 0 .3rem;
+  border-radius: 2rem;
+  box-shadow: 0 0 0.2rem;
+  font-size: .6rem;
+}
+.contenedor-termostato .repeticion{
+  display: flex;
+}
+.contenedor-termostato .repeticion p {
+    padding: 0 .2rem;
+    font-size: .7rem;
+}
+
+.contenedor-termostato .repeticion p[activado] {
+    color: #fff;
+    font-weight: bolder;
+    background: #333;
+}
+.contenedor-termostato .nuevo-programa>div>input[type="checkbox"]
+{
+  display: none;
+}
+.contenedor-termostato .nuevo-programa>div>input[type="checkbox"]:checked + label
+{
+  color: green;
 }
 .contenedor-termostato .nuevo-programa .contenedor-botones{
   position: absolute;
