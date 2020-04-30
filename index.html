@@ -485,7 +485,7 @@
 			<div class="categoria-menu" id="servicios">
 				<div class="botones">
 					<button onclick="restaurantesFavoritos.interfaz.style.display='grid';pantallas.push(restaurantesFavoritos);mostrarCarpeta();"><img src="assets/fastfood.svg"/>Restaurantes</button>
-					<button onclick="pantallaTaxis.interfaz.style.display='grid';pantallas.push(pantallaTaxis);mostrarCarpeta();"><img src="assets/taxi.svg"/>Taxi</button>
+					<button onclick="pantallaTaxis.interfaz.style.display='grid';pantallas.push(pantallas);mostrarCarpeta();"><img src="assets/taxi.svg"/>Taxi</button>
 					<button onclick="netlis.interfaz.style.display='grid';pantallas.push(netlis);mostrarCarpeta();electrodomesticoActual=netlis;"><img src="assets/theaters.svg"/>Netlis</button>
 				</div>
 				<div class="netlis">
@@ -637,6 +637,10 @@
 									<div>
 										<img src="assets/place.svg"/>
 										<input type="text" placeholder="¿A donde te llevamos?" onblur="mostrarDistancia();">
+									</div>
+									<div>
+										<img src="assets/event.svg"/>
+										<input type="datetime-local">
 									</div>
 									<div class="amigo">
 										<img src="assets/person.svg"/>

@@ -1642,13 +1642,15 @@ p.display-temperatura {
     margin: 0 1rem;
 }
 #servicios .taxis-container .form input[type="text"],
-#servicios .taxis-container .form input[type="number"] {
+#servicios .taxis-container .form input[type="number"],
+#servicios .taxis-container .form input[type="datetime-local"] {
     padding: .2rem .9rem;
     font-size: .9rem;
     border-radius: 3rem;
 }
 #servicios .taxis-container .form input[type="text"]:focus,
-#servicios .taxis-container .form input[type="number"]:focus
+#servicios .taxis-container .form input[type="number"]:focus,
+#servicios .taxis-container .form input[type="datetime-local"]
 {
   outline: none;
 }
